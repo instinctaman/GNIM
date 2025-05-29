@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="assets/css/stNotFrogot.css" />
     <!-- Responsive Style -->
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/full.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -146,6 +147,7 @@
             color: #2c3e50;
             margin-bottom: 20px;
             font-size: 24px;
+            background-color: #ffa100;
         }
 
         .form-group {
@@ -307,7 +309,7 @@
     <!--================================================================================= 
                                 START 5* APP HOME
     ==================================================================================-->
-    <section id="education-home" class="banner-area theme-bg-gradient2">
+    <section id="education-home" class="banner-area theme-bg-gradient2 mb120">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-sm-6">
@@ -365,371 +367,153 @@
     <!--================================================================================= 
                                 START courses
     ==================================================================================-->
-    <section id="education-courses" class="course pt30 pb100">
+
+
+    <style>
+#ourclients {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background:#f9f9f9;
+  padding-bottom:30px;
+  height:150px;
+}
+#ourclients .clients-wrap {
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#ourclients .clients-wrap ul {
+  display: block;
+  list-style: none;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+#ourclients .clients-wrap ul li {
+  display: block;
+  float: left;
+  position: relative;
+  width: 220px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+#ourclients .clients-wrap ul li img {
+  vertical-align: middle;
+  max-width: 100%;
+  width:150px;
+  max-height: 100%;
+  -webkit-transition: 0 linear left;
+  -moz-transition: 0 linear left;
+  transition: 0 linear left;
+}
+#ourclients h3{
+border-bottom:2px solid #3399ff;
+width:150px;
+padding:10px;
+
+
+}    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<div id="ourclients" class="mb120">
+<center><h2 style="position: relative; top: 45px;">Academic Tie-Ups</h2></center>
+  <div class="clients-wrap">
+    <ul id="clientlogo" class="clearfix">
+      <li style="box-sizing: border-box;; ">
+        <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/decathlon.webp" alt="Logo">
+      </li>
+      <li style="box-sizing: border-box;">
+        <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/iimb.webp" alt="Logo">
+      </li>
+      <li style="box-sizing: border-box;">
+        <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/iimc.webp" alt="Logo">
+      </li>
+      <li style="box-sizing: border-box;">
+        <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/partners_01.webp" alt="Logo">
+      </li>
+      <li style="box-sizing: border-box;">
+        <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/partners_2.webp" alt="Logo" hspace='100'>
+      </li>
+      <li style="box-sizing: border-box;">
+        <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/partners_3.webp " alt="Logo" hspace='100'>
+      </li>
+      <li style="box-sizing: border-box;">
+        <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/partners_4.webp " alt="Logo" hspace='100'>
+      </li>
+      <li style="box-sizing: border-box;">
+        <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/partners_5.webp " alt="Logo" hspace='100'>
+      </li>
+      <li style="box-sizing: border-box;">
+        <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/partners_6.webp " alt="Logo" hspace='100'>
+      </li>
+      <li style="box-sizing: border-box;">
+        <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/partners_7.webp " alt="Logo" hspace='100'>
+      </li>
+      <li style="box-sizing: border-box;">
+        <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/sparkminda.webp " alt="Logo" hspace='100'>
+      </li>
+      <li style="box-sizing: border-box;">
+        <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/yakult.webp" alt="Logo" hspace='100'>
+      </li>
+     <li>
+     </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+    $(function() {
+  var $clientslider = $('#clientlogo');
+  var clients = $clientslider.children().length;
+  var clientwidth = (clients * 350); 
+  $clientslider.css('width', clientwidth);
+  var rotating = true;
+  var clientspeed = 0;
+  var seeclients = setInterval(rotateClients, clientspeed);
+  $(document).on({
+    mouseenter: function() {
+      rotating = false;
+    },
+    mouseleave: function() {
+      rotating = true;
+    }
+  }, '#ourclients');
+  function rotateClients() {
+    if (rotating != false) {
+      var $first = $('#clientlogo li:first');
+      $first.animate({
+        'margin-left': '-240px'
+      }, 2000, function() {
+        $first.remove().css({
+          'margin-left': '0px'
+        });
+        $('#clientlogo li:last').after($first);
+      });
+    }
+  }
+});
+</script>
+
+
+
+    <section id="education-courses">
         <div class="container-fluid">
-            <div class="container">
-                <div class="row">
-                    <!-- section title -->
-                    <div class="text-center wow fadeIn" data-wow-duration="2s">
-                        <div class="subtitle color-7">
-                            GNIM
-                        </div>
-                        <div class="title color-white lheight-40 mb30">
-                            <span>About GNIM<span class="color-15">.</span></span>
-                        </div>
-                        <div class="spliter mb30"></div>
+            <div class="row" style="display: flex;">
+                <div class="col-lg-5">
+                    <div class="back">
+                        <img src="assets/images/about/about_gnim_home.webp" alt="">
                     </div>
-                    <!--Star course items -->
-                    <div class="course-items">
-                        <div class="tabs text-center">
-                            <div class="tabs-nav">
-                                <ul class="list-inline nav nav-tabs fsize-0">
-                                    <!-- Start course tab button -->
-                                    <li class="active col-lg-2 col-md-2">
-                                        <a href="#course-item-1" data-toggle="tab" class="fsize-12 uppercase">
-                                            <div class="ia-icon theme-bg-gradient mt25">
-                                                <i class="fa-solid fa-eject"></i>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="col-lg-2 col-md-2">
-                                        <a href="#course-item-2" data-toggle="tab" class="fsize-12 uppercase">
-                                            <div class="ia-icon theme-bg-gradient mt25">
-                                                <i class="fa-solid fa-person-circle-exclamation"></i>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="col-lg-2 col-md-2">
-                                        <a href="#course-item-3" data-toggle="tab" class="fsize-12 uppercase">
-                                            <div class="ia-icon theme-bg-gradient mt25">
-                                                <i class="fa-solid fa-eye-low-vision"></i>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- <li class="col-lg-2 col-md-2">
-                                        <a href="#course-item-4" data-toggle="tab" class="fsize-12 uppercase">
-                                            <div class="ia-icon theme-bg-gradient mt25">
-                                                <i class="fa fa-certificate"></i>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="col-lg-2 col-md-2">
-                                        <a href="#course-item-5" data-toggle="tab" class="fsize-12 uppercase">
-                                            <div class="ia-icon theme-bg-gradient mt25">
-                                                <i class="fa fa-credit-card"></i>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="col-lg-2 col-md-2">
-                                        <a href="#course-item-6" data-toggle="tab" class="fsize-12 uppercase">
-                                            <div class="ia-icon theme-bg-gradient mt25">
-                                                <i class="fa fa-camera" aria-hidden="true"></i>
-                                            </div>
-                                        </a>
-                                    </li> -->
-                                    <!-- End course tab button -->
-                                </ul>
-                            </div>
-                            <div class="tab-content relative background-white mt100 bdrs-10">
-                                <!-- Start Single tab content -->
-                                <div class="tab-pane fade active in text-left clearfix" id="course-item-1">
-                                    <div class="course-info-header col-lg-6 col-md-12 col-sm-12 col-xs-12 ptb60 pl60">
-                                        <div class="table mb40">
-                                            <div class="title-bl table-cell valign-middle">
-                                                <div class="title color-2">
-                                                    <span>About GNIM</span>
-                                                </div>
-                                                <div class="subtitle fweight-600 color-4">
-                                                    Best PGDM College in Delhi NCR
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="lheight-30">
-                                            Greater Noida Institute of Management (GNIM) is a premier institution
-                                            dedicated to providing high-quality management education and
-                                            industry-oriented learning. Located in the heart of Greater Noida, GNIM is
-                                            committed to nurturing future business leaders by integrating academic
-                                            excellence with practical exposure.
-                                        </p>
-                                        <ul class="list1">
-                                            <li>
-                                                <span class="table-cell valign-middle">
-                                                    <strong>Top Placements:</strong>
-                                                    GNIM has a strong track record of placements with top corporate
-                                                    brands, ensuring excellent career opportunities for students.</span>
-                                            </li>
-                                            <li>
-                                                <span class="table-cell valign-middle"><strong>Industry-Focused
-                                                        Curriculum:</strong> The institute offers a dynamic and
-                                                    industry-driven curriculum designed to enhance strategic thinking,
-                                                    innovation, and managerial skills.</span>
-                                            </li>
-                                            <li>
-                                                <span class="table-cell valign-middle"><strong>Corporate
-                                                        Connect:</strong> GNIM regularly hosts corporate leaders,
-                                                    industry experts, and entrepreneurs through guest lectures,
-                                                    mentorship programs, and networking events.</span>
-                                            </li>
-                                            <li>
-                                                <span class="table-cell valign-middle"><strong>Holistic Learning
-                                                        Approach:</strong> Beyond academics, GNIM emphasizes real-world
-                                                    exposure through case studies, live projects, internships, and
-                                                    industrial visits.</span>
-                                            </li>
-                                            <li>
-                                                <span class="table-cell valign-middle"><strong>State-of-the-Art
-                                                        Infrastructure:
-
-                                                    </strong> The campus is equipped with modern classrooms, a
-                                                    well-stocked library, a dedicated incubation center, and advanced
-                                                    learning resources to support students' growth.</span>
-                                            </li>
-                                            <li>
-                                                <span class="table-cell valign-middle"><strong>Global Exposure:</strong>
-                                                    GNIM provides international learning opportunities through student
-                                                    exchange programs, corporate sessions, and global educational
-                                                    tours.</span>
-                                            </li>
-                                        </ul>
-                                        <!-- button -->
-                                        <div class="flex-1">
-                                            <button
-                                                class="button button-mat border-gradient bdrs-10 lheight-50 color-white fsize-14 fweight-600 btn-1">
-                                                <span class="color-2 button-text">START LEARN NOW</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="course-slider-bl col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="course-slider arrow-btn">
-                                            <img src="assets/images/about/about_gnim_home.webp" alt="">
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Single tab content -->
-                                <!-- Start Single tab content -->
-                                <div class="tab-pane fade text-left clearfix" id="course-item-2">
-                                    <div class="course-info-header col-lg-6 col-md-12 col-sm-12 col-xs-12 ptb60 pl60">
-                                        <div class="table mb40">
-                                            <div class="title-bl table-cell valign-middle">
-                                                <div class="title color-2">
-                                                    <span>GNIM Mission</span>
-                                                </div>
-                                                <div class="subtitle fweight-600 color-4">
-                                                    <!-- Make your courses standout -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="lheight-30">
-                                            Empowering Minds: GNIM's mission is to ignite minds with adynamic blend of
-                                            intellectually riveting education and real-world practicality, preparing
-                                            students to thrive in the fiercely competitive corporate realm. Community of
-                                            Changemakers: At GNIM, we don't just educate, we cultivate a vibrant
-                                            community of learners, embracing diversity and nurturing inclusivity, all
-                                            while instilling a profound sense of social responsibility. Beyond
-                                            Boundaries: Dedicated to more than just academics, we are committed to
-                                            arming students with the knowledge, skills, and transformative experiences
-                                            that propel them toward making a significant impact on the world, unlocking
-                                            their boundless potential
-                                        </p>
-
-
-                                        <!-- button -->
-                                        <div class="flex-1">
-                                            <button
-                                                class="button button-mat border-gradient bdrs-10 lheight-50 color-white fsize-14 fweight-600 btn-1">
-                                                <span class="color-2 button-text">START LEARN NOW</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="course-slider-bl col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="course-slider arrow-btn">
-                                            <img src="assets/images/about/vision_gnim_2.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Single tab content -->
-                                <!-- Start Single tab content -->
-                                <div class="tab-pane fade text-left clearfix" id="course-item-3">
-                                    <div class="course-info-header col-lg-6 col-md-12 col-sm-12 col-xs-12 ptb60 pl60">
-                                        <div class="table mb40">
-                                            <div class="title-bl table-cell valign-middle">
-                                                <div class="title color-2">
-                                                    <span>GNIM Vision</span>
-                                                </div>
-                                                <div class="subtitle fweight-600 color-4">
-                                                    <!-- Make your courses standout -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="lheight-30">
-                                            We strive to be a leading institution of professional education that
-                                            empowers students to become trustworthy global citizens and leaders in their
-                                            chosen fields through an innovative, interdisciplinary, and inclusive
-                                            approach to learning, with an emphasis on learning-centered teaching.
-                                        </p>
-                                        <!-- <ul class="list1">
-                                            <li>
-                                                <span class="table-cell valign-middle">Pig swine prosciutto rump pork chop</span>
-                                            </li>
-                                            <li>
-                                                <span class="table-cell valign-middle">Tail spare ribs capicola flank shank</span>
-                                            </li>
-                                            <li>
-                                                <span class="table-cell valign-middle">Beef ribs sirloin cupim frankfurter</span>
-                                            </li>
-                                        </ul> -->
-                                        <!-- button -->
-                                        <div class="flex-1">
-                                            <button
-                                                class="button button-mat border-gradient bdrs-10 lheight-50 color-white fsize-14 fweight-600 btn-1">
-                                                <span class="color-2 button-text">START LEARN NOW</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="course-slider-bl col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="course-slider arrow-btn">
-                                            <!-- <div class="course-slider-img" style="background-image: url(assets/images/course/course-img-1.jpg);"></div>
-                                            <div class="course-slider-img" style="background-image: url(assets/images/course/course-img-1.jpg);"></div> -->
-                                            <img src="assets/images/about/vision_gnim_1.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Single tab content -->
-                                <!-- Start Single tab content -->
-                                <div class="tab-pane fade text-left clearfix" id="course-item-4">
-                                    <div class="course-info-header col-lg-6 col-md-12 col-sm-12 col-xs-12 ptb60 pl60">
-                                        <div class="table mb40">
-                                            <div class="title-bl table-cell valign-middle">
-                                                <div class="title color-2">
-                                                    <span>GNIM Goals</span>
-                                                </div>
-                                                <div class="subtitle fweight-600 color-4">
-                                                    <!-- Make your courses standout -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="lheight-30">
-                                            Empowering future leaders through innovative learning, global citizenship,
-                                            impactful research, and fostering emotional intelligence to create
-                                            influential role models for a positively shaped society
-                                        </p>
-                                        <!-- <ul class="list1">
-                                            <li>
-                                                <span class="table-cell valign-middle">Pig swine prosciutto rump pork chop</span>
-                                            </li>
-                                            <li>
-                                                <span class="table-cell valign-middle">Tail spare ribs capicola flank shank</span>
-                                            </li>
-                                            <li>
-                                                <span class="table-cell valign-middle">Beef ribs sirloin cupim frankfurter</span>
-                                            </li>
-                                        </ul> -->
-                                        <!-- button -->
-                                        <div class="flex-1">
-                                            <button
-                                                class="button button-mat border-gradient bdrs-10 lheight-50 color-white fsize-14 fweight-600 btn-1">
-                                                <span class="color-2 button-text">START LEARN NOW</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="course-slider-bl col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="course-slider arrow-btn">
-                                            <!-- <div class="course-slider-img" style="background-image: url(assets/images/course/course-img-1.jpg);"></div>
-                                            <div class="course-slider-img" style="background-image: url(assets/images/course/course-img-1.jpg);"></div> -->
-                                            <img src="assets/images/about/life_sc.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Single tab content -->
-                                <!-- Start Single tab content -->
-                                <!-- <div class="tab-pane fade text-left clearfix" id="course-item-5">
-                                    <div class="course-info-header col-lg-6 col-md-12 col-sm-12 col-xs-12 ptb60 pl60">
-                                        <div class="table mb40">
-                                            <div class="title-bl table-cell valign-middle">
-                                                <div class="title color-2">
-                                                    <span>HTML5/CSS3 Essentials</span>
-                                                </div>
-                                                <div class="subtitle fweight-600 color-4">
-                                                    Make your courses standout
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="lheight-30">
-                                            Hamburger pork beef shank turducken drumstick pork loin. Pork short ribs rump fatback capicola ham strip steak jowl filet mignon buffalo alcatra swine t-bone. Alcatra capicola tenderloin, jerky filet mignon pancetta.
-                                        </p>
-                                      <ul class="list1">
-                                            <li>
-                                                <span class="table-cell valign-middle">Pig swine prosciutto rump pork chop</span>
-                                            </li>
-                                            <li>
-                                                <span class="table-cell valign-middle">Tail spare ribs capicola flank shank</span>
-                                            </li>
-                                            <li>
-                                                <span class="table-cell valign-middle">Beef ribs sirloin cupim frankfurter</span>
-                                            </li>
-                                        </ul> -->
-                                <!-- button -->
-                                <!-- <div class="flex-1">
-                                            <button class="button button-mat border-gradient bdrs-10 lheight-50 color-white fsize-14 fweight-600 btn-1">
-                                                <span class="color-2 button-text">START LEARN NOW</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="course-slider-bl col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="course-slider arrow-btn">
-                                            <div class="course-slider-img" style="background-image: url(assets/images/course/course-img-1.jpg);"></div>
-                                            <div class="course-slider-img" style="background-image: url(assets/images/course/course-img-1.jpg);"></div>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <!-- End Single tab content -->
-                                <!-- Start Single tab content -->
-                                <!-- <div class="tab-pane fade text-left clearfix" id="course-item-6">
-                                    <div class="course-info-header col-lg-6 col-md-12 col-sm-12 col-xs-12 ptb60 pl60">
-                                        <div class="table mb40">
-                                            <div class="title-bl table-cell valign-middle">
-                                                <div class="title color-2">
-                                                    <span>Art of Photography</span>
-                                                </div>
-                                                <div class="subtitle fweight-600 color-4">
-                                                    Make your courses standout
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="lheight-30">
-                                            Hamburger pork beef shank turducken drumstick pork loin. Pork short ribs rump fatback capicola ham strip steak jowl filet mignon buffalo alcatra swine t-bone. Alcatra capicola tenderloin, jerky filet mignon pancetta.
-                                        </p>
-                                      <ul class="list1">
-                                            <li>
-                                                <span class="table-cell valign-middle">Pig swine prosciutto rump pork chop</span>
-                                            </li>
-                                            <li>
-                                                <span class="table-cell valign-middle">Tail spare ribs capicola flank shank</span>
-                                            </li>
-                                            <li>
-                                                <span class="table-cell valign-middle">Beef ribs sirloin cupim frankfurter</span>
-                                            </li>
-                                        </ul> -->
-                                <!-- button -->
-                                <!-- <div class="flex-1">
-                                            <button class="button button-mat border-gradient bdrs-10 lheight-50 color-white fsize-14 fweight-600 btn-1">
-                                                <span class="color-2 button-text">START LEARN NOW</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="course-slider-bl col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="course-slider arrow-btn">
-                                            <div class="course-slider-img" style="background-image: url(assets/images/course/course-img-1.jpg);"></div>
-                                            <div class="course-slider-img" style="background-image: url(assets/images/course/course-img-1.jpg);"></div>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <!-- End Single tab content -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End course items -->
+                </div>
+                <div class="col-lg-7">
+                    <h5 class="color-1" style="text-transform: uppercase;">Best PGDM College in Delhi NCR</h5>
+                    <h2 style="font-size: 35px;">About GNIM</h2>
+                    <p>Greater Noida Institute of Management (GNIM) is a premier institution dedicated to providing
+                        high-quality management education and industry-oriented learning. Located in the heart of
+                        Greater Noida, GNIM is committed to nurturing future business leaders by integrating academic
+                        excellence with practical exposure.</p>
+                    
                 </div>
             </div>
         </div>
@@ -2076,7 +1860,6 @@ a:hover {
 h2 {
   margin-bottom: 48px;
   padding-bottom: 16px;
-  font-size: 20px;
   line-height: 28px;
   font-weight: 700;
   position: relative;
@@ -3056,69 +2839,185 @@ $(document).ready(function () {
                 </div>
                 <div class="modal-body">
                     <!-- contact form -->
-                    <div class="contact-section">
-                        <form method="post" action="assets/bin/mailer.php" class="contact-form signup-form"
-                            id="ajax-contact">
-                            <div class="row section-signup semitrans">
-                                <div class="col-md-12">
-                                    <!-- name -->
-                                    <div class="form-group has-icon-left form-control-name">
-                                        <label class="sr-only" for="name">Your name</label>
-                                        <input type="text" class="form-control form-control-lg" name="name" id="name"
-                                            placeholder="Your name">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <!-- email -->
-                                    <div class="form-group has-icon-left form-control-email">
-                                        <label class="sr-only" for="email">Email address</label>
-                                        <input type="email" class="form-control form-control-lg" name="email" id="email"
-                                            placeholder="Email address" autocomplete="off">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <!-- phone number -->
-                                    <div class="form-group has-icon-left form-control-phone">
-                                        <label class="sr-only" for="phone">Phone Number</label>
-                                        <input type="text" class="form-control form-control-lg" name="phone" id="phone"
-                                            placeholder="Phone Number" autocomplete="off">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <!-- address -->
-                                    <div class="form-group has-icon-left form-control-address">
-                                        <label class="sr-only" for="address">Address</label>
-                                        <input type="text" class="form-control form-control-lg" name="address"
-                                            id="address" placeholder="Your Address" autocomplete="off">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <!-- text message -->
-                                    <div class="form-group has-icon-left form-control-message">
-                                        <label class="sr-only" for="message">Enter your message</label>
-                                        <textarea class="form-control form-control-lg home-textarea" name="message"
-                                            id="message" placeholder="Enter your message" autocomplete="off"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <!-- submit button -->
-                                    <div class="form-group">
-                                        <button
-                                            class="contact-btn btn theme-bg-gradient lheight-60i color-white fsize-14 fweight-600">
-                                            Send Message
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <p class="submit-btn-bottom-text">Your email is safe with us and we hate spam as
-                                        much as you do.</p>
-                                </div>
-                            </div>
-                            <!--Result notification -->
-                            <div id="error-message" class="text-center"></div>
-                            <div id="form-messages"></div>
-                        </form>
-                    </div>
+                    <style>
+        @media (min-width: 1200px) {
+            .forming {
+                position: relative;
+                margin-top: -745px;
+                margin-left: 844px;
+            }
+
+        }
+
+        .registration-container {
+            background-color: #fff;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .registration-container h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 0px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #34495e;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-group.checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .form-group.checkbox input {
+            margin-top: 5px;
+            left: -190px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #132273;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #1c5980;
+        }
+
+        .success-message {
+            text-align: center;
+            color: green;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            .registration-container {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            .registration-container h1 {
+                font-size: 20px;
+            }
+
+            .form-group input,
+            .form-group select {
+                font-size: 13px;
+            }
+
+            button {
+                font-size: 15px;
+            }
+        }
+    </style>
+    <!-- <section class="forming"> -->
+        <div class="registration-container">
+            <h1 style="color: #ffa100;">Admissions Open 2025-27</h1>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name*</label>
+                    <input type="text" id="fullName" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address*</label>
+                    <input type="email" id="email" required />
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number*</label>
+                    <input type="tel" id="phone" required />
+                </div>
+                <div class="form-group">
+                    <label for="state">Select State*</label>
+                    <select id="state" required>
+                        <option value="">--Select State--</option>
+                        <option value="UP">Uttar Pradesh</option>
+                        <option value="DL">Delhi</option>
+                        <option value="HR">Haryana</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="city">Select City*</label>
+                    <select id="city" required>
+                        <option value="">--Select City--</option>
+                        <option value="Noida">Noida</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Gurgaon">Gurgaon</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="course">Select Course*</label>
+                    <select id="course" required>
+                        <option value="">--Select Course--</option>
+                        <option value="BCA">BCA</option>
+                        <option value="BBA">BBA</option>
+                        <option value="MBA">MBA</option>
+                    </select>
+                </div>
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="consent" required />
+                    <label for="consent">
+                        I authorize GNIM and its representatives to contact me with updates and notifications.
+                    </label>
+                </div>
+                <button type="submit">Register Now</button>
+                <p id="successMsg" class="success-message"></p>
+            </form>
+        </div>
+    <!-- </section> -->
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const fullName = document.getElementById("fullName").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const state = document.getElementById("state").value;
+            const city = document.getElementById("city").value;
+            const course = document.getElementById("course").value;
+            const consent = document.getElementById("consent").checked;
+
+            if (!fullName || !email || !phone || !state || !city || !course || !consent) {
+                alert("Please fill all fields and agree to the terms.");
+                return;
+            }
+
+            document.getElementById("successMsg").textContent =
+                "Registration successful! Our team will contact you shortly.";
+            this.reset();
+        });
+
+    </script>
+
                 </div>
             </div>
         </div>
