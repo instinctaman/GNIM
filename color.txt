@@ -1,2 +1,5 @@
-    background: #132273;
-    #fd7e14;
+git init
+git add .
+git commit -m "Initial commit"
+in the new repo ->git remote add origin https://github.com/your-username/your-repo-name.git
+git push -u origin main

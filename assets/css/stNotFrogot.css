@@ -45,10 +45,7 @@
 /* ==========================================================================
    01. General & Basic Styles
    ========================================================================== */
-body {
-    /* background-image: url("../images/pexels-jplenio-1103970.jpg"); */
-    /* position: fixed; */
-}
+
 img {
     max-width: 100%;
 }
@@ -70,7 +67,7 @@ img {
 }
 
 .color-white {
-    color :#ffa100;
+    color :#fff;
 }
 
 .color-1 {
@@ -105,7 +102,7 @@ img {
 }
 
 .color-9 {
-    color: #ffa100;
+    color: #58709d;
 }
 
 .color-10 {
@@ -1072,7 +1069,7 @@ img {
 
 .list1 {
     list-style: none;
-    line-height: 20px;
+    line-height: 38px;
 }
 
 .list1 li:before {
@@ -1243,7 +1240,7 @@ body {
     margin: 0;
     font-weight: 400;
     font-size: 16px;
-    color: #ffa100;
+    color: #58709d;
     overflow-x: hidden;
     font-family: "Montserrat", sans-serif;
 }
@@ -1285,20 +1282,9 @@ header li:hover>a {
 /* header li.active>a {
     color: #132273 !important;
 } */
-.normal{
-    font-weight: bolder;
-}
-.seth{
-  box-shadow: #000 0px 0px 10px;
-}
-.seth1 {
-    
-    border-radius: 10px;
-    
-    margin: 5px 5px 5px 5px;
-}
+
 nav {
-    /* background-color: rgba(35, 36, 36, 0); */
+    background-color: rgba(35, 36, 36, 0);
     padding: 10px 0;
     -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
@@ -1362,12 +1348,8 @@ nav.top-nav-collapse {
 .navbar-toggle span {
     background: #fff;
 }
-.m-10{
-    margin: 10px;
-}
-.m-30{
-    margin: 30px;
-}
+
+
 /* ==========================================================================
    03. Home Banner Area style
    ========================================================================== */
@@ -1547,16 +1529,13 @@ nav.top-nav-collapse {
    ========================================================================== */
 
 .course {
-    /* background-image: url("../images/course-bg.jpg"); */
-    /* position: relative;
+    background-image: url("../images/course-bg.jpg");
+    position: relative;
     background-repeat: no-repeat;
-    background-size: cover; */
-}
-.row{
-    display: flex;
+    background-size: cover;
 }
 
-/* .course .container-fluid {
+.course .container-fluid {
     position: relative;
     z-index: 1;
 }
@@ -1647,8 +1626,8 @@ nav.top-nav-collapse {
     overflow: hidden;
     -webkit-box-shadow: -5.4px 8.4px 29px rgba(36, 171, 179, 0.2);
     box-shadow: -5.4px 8.4px 29px rgba(36, 171, 179, 0.2);
-    right: 15px;
-    top: 35px;
+    right: -40px;
+    top: -40px;
 }
 
 .course .course-slider .course-slider-img {
@@ -1684,7 +1663,7 @@ nav.top-nav-collapse {
     -ms-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
-} */
+}
 
 
 /* ==========================================================================
@@ -1723,7 +1702,7 @@ nav.top-nav-collapse {
 .why-choose .nav-tabs>li>a,
 .why-choose .nav-tabs>li>a:hover,
 .why-choose .nav-tabs>li>a:focus {
-    color: #ffa100;
+    color: #58709d;
     background-color: transparent;
     border: none;
     border-radius: 20px;
@@ -2046,7 +2025,7 @@ nav.top-nav-collapse {
     width: 6px;
     height: 6px;
     opacity: 0.3;
-    background-color: #ffa100;
+    background-color: #58709d;
     border-radius: 50%;
 }
 
@@ -2171,7 +2150,7 @@ nav.top-nav-collapse {
     bottom: 0;
     left: 50%;
     margin-left: -18px;
-    background-color: #ffa100;
+    background-color: #fcff33
 }
 
 .progress-bar-number .name-inner {
@@ -2571,7 +2550,7 @@ nav.top-nav-collapse {
 }
 
 .btn.theme-bg-gradient {
-    background-image: -webkit-gradient(linear, left top, right top, from(#ffa100), to(#ffa100));
+    background-image: -webkit-gradient(linear, left top, right top, from(#), to(#ffa100));
     background-image: linear-gradient(to right, #ffa100 0%, #ffa100 100%);
     -webkit-box-shadow: 0 5px 29px rgba(0, 205, 214, 0.3);
     box-shadow: 0 5px 29px rgba(0, 205, 214, 0.3);
@@ -2765,7 +2744,7 @@ nav.top-nav-collapse {
 }
 
 #toTop:hover {
-    color: #ffa100;
+    color: #58709d;
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
