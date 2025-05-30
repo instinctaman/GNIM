@@ -67,7 +67,7 @@ img {
 }
 
 .color-white {
-    color :#fff;
+    color: #fff;
 }
 
 .color-1 {
@@ -83,12 +83,13 @@ img {
 }
 
 .color-4 {
-    color:#ffa100;
+    color: #ffa100;
 }
 
 .color-5 {
     color: #1e1d32;
 }
+
 .color-6 {
     color: #ffa100;
 }
@@ -127,8 +128,8 @@ img {
 
 
 .theme-bg-gradient {
-   
-        background-color: #132273;
+
+    background-color: #132273;
     /* -webkit-box-shadow: 0 5px 29px rgba(0, 205, 214, 0.3); */
     box-shadow: 0 5px 10px #132240;
 
@@ -245,11 +246,13 @@ img {
         -webkit-transform: scale(1);
         transform: scale(1);
     }
+
     60% {
         opacity: 0;
         -webkit-transform: scale(1.3);
         transform: scale(1.3);
     }
+
     100% {
         opacity: 1;
         -webkit-transform: scale(1);
@@ -263,11 +266,13 @@ img {
         -webkit-transform: scale(1);
         transform: scale(1);
     }
+
     60% {
         opacity: 0;
         -webkit-transform: scale(1.3);
         transform: scale(1.3);
     }
+
     100% {
         opacity: 1;
         -webkit-transform: scale(1);
@@ -281,11 +286,13 @@ img {
         -webkit-transform: scale(1);
         transform: scale(1);
     }
+
     60% {
         opacity: 0;
         -webkit-transform: scale(1.3);
         transform: scale(1.3);
     }
+
     100% {
         opacity: 0.5;
         -webkit-transform: scale(1);
@@ -299,11 +306,13 @@ img {
         -webkit-transform: scale(1);
         transform: scale(1);
     }
+
     60% {
         opacity: 0;
         -webkit-transform: scale(1.3);
         transform: scale(1.3);
     }
+
     100% {
         opacity: 0.5;
         -webkit-transform: scale(1);
@@ -526,20 +535,24 @@ img {
 .mb120 {
     margin-bottom: 120px;
 }
+
 .mt120 {
     margin: 0px -72px;
     padding: 72px;
 }
+
 .flexix {
     position: relative;
 }
-.tops{
+
+.tops {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1;
 }
+
 .marquee {
     width: 100%;
     overflow: hidden;
@@ -548,39 +561,43 @@ img {
     align-items: center;
     position: relative;
 }
+
 .marquee-content {
-    display: flex
-;
+    display: flex;
     animation: marquee 20s linear infinite;
     animation-play-state: running;
 }
+
 .marquee-item {
     flex-shrink: 0;
     width: 150px;
     height: 130px;
     background-color: #fff;
-    display: flex
-;
+    display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 15px;
     font-size: 20px;
     transition: transform 0.4s ease, filter 0.4s ease;
 }
+
 .div_mar {
     padding: 10px;
     border-radius: 10px;
 }
-.marquee-item > div > img {
+
+.marquee-item>div>img {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     /* padding: 12px; */
     padding: 5px 10px 5px 10px;
     height: 100%;
     width: 100%;
 }
+
 .one {
     margin-top: 20px;
 }
+
 .elementor-kit-170 h2 {
     color: var(--e-global-color-primary);
     font-family: var(--e-global-typography-secondary-font-family), Sans-serif;
@@ -589,6 +606,7 @@ img {
     text-transform: var(--e-global-typography-secondary-text-transform);
     line-height: var(--e-global-typography-secondary-line-height);
 }
+
 .mlr8 {
     margin-left: 8px;
     margin-right: 8px;
@@ -889,8 +907,8 @@ img {
 }
 
 .ptb90 {
-    padding-top:90px;
-    padding-bottom:90px;
+    padding-top: 90px;
+    padding-bottom: 90px;
 }
 
 .ptb100 {
@@ -1350,6 +1368,28 @@ nav.top-nav-collapse {
 }
 
 
+.slide-right {
+  animation: 3s slide-right;
+}
+@keyframes slide-right {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+.slide-left {
+  animation: 3s slide-left;
+}
+@keyframes slide-left {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
 /* ==========================================================================
    03. Home Banner Area style
    ========================================================================== */
@@ -1377,10 +1417,11 @@ nav.top-nav-collapse {
     filter: opacity(1);
 }
 
-.banner-intro{
+.banner-intro {
     position: relative;
     top: 80px;
 }
+
 .banner-intro .banner-title span {
     color: #ffa100;
 }
@@ -1499,14 +1540,17 @@ nav.top-nav-collapse {
     0% {
         transform: scale(0);
     }
+
     50% {
         transform: scale(0.7);
         opacity: .3;
     }
+
     80% {
         transform: scale(0.9);
         opacity: .2;
     }
+
     100% {
         transform: scale(1.2);
         opacity: 0;
@@ -1517,6 +1561,7 @@ nav.top-nav-collapse {
     0% {
         transform: scale(0.5);
     }
+
     100% {
         transform: scale(1.3);
         opacity: 0;
@@ -1524,6 +1569,61 @@ nav.top-nav-collapse {
 }
 
 
+/* ==========================================================================
+   3.1images center
+   ========================================================================== */
+.full1{    
+    background-color: aliceblue;
+    max-width: 315px;
+    border-radius: 25px;
+    max-height: 260px;
+}
+.back {
+    border-radius: 30px 30px 0px 30px;
+    background-color: #00062B;
+    max-width: 315px;
+    padding: 25px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.back .gaping {
+    border: 2px solid #00062B;
+    max-width: 160px;
+    background-color: white;
+    border-radius: 100px;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back .gaping img {
+    background-color: aliceblue;
+    height: 130px;
+    border: 2px solid #00062B;
+    border-radius: 100px;
+}
+#boxe {
+    background-color: #00062B;
+    top: 0px;
+    position: relative;
+    height: 25px;
+    left: 280px;
+    z-index: 1;
+    width: 35px;
+}
+.textunderimg{
+    position: relative;
+    top: -25px;
+    background-color: aliceblue;
+    border-radius: 25px;
+    text-align: center;
+    max-width: 315px;
+    font-size: 25px;
+    z-index: 2;
+}
 /* ==========================================================================
    04. course SECTION
    ========================================================================== */
@@ -1726,7 +1826,8 @@ nav.top-nav-collapse {
 .why-choose .nav-tabs>li.active>a:hover,
 .why-choose .nav-tabs>li.active>a:focus {
     background-color: transparent;
-    background-image: -webkit-gradient(linear, left top, right top, from(#ffa100), to(#ffa100));background-image: linear-gradient(to right, #132273 0%, #132240 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(#ffa100), to(#ffa100));
+    background-image: linear-gradient(to right, #132273 0%, #132240 100%);
     color: #fff;
     border: 1px solid transparent;
 }
@@ -2159,6 +2260,7 @@ nav.top-nav-collapse {
     font-size: 18px;
     text-transform: capitalize
 }
+
 /*end progress bar*/
 
 
@@ -2297,8 +2399,8 @@ nav.top-nav-collapse {
    ========================================================================== */
 
 .contact-section {
-    background: -webkit-linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 71, 134, 0.7)), url(../images/contact-bg.jpg) 50% 0 repeat fixed;
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 71, 134, 0.7)), url(../images/contact-bg.jpg) 50% 0 repeat fixed;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 71, 134, 0.7)), url(../images/contact-bg.jpg) 50% 0 repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 71, 134, 0.7)), url(../images/contact-bg.jpg) 50% 0 repeat fixed;
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
