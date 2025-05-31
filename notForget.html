@@ -60,7 +60,8 @@
     ==================================================================================-->
     <header>
         <!--Nav Menu Starts-->
-        <nav class="navbar default nav-mob ">
+        <nav class="navbar default nav-mob " style="
+    margin-bottom: 0px;">
             <div class="container mob-logo">
                 <div class="navbar-header col-sm-2 tablet-logo">
                     <button type="button" class="navbar-toggle mob-menu" data-toggle="collapse" data-target="#myNavbar">
@@ -114,7 +115,7 @@
 
     <!-- <section class="slider-section"> -->
     <div class="front_image">
-        <img src="assets/images/GNIM_Mdp_website_slider.webp" alt="">
+        <img src="assets/images/GNIM_Mdp_website_slider.webp" class="response"  alt="GNIM Banner Image">
     </div>
     <!-- End of Carousel -->
     <!-- </section> -->
@@ -124,124 +125,25 @@
 
 
     <style>
-        @media (min-width: 1200px) {
-            .forming {
-                position: relative;
-                margin-top: -745px;
-                margin-left: 844px;
-            }
-
-        }
-
-        .registration-container {
-            background-color: #fff;
-            max-width: 500px;
-            margin: 50px auto;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .registration-container h1 {
-            text-align: center;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-size: 24px;
-            background-color: #ffa100;
-        }
-
-        .form-group {
-            margin-bottom: 0px;
-        }
-
-        .form-group label {
-            display: block;
-            color: #34495e;
-            margin-bottom: 5px;
-            font-size: 14px;
-        }
-
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #bdc3c7;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
-        .form-group.checkbox {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
-        .form-group.checkbox input {
-            margin-top: 5px;
-            left: -190px;
-        }
-
-        button {
-            /* width: 100%; */
-            padding: 12px;
-            background-color: #132273;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        button:hover {
-            background-color: #1c5980;
-        }
-
-        .success-message {
-            text-align: center;
-            color: green;
-            margin-top: 15px;
-            font-weight: bold;
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 600px) {
-            .registration-container {
-                margin: 20px;
-                padding: 20px;
-            }
-
-            .registration-container h1 {
-                font-size: 20px;
-            }
-
-            .form-group input,
-            .form-group select {
-                font-size: 13px;
-            }
-
-            button {
-                font-size: 15px;
-            }
-        }
+        
     </style>
     <section class="forming">
-        <div class="registration-container">
-            <h1 style="color: #ffa100;">Admissions Open 2025-27</h1>
+        <div class="registration-container" style="margin-bottom: 70px;">
+            <h1 style="color: #ffa100; margin-top: 0; margin-bottom: 15px;">Admissions Open 2025-27</h1>
             <form id="registrationForm">
-                <div class="form-group">
-                    <label for="fullName">Full Name*</label>
-                    <input type="text" id="fullName" required />
+                <div class="form-group" style="margin: 0;">
+                    <!-- <label for="fullName">Full Name*</label> -->
+                    <input type="text" id="fullName" placeholder="Full Name" required />
                 </div>
-                <div class="form-group">
-                    <label for="email">Email Address*</label>
-                    <input type="email" id="email" required />
+                <div class="form-group" style="margin: 0;">
+                    <!-- <label for="email">Email Address*</label> -->
+                    <input type="email" id="email" placeholder="Enter Email" required />
                 </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number*</label>
-                    <input type="tel" id="phone" required />
+                <div class="form-group" style="margin: 0;">
+                    <!-- <label for="phone">Phone Number*</label> -->
+                    <input type="tel" id="phone" placeholder="Phone Number" required />
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="margin: 0;">
                     <label for="state">Select State*</label>
                     <select id="state" required>
                         <option value="">--Select State--</option>
@@ -250,7 +152,7 @@
                         <option value="HR">Haryana</option>
                     </select>
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="margin: 0;">
                     <label for="city">Select City*</label>
                     <select id="city" required>
                         <option value="">--Select City--</option>
@@ -259,7 +161,7 @@
                         <option value="Gurgaon">Gurgaon</option>
                     </select>
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="margin: 0;">
                     <label for="course">Select Course*</label>
                     <select id="course" required>
                         <option value="">--Select Course--</option>
@@ -314,9 +216,9 @@
             <div class="row">
                 <div class="col-lg-6 col-sm-6">
                     <div class="banner-intro">
-                        <h1 class="banner-title" style="background-color: #132772;">Present Education in beautiful way
+                        <h1 class="banner-title" style="color: #132772;">Present Education in beautiful way
                             with <span id="area">variable</span><span id="cursor">|</span></h1>
-                        ... <p class="color-white lheight-30" style="color: #ffa100;">The Greater Noida Institute of
+                        ... <p class="color-white lheight-30" style="color: #ffa100; margin-top: 35px;">The Greater Noida Institute of
                             Management (GNIM) is a distinguished educational institution located in Greater Noida, Uttar
                             Pradesh. Established in 2017 under the aegis of the Vinayak Education Society, GNIM operates
                             as an autonomous institution affiliated with Chaudhary Charan Singh University, Meerut, and
@@ -344,16 +246,16 @@
                                     <div class="circle circle-1"></div>
                                     <div class="circle circle-2"></div>
                                 </a>
-                                <p class="color-7">Watch Courses Demo Video</p>
+                                <p style="color: black;">Watch Courses Demo Video</p>
                             </div>
                             <div class="single-media">
                                 <a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
-                                <p class="color-7">Start Learn Courses Now</p>
+                                <p style="color: black;">Start Learn Courses Now</p>
                             </div>
                             <div class="single-media">
                                 <a data-toggle="modal" data-target="#education-contact"><i
                                         class="fa-solid fa-clipboard-question"></i></a>
-                                <p class="color-7">Do You have Any qustions?</p>
+                                <p style="color: black;">Do You have Any qustions?</p>
                             </div>
                         </div>
                     </div>
@@ -391,7 +293,7 @@
             display: block;
             list-style: none;
             position: relative;
-            margin-left: auto;
+            margin-left: -65px;
             margin-right: auto;
         }
 
@@ -426,21 +328,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <div id="ourclients" class="mb120">
         <center>
-            <h2 style="position: relative; top: 45px;">Academic Tie-Ups</h2>
+            <h2 style="margin-bottom: 20px; margin-top: -100px;">Academic Tie-Ups</h2>
         </center>
         <div class="clients-wrap">
             <ul id="clientlogo" class="clearfix">
                 <li style="box-sizing: border-box;; ">
-                    <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/decathlon.webp" alt="Logo">
+                    <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/decathlon.webp" alt="Logo" hspace='100'>
                 </li>
                 <li style="box-sizing: border-box;">
-                    <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/iimb.webp" alt="Logo">
+                    <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/iimb.webp" alt="Logo" hspace='100'>
                 </li>
                 <li style="box-sizing: border-box;">
-                    <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/iimc.webp" alt="Logo">
+                    <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/iimc.webp" alt="Logo" hspace='100'>
                 </li>
                 <li style="box-sizing: border-box;">
-                    <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/partners_01.webp" alt="Logo">
+                    <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/partners_01.webp" alt="Logo" hspace='100'>
                 </li>
                 <li style="box-sizing: border-box;">
                     <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/partners_2.webp" alt="Logo"
@@ -471,10 +373,7 @@
                         hspace='100'>
                 </li>
                 <li style="box-sizing: border-box;">
-                    <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/yakult.webp" alt="Logo"
-                        hspace='100'>
-                </li>
-                <li>
+                    <img style="box-shadow:0 0 20px #3d3d3d;" src="assets/images/partners/yakult.webp" alt="Logo" hspace='100'>
                 </li>
             </ul>
         </div>
@@ -527,7 +426,7 @@
                 <div class="col-lg-7">
                     <h5 class="color-1 slide-left" style="text-transform: uppercase;">Best PGDM College in Delhi NCR
                     </h5>
-                    <h2 style="font-size: 35px;">About GNIM</h2>
+                    <h2>About GNIM</h2>
                     <p style="margin-bottom:1px!important;">Greater Noida Institute of Management (GNIM) is a premier
                         institution dedicated to providing high-quality management education and industry-oriented
                         learning. Located in the heart of Greater Noida, GNIM is committed to nurturing future business
@@ -670,7 +569,7 @@
                                 </div>
                             </div>
                             <div id="boxe"></div>
-                            <div class="textunderimg">Innocation Carriculum design</div>
+                            <div class="textunderimg">Excellence in Management Education Award</div>
                         </div>
                     </div>
 
@@ -682,7 +581,7 @@
                                 </div>
                             </div>
                             <div id="boxe"></div>
-                            <div class="textunderimg">Innocation Carriculum design</div>
+                            <div class="textunderimg">Top Placement Record in Delhi NCR</div>
                         </div>
                     </div>
 
@@ -694,7 +593,7 @@
                                 </div>
                             </div>
                             <div id="boxe"></div>
-                            <div class="textunderimg">Innocation Carriculum design</div>
+                            <div class="textunderimg">Best Emerging B School in Delhi NCR</div>
                         </div>
                     </div>
 
@@ -706,7 +605,7 @@
                                 </div>
                             </div>
                             <div id="boxe"></div>
-                            <div class="textunderimg">Innocation Carriculum design</div>
+                            <div class="textunderimg">Innovative Curriculum Design Award</div>
                         </div>
                     </div>
 
@@ -718,7 +617,7 @@
                                 </div>
                             </div>
                             <div id="boxe"></div>
-                            <div class="textunderimg">Innocation Carriculum design</div>
+                            <div class="textunderimg">Top Institute for Business Analytics</div>
                         </div>
                     </div>
 
@@ -730,7 +629,7 @@
                                 </div>
                             </div>
                             <div id="boxe"></div>
-                            <div class="textunderimg">Innocation Carriculum design</div>
+                            <div class="textunderimg">Best Faculty in Management Studies</div>
                         </div>
                     </div>
 
@@ -742,7 +641,55 @@
                                 </div>
                             </div>
                             <div id="boxe"></div>
-                            <div class="textunderimg">Innocation Carriculum design</div>
+                            <div class="textunderimg">Outstanding Industry Collaboration Award</div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="full1">
+                            <div class="back">
+                                <div class="gaping">
+                                    <img src="assets/images/Award/award.webp" alt="">
+                                </div>
+                            </div>
+                            <div id="boxe"></div>
+                            <div class="textunderimg">Leadership in Innovation Award</div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="full1">
+                            <div class="back">
+                                <div class="gaping">
+                                    <img src="assets/images/Award/award.webp" alt="">
+                                </div>
+                            </div>
+                            <div id="boxe"></div>
+                            <div class="textunderimg">Awarded by Ministry of Education for Excellence in Management Education</div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="full1">
+                            <div class="back">
+                                <div class="gaping">
+                                    <img src="assets/images/Award/award.webp" alt="">
+                                </div>
+                            </div>
+                            <div id="boxe"></div>
+                            <div class="textunderimg">Excellence in Management Education Award</div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="full1">
+                            <div class="back">
+                                <div class="gaping">
+                                    <img src="assets/images/Award/award.webp" alt="">
+                                </div>
+                            </div>
+                            <div id="boxe"></div>
+                            <div class="textunderimg">Top Placement Record in Delhi NCR</div>
                         </div>
                     </div>
                 </div>
@@ -771,834 +718,335 @@
 
    <div class="container">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-lg-4">
             <img src="assets/images/about/vision_gnim_1.jpg" alt="">
         </div>
-        <div class="col-md-4">
-            <div class="back2">
-                <img src="assets/images/about/vision_gnim_2.jpg" alt="">
+        <div class="col-lg-4">
             
-            <h3> <i class="fa-solid fa-building-columns"></i> GNIM Mission</h3>
-            <p>Empowering Minds: GNIM's mission is to ignite minds with adynamic blend of intellectually riveting education and real-world practicality, preparing students to thrive in the fiercely competitive corporate realm. Community of Changemakers: At GNIM, we don't just educate, we cultivate a vibrant community of learners, embracing diversity and nurturing inclusivity, all while instilling a profound sense of social responsibility. Beyond Boundaries: Dedicated to more than just academics, we are committed to arming students with the knowledge, skills, and transformative experiences that propel them toward making a significant impact on the world, unlocking their boundless potential</p>
+                <img src="assets/images/about/vision_gnim_2.jpg" alt="">
+            <div class="back2">
+            <h3 style="    color: white;
+    margin: 12px;
+    padding: 12px;"><i class="color-1 fa-solid fa-building"></i> GNIM Mission</h3>
+            <p class="pstyle">Empowering Minds: GNIM's mission is to ignite minds with adynamic blend of intellectually riveting education and real-world practicality, preparing students to thrive in the fiercely competitive corporate realm. Community of Changemakers: At GNIM, we don't just educate, we cultivate a vibrant community of learners, embracing diversity and nurturing inclusivity, all while instilling a profound sense of social responsibility. Beyond Boundaries: Dedicated to more than just academics, we are committed to arming students with the knowledge, skills, and transformative experiences that propel them toward making a significant impact on the world, unlocking their boundless potential</p>
             </div>
         </div>
-        <div class="col-md-4">
-            <h3><i class="fa-solid fa-crosshairs"></i> GNIM Vision</h3>
-            <p>We strive to be a leading institution of professional education that empowers students to become trustworthy global citizens and leaders in their chosen fields through an innovative, interdisciplinary, and inclusive approach to learning, with an emphasis on learning-centered teaching.</p>
+        <div class="col-lg-4">
+            <h3><i class="color-1 fa-solid fa-crosshairs" ></i> GNIM Vision</h3>
+            <p class="pstyle" style="color: black;">We strive to be a leading institution of professional education that empowers students to become trustworthy global citizens and leaders in their chosen fields through an innovative, interdisciplinary, and inclusive approach to learning, with an emphasis on learning-centered teaching.</p>
             <img src="assets/images/about/life_sc.jpg" alt="">
-            <h3><i class="fa-solid fa-bullseye"></i> GNIM Goals</h3>
-            <p>Empowering future leaders through innovative learning, global citizenship, impactful research, and fostering emotional intelligence to create influential role models for a positively shaped society</p>
+            <h3><i class="color-1 fa-solid fa-bullseye"></i> GNIM Goals</h3>
+            <p class="pstyle" style="color: black;">Empowering future leaders through innovative learning, global citizenship, impactful research, and fostering emotional intelligence to create influential role models for a positively shaped society</p>
         </div>
     </div>
    </div>
 
 
 
+   <section class="videosection">
+    <h2 style="text-align: center;">Explore Our Campus from the Comfort of Your Home!!</h2>
+    <iframe width="695" height="391" src="https://www.youtube.com/embed/hElbFa5ryGY" title=" Best Management Institute in Delhi-NCR | PGDM | GNIM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" style="width: 100%;"></iframe>
+   </section>
     <!--================================================================================= 
                                 START why-choose 
     ==================================================================================-->
-    <section id="education-why-choose" class="why-choose pt100 pb80 ">
-        <div class="container">
-            <div class="row">
-                <div class="why-choose-items">
-                    <div class="tabs text-center">
-                        <div class="tabs-nav">
-                            <ul class="list-inline nav nav-tabs fsize-0">
-                                <!-- why-choose tab buttons -->
-                                <li class="active">
-                                    <a href="#img-why-choose" data-toggle="tab" class="fsize-12 uppercase">
-                                        Image
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#video-why-choose" data-toggle="tab" class="fsize-12 uppercase">
-                                        Video
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tab-content relative background-white plr80 bdrs-10">
-                            <!-- Start tab content -->
-                            <div class="tab-pane fade active in text-left clearfix" id="img-why-choose">
-                                <div class="tab-text col-lg-6 col-md-6 col-sm-12 col-xs-12 lheight-30">
-                                    <div class="valign-middle partition_left pl30 mb40 relative wow fadeIn"
-                                        data-wow-duration="2s"
-                                        style="visibility: visible; animation-duration: 2s; animation-name: fadeIn;">
-                                        <div class="ptb5">
-                                            <div class="subtitle">Make your courses standout</div>
-                                            <div class="title color-2">
-                                                <span>Why choose us<span class="color-15">.</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- <p>Doner t-bone meatball buffalo bresaola, cow kielbasa short ribs beef
-                                        <a href="#" class="color-17 td-underline">andouille ground</a> round cupim prosciutto swine.</p>
-                                    <p>Leberkas drumstick venison kielbasa, shoulder salami picanha frankfurter cupim andouille tenderloin kevin jowl meatloaf. Shoulder landjaeger beef chicken
-                                        <a href="#" class="color-17 td-underline">ball tip andouille</a>, cow hamburger bresaola swine pork belly chuck short ribs.</p> -->
-                                    <!-- <ul class="list1">
-                                        <li>
-                                            <span class="table-cell valign-middle">Reliable and Secure Platform</span>
-                                        </li>
-                                        <li>
-                                            <span class="table-cell valign-middle">Everything is perfectly orgainized for future</span>
-                                        </li>
-                                        <li>
-                                            <span class="table-cell valign-middle">Attach large file easily</span>
-                                        </li>
-                                        <li>
-                                            <span class="table-cell valign-middle">Tons of courses and easy to use and customize</span>
-                                        </li>
-                                        <li>
-                                            <span class="table-cell valign-middle"> Reliable and easy setup</span>
-                                        </li>
-                                    </ul> -->
-                                    <p>GNIM offers a dynamic and industry-driven learning environment that equips
-                                        students with the skills and knowledge required to thrive in today’s competitive
-                                        world. With experienced faculty from IITs, IIMs, and NITs, the institute ensures
-                                        quality education backed by practical exposure. It is affiliated with Chaudhary
-                                        Charan Singh University and approved by AICTE, making its programs credible and
-                                        widely recognized. The institute has strong placement connections with over 500
-                                        companies, including top recruiters like Infosys, IBM, Paytm, and Amazon,
-                                        ensuring excellent career opportunities. Along with modern infrastructure,
-                                        well-equipped labs, and interactive classrooms, GNIM emphasizes holistic
-                                        development through workshops, seminars, and soft skills training. Choosing GNIM
-                                        means stepping into a future of academic excellence, leadership development, and
-                                        career success.</p>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <div class="img-exp">
-                                        <img src="assets/images/about/life_carrer.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End tab content -->
-                            <!-- Start tab content -->
-                            <div class="tab-pane fade text-left clearfix" id="video-why-choose">
-                                <div class="tab-text col-lg-6 col-md-6 col-sm-12 col-xs-12 lheight-30">
-                                    <div class="valign-middle partition_left pl30 mb40 relative wow fadeIn"
-                                        data-wow-duration="2s"
-                                        style="visibility: visible; animation-duration: 2s; animation-name: fadeIn;">
-                                        <div class="ptb5">
-                                            <div class="subtitle">Make your courses standout</div>
-                                            <div class="title color-2">
-                                                <span>Why choose us<span class="color-15">.</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- <p>Doner t-bone meatball buffalo bresaola, cow kielbasa short ribs beef
-                                        <a href="#" class="color-17 td-underline">andouille ground</a> round cupim prosciutto swine.</p>
-                                    <p>Leberkas drumstick venison kielbasa, shoulder salami picanha frankfurter cupim andouille tenderloin kevin jowl meatloaf. Shoulder landjaeger beef chicken
-                                        <a href="#" class="color-17 td-underline">ball tip andouille</a>, cow hamburger bresaola swine pork belly chuck short ribs.</p> -->
-                                    <!-- <ul class="list1">
-                                        <li>
-                                            <span class="table-cell valign-middle">Reliable and Secure Platform</span>
-                                        </li>
-                                        <li>
-                                            <span class="table-cell valign-middle">Everything is perfectly orgainized for future</span>
-                                        </li>
-                                        <li>
-                                            <span class="table-cell valign-middle">Attach large file easily</span>
-                                        </li>
-                                        <li>
-                                            <span class="table-cell valign-middle">Tons of courses and easy to use and customize</span>
-                                        </li>
-                                        <li>
-                                            <span class="table-cell valign-middle"> Reliable and easy setup</span>
-                                        </li>
-                                    </ul> -->
-                                    <p>GNIM offers a dynamic and industry-driven learning environment that equips
-                                        students with the skills and knowledge required to thrive in today’s competitive
-                                        world. With experienced faculty from IITs, IIMs, and NITs, the institute ensures
-                                        quality education backed by practical exposure. It is affiliated with Chaudhary
-                                        Charan Singh University and approved by AICTE, making its programs credible and
-                                        widely recognized. The institute has strong placement connections with over 500
-                                        companies, including top recruiters like Infosys, IBM, Paytm, and Amazon,
-                                        ensuring excellent career opportunities. Along with modern infrastructure,
-                                        well-equipped labs, and interactive classrooms, GNIM emphasizes holistic
-                                        development through workshops, seminars, and soft skills training. Choosing GNIM
-                                        means stepping into a future of academic excellence, leadership development, and
-                                        career success.</p>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <div class="video-exp">
-                                        <iframe width="100%" height="400" src="https://youtu.be/hElbFa5ryGY"
-                                            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End tab content -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!--================================================================================= 
                                 END why-choose 
     ==================================================================================-->
-    <style>
-        @keyframes slide {
-            from {
-                transform: translateX(0);
-
-            }
-
-            to {
-                transform: translateX(-100%);
-
-            }
-        }
-
-        .logos {
-            overflow: hidden;
-            padding: 60px 0;
-            background: white;
-            white-space: nowrap;
-            position: relative;
-        }
-
-        .logos:before,
-        .logos:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            width: 250px;
-            height: 100%;
-            z-index: 2;
-        }
-
-        .logos:before {
-            left: 0;
-            background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-        }
-
-        .logos:after {
-            right: 0;
-            background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-        }
-
-
-        .logos:hover .logos-slide {
-            animation-play-state: paused;
-
-
-        }
-
-        .logos-slide {
-            display: inline-block;
-            animation: 35s slide infinite linear;
-        }
-
-        .logos-slide img {
-            /* border: 2px solid #e0d6d6; */
-            box-shadow: 5px 5px 5px 5px rgb(240, 237, 237);
-            border-radius: 3px;
-            height: 70px;
-            margin: 0 40px;
-        }
-    </style>
-    <!-- partial:index.partial.html -->
-    <div class="tieup">
-        <h2 style="text-align: center;">Academic Tie-Ups</h2>
-        <div class="logos">
-            <div class="logos-slide">
-                <img src="assets/images/partners/decathlon.webp" />
-                <img src="assets/images/partners/iimb.webp" />
-                <img src="assets/images/partners/iimc.webp" />
-                <img src="assets/images/partners/partners_01.webp" />
-                <img src="assets/images/partners/partners_2.webp" />
-                <img src="assets/images/partners/partners_3.webp" />
-                <img src="assets/images/partners/partners_4.webp" />
-                <img src="assets/images/partners/partners_5.webp" />
-                <img src="assets/images/partners/partners_6.webp" />
-                <img src="assets/images/partners/partners_7.webp" />
-                <img src="assets/images/partners/sparkminda.webp" />
-                <img src="assets/images/partners/yakult.webp" />
-            </div>
-
-        </div>
-    </div>
-    <script>
-        const copy = document.querySelector(".logos-slide").cloneNode(false);
-        document.querySelector(".logos").appendChild(copy);
-    </script>
     <!-- partial -->
 
     <!--================================================================================= 
                                 START Program 
     ==================================================================================-->
-    <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
-    <style>
-        main {
-            --color-bg: #eec50f;
-            --color-text: #f4f3f7;
-            --color-primary: #ffda33;
-            --color-secondary: #e0ff33;
-            --color-tertiary: #f1ff33;
-            --color-accent: #ffcc00;
-            --card-radius: 16px;
-            --card-bg: rgba(150, 228, 26, 0.03);
-            --card-border: rgba(216, 143, 32, 0.1);
-            --card-shadow: 0 15px 30px -12px rgba(233, 160, 26, 0.479);
-            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-        }
-
-        .program {
-            background-image: url(assets/images/program/background.jpg);
-        }
-
-        .gradient-blob {
-            position: absolute;
-            border-radius: 100%;
-            filter: blur(40px);
-            opacity: 0.3;
-            -webkit-animation: float 20s infinite alternate ease-in-out;
-            animation: float 20s infinite alternate ease-in-out;
-        }
-
-        .gradient-blob:nth-child(1) {
-            background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
-            width: 150vw;
-            height: 150vw;
-            top: -100%;
-            left: -25%;
-            -webkit-animation-delay: 0s;
-            animation-delay: 0s;
-        }
-
-        .gradient-blob:nth-child(2) {
-            background: linear-gradient(to right, var(--color-tertiary), var(--color-secondary));
-            width: 150vw;
-            height: 150vw;
-            bottom: -100%;
-            right: -25%;
-            -webkit-animation-delay: -5s;
-            animation-delay: -5s;
-        }
-
-        .gradient-blob:nth-child(3) {
-            background: linear-gradient(to right, var(--color-accent), var(--color-primary));
-            width: 100vw;
-            height: 100vw;
-            top: 30%;
-            left: -50%;
-            -webkit-animation-delay: -10s;
-            animation-delay: -10s;
-        }
-
-        @-webkit-keyframes float {
-            0% {
-                transform: translate(0, 0) scale(1);
-            }
-
-            50% {
-                transform: translate(2%, 2%) scale(1.02);
-            }
-
-            100% {
-                transform: translate(-2%, -2%) scale(0.98);
-            }
-        }
-
-        @keyframes float {
-            0% {
-                transform: translate(0, 0) scale(1);
-            }
-
-            50% {
-                transform: translate(2%, 2%) scale(1.02);
-            }
-
-            100% {
-                transform: translate(-2%, -2%) scale(0.98);
-            }
-        }
-
-        main {
-            width: 100%;
-            padding: 2rem 1rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-            line-height: 1.1;
-            background: linear-gradient(to right, var(--color-text), rgba(255, 255, 255, 0.7));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-align: center;
-        }
-
-        .subtitle {
-            font-size: 1rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            opacity: 0.8;
-        }
-
-        .cards-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            perspective: 1000px;
-        }
-
-        .card {
-            position: relative;
-            height: 320px;
-            border-radius: var(--card-radius);
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            box-shadow: var(--card-shadow);
-            transform-style: preserve-3d;
-            transition: var(--transition);
-            cursor: pointer;
-            overflow: hidden;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-
-        .card::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(245, 238, 238, 0.986) 0%, transparent 50%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .card:hover::before {
-            opacity: 1;
-        }
-
-        .card-content {
-            position: relative;
-            height: 100%;
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            transform-style: preserve-3d;
-            transition: transform 0.5s ease;
-        }
-
-        .card h2 {
-            font-size: 1.5rem;
-            margin-bottom: 0.75rem;
-            font-weight: 700;
-            transform: translateZ(20px);
-            background: linear-gradient(to right, var(--color-text), rgba(255, 255, 255, 0.8));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .card p {
-            margin-bottom: 1.5rem;
-            font-size: 0.9rem;
-            opacity: 0.8;
-            transform: translateZ(15px);
-        }
-
-        .card-footer {
-            margin-top: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transform: translateZ(15px);
-        }
-
-        .card-button {
-            padding: 0.6rem 0.5rem;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 100px;
-            color: var(--color-text);
-            font-weight: 300;
-            font-size: 0.5rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            -webkit-backdrop-filter: blur(5px);
-            backdrop-filter: blur(5px);
-        }
-
-        .card-button:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-        }
-
-        .card-icon {
-            font-size: 1.25rem;
-            opacity: 0.7;
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover .card-icon {
-            transform: translateX(5px);
-            opacity: 1;
-        }
-
-        @media (min-width: 640px) {
-            main {
-                padding: 5vh 2rem;
-            }
-
-            h1 {
-                font-size: 3.5rem;
-                margin-bottom: 0.75rem;
-            }
-
-            .subtitle {
-                font-size: 1.1rem;
-                margin-bottom: 4rem;
-            }
-
-            .card {
-                height: 350px;
-            }
-
-            .card-content {
-                padding: 1.75rem;
-            }
-
-            .card-tag {
-                font-size: 0.75rem;
-                padding: 0.5rem 1rem;
-                margin-bottom: 1.25rem;
-            }
-
-            .card h2 {
-                font-size: 1.6rem;
-            }
-
-            .card p {
-                font-size: 1rem;
-            }
-
-            .card-button {
-                padding: 0.7rem 1.4rem;
-                font-size: 0.9rem;
-            }
-
-            .gradient-blob {
-                filter: blur(50px);
-                opacity: 0.35;
-            }
-        }
-
-        @media (min-width: 768px) {
-            .cards-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .gradient-blob {
-                filter: blur(60px);
-                opacity: 0.4;
-            }
-
-            .gradient-blob:nth-child(1) {
-                width: 120vw;
-                height: 120vw;
-                top: -70%;
-                left: -20%;
-            }
-
-            .gradient-blob:nth-child(2) {
-                width: 120vw;
-                height: 120vw;
-                bottom: -70%;
-                right: -20%;
-            }
-
-            .gradient-blob:nth-child(3) {
-                width: 80vw;
-                height: 80vw;
-                top: 30%;
-                left: -30%;
-            }
-
-            .card-content {
-                padding: 2rem;
-            }
-
-            .card h2 {
-                transform: translateZ(25px);
-            }
-
-            .card-tag {
-                transform: translateZ(20px);
-            }
-
-            .card p {
-                transform: translateZ(20px);
-            }
-        }
-
-        @media (min-width: 1024px) {
-            main {
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 10vh 2rem;
-            }
-
-            h1 {
-                font-size: 4.5rem;
-            }
-
-            .subtitle {
-                font-size: 1.25rem;
-            }
-
-            .cards-container {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .card {
-                height: 400px;
-                border-radius: 24px;
-            }
-
-            .gradient-blob {
-                filter: blur(80px);
-                opacity: 0.5;
-            }
-
-            .gradient-blob:nth-child(1) {
-                width: 60vw;
-                height: 60vw;
-                top: -20%;
-                left: -10%;
-            }
-
-            .gradient-blob:nth-child(2) {
-                width: 60vw;
-                height: 60vw;
-                bottom: -30%;
-                right: -10%;
-            }
-
-            .gradient-blob:nth-child(3) {
-                width: 40vw;
-                height: 40vw;
-                top: 40%;
-                left: 30%;
-            }
-
-            .card h2 {
-                font-size: 1.75rem;
-                transform: translateZ(30px);
-            }
-
-            .card-tag {
-                transform: translateZ(20px);
-            }
-
-            .card p {
-                transform: translateZ(25px);
-            }
-
-            .card-footer {
-                transform: translateZ(20px);
-            }
-        }
-    </style>
+    
     <section id="education-program" class="program">
-        <div class="background">
-            <div class="gradient-blob"></div>
-            <div class="gradient-blob"></div>
-            <div class="gradient-blob"></div>
-        </div>
-
-        <main>
-            <h1>Academic</h1>
-            <p class="subtitle" style="color: #e0ff33;">Program Offered by (GNIM)</p>
-            <p style="color: #eec50f;">Greater Noida Institute of Management (GNIM) offers a range of programs tailored
-                for future business leaders, including PGDM and MBA courses with options for dual specialization. These
-                programs are designed to provide in-depth knowledge and skills in key areas of management. Additionally,
-                GNIM offers certification programs that enhance industry-relevant competencies, preparing students for
-                competitive careers.</p>
-            <div class="cards-container">
-                <div class="card" data-rotation-factor="2">
-                    <div class="card-content">
-                        <i class="fa-solid fa-graduation-cap" style="font-size: 80px; color: #f5f3f3;"></i>
-                        <p style="font-size: xx-large;">Post Graduate Diploma in Management(PGDM)</p>
-                        <div class="card-footer">
-                            <button class="card-button"
-                                style="background-color: rgb(255, 230, 0); font-size: 25px;">Apply Now</button>
-                            <div class="card-icon">→</div>
-                        </div>
-                    </div>%
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="color-1" style="font-size: 20px;">ACADEMIC</div>
+                    <h2 style="color: white;" class="slide-right">Program Offered by (GNIM)</h2>
+                    <p style="    color: #a1a3b1;">Greater Noida Institute of Management (GNIM) offers a range of programs tailored for future business leaders, including PGDM and MBA courses with options for dual specialization. These programs are designed to provide in-depth knowledge and skills in key areas of management. Additionally, GNIM offers certification programs that enhance industry-relevant competencies, preparing students for competitive careers.</p>
+                    <button>Apply Now</button>
                 </div>
-
-                <div class="card" data-rotation-factor="2">
-                    <div class="card-content">
-                        <i class="fa-solid fa-thumbs-up" style="font-size: 80px; color:#f5f3f3;"></i>
-                        <p style="font-size: xx-large;">Corporate Exposure through Live Projects</p>
-                        <div class="card-footer">
-                            <button class="card-button"
-                                style="background-color: rgb(255, 230, 0); font-size: 25px;">Apply now</button>
-                            <div class="card-icon">→</div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="proinfo slide-left" style="background-color: white;">
+                            <i class="fa-solid fa-graduation-cap color-1"></i>
+                            <h3 class="marginde">Post Graduate Diploma in Management(PGDM)</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="proinfo textw slide-left">
+                            <i class="fa-solid fa-thumbs-up color-1"></i>
+                            <h3 class="marginde">Corporate Exposure through Live Projects</h3>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="card" data-rotation-factor="2">
-                    <div class="card-content">
-                        <i class="fa-solid fa-user-doctor" style="font-size: 80px; color:#f5f3f3;"></i>
-                        <p style="font-size: xx-large;">Dual Specialization</p>
-                        <div class="card-footer">
-                            <button class="card-button"
-                                style="background-color: rgb(255, 230, 0); font-size: 25px;">Apply now</button>
-                            <div class="card-icon">→</div>
+                    <div class="row">
+                        
+                        <div class="col-md-6">
+                            <div class="proinfo textw slide-left">
+                            <i class="fa-solid fa-user-doctor color-1"></i>
+                            <h3 class="marginde">Dual Specialization</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="proinfo textw slide-left" style="background-color: #ffa100;">
+                            <i class="fa-solid fa-briefcase color-white"></i>
+                            <h3 class="marginde">Certification Programs</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
     </section>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const cards = document.querySelectorAll(".card");
-            const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
-            cards.forEach((card) => {
-                const content = card.querySelector(".card-content");
-                const rotationFactor =
-                    parseFloat(card.getAttribute("data-rotation-factor")) || 2;
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
+<style>
+    @import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
 
-                if (!isTouchDevice) {
-                    card.addEventListener("mousemove", (e) => {
-                        const rect = card.getBoundingClientRect();
-                        const x = e.clientX - rect.left;
-                        const y = e.clientY - rect.top;
 
-                        const centerX = rect.width / 2;
-                        const centerY = rect.height / 2;
-                        const rotateY = (rotationFactor * (x - centerX)) / centerX;
-                        const rotateX = (-rotationFactor * (y - centerY)) / centerY;
+.col-md-4 {
+  text-align: center;
+  padding-bottom: 50px;
+  border-right: 1px dashed black;
+}
 
-                        content.style.transform = `
-          rotateX(${rotateX}deg) 
-          rotateY(${rotateY}deg)
-        `;
+.col-md-4:last-child {
+  border-right: 0px solid black;
+}
 
-                        card.style.setProperty("--x", `${(x / rect.width) * 100}%`);
-                        card.style.setProperty("--y", `${(y / rect.height) * 100}%`);
-                    });
+.counter {
+  animation-duration: 1s;
+  animation-delay: 0s;
+      font-size: 35px;
+    font-weight: 500;
+}
 
-                    card.addEventListener("mouseleave", () => {
-                        content.style.transform = "rotateX(0) rotateY(0)";
 
-                        content.style.transition = "transform 0.5s ease";
-                        setTimeout(() => {
-                            content.style.transition = "";
-                        }, 500);
-                    });
-                }
+.text-center .color-1 {
+    position: absolute;
+    margin-top: 5px;
+    font-weight: 600;
+    font-size: 25px;
+}
 
-                const randomDelay = Math.random() * 2;
-                card.style.animation = `cardFloat 4s infinite alternate ease-in-out ${randomDelay}s`;
-            });
+@media (max-width: 991px) {
+  .col-md-4 {
+    border-right: 0px dashed black;
+    border-bottom: 1px dashed black;
+    width: 50%;
+    margin: auto auto;
+  }
+  
+  .col-md-4:last-child {
+    border-bottom: 0px dashed black;
+  }
+}
+</style>
+<section class="jaupper">
+    <div class="container">
+  <div class="row">
+    <div class="col-md-3 text-center" >
+      <h1><i class="fa fa-users color-3"></i></h1>
+      <span class="counter">100</span> <i class="color-1">%</i>
+      <h4>100 % Placement Record</h4>
+    </div> 
+    <div class="col-md-3 text-center">
+      <h1><i class="fa fa-desktop color-3"></i></h1>
+      <span class="counter">35</span> <i class="color-1">LPA</i>
+      <h4>Highest Package</h4>
+    </div>
+    <div class="col-md-3 text-center">
+      <h1><i class="fa fa-coffee color-3"></i></h1>
+      <span class="counter">200</span><i class="color-1">+</i>
+       <h4>Companies Recruiters</h4>
+    </div>
+    <div class="col-md-3 text-center">
+      <h1><i class="fa fa-coffee color-3"></i></h1>
+      <span class="counter">5.5</span><i class="color-1">LPA</i>
+      <h4>Placement Opportunity Assurance (POA)</h4>
+    </div>
+  </div>
+</div>
+</section>
+<!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js'></script>
+<script src='https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js'></script>
+<script>
+    $('.counter').counterUp({
+  delay: 10,
+  time: 2000
+});
+$('.counter').addClass('animated fadeInDownBig');
+$('h3').addClass('animated fadeIn');
+</script>
+   <!-- <style>
+    .col_half { width: 49%; }
+.col_third { width: 32%; }
+.col_fourth { width: 23.5%; }
+.col_fifth { width: 18.4%; }
+.col_sixth { width: 15%; }
+.col_three_fourth { width: 74.5%;}
+.col_twothird{ width: 66%;}
+.col_half,
+.col_third,
+.col_twothird,
+.col_fourth,
+.col_three_fourth,
+.col_fifth{
+	position: relative;
+	display:inline;
+	display: inline-block;
+	float: left;
+	margin-right: 2%;
+	margin-bottom: 20px;
+}
+.end { margin-right: 0 !important; }
+/* Column Grids End */
 
-            const style = document.createElement("style");
-            style.textContent = `
-    @keyframes cardFloat {
-      0% {
-        transform: translateY(0);
-      }
-      100% {
-        transform: translateY(-5px);
-      }
-    }
-    
-    @media (min-width: 768px) {
-      @keyframes cardFloat {
-        0% {
-          transform: translateY(0);
-        }
-        100% {
-          transform: translateY(-8px);
-        }
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      @keyframes cardFloat {
-        0% {
-          transform: translateY(0);
-        }
-        100% {
-          transform: translateY(-10px);
-        }
-      }
-    }
-  `;
-            document.head.appendChild(style);
+.wrapper { width: 980px; margin: 30px auto; position: relative;}
+.counter { background-color: #ffffff; padding: 20px 0; border-radius: 5px;}
+.count-title { font-size: 40px; font-weight: normal;  margin-top: 10px; margin-bottom: 0; text-align: center; }
+.count-text { font-size: 13px; font-weight: normal;  margin-top: 10px; margin-bottom: 0; text-align: center; }
+.fa-2x { margin: 0 auto; float: none; display: table; color: #4ad1e5; }
+   </style>
+   <section>
+    <div class="wrapper">
+    <div class="counter col_fourth">
+        <i class="fa fa-solid fa-people-group fa-2x"></i>
+      <h2 class="timer count-title count-number" data-to="100" data-speed="1500">100 %</h2>
+       <p class="count-text ">100 % Placement Record</p> 
+    </div>
 
-            const buttons = document.querySelectorAll(".card-button");
-            buttons.forEach((button) => {
-                button.addEventListener("click", (e) => {
-                    e.stopPropagation();
+    <div class="counter col_fourth">
+      <i class="fa fa-solid fa-thumbs-up fa-2x"></i>
+      <h2 class="timer count-title count-number" data-to="35" data-speed="1500">35 LPA</h2>
+      <p class="count-text ">Highest Package</p>
+    </div>
 
-                    const ripple = document.createElement("span");
-                    ripple.classList.add("ripple");
-                    button.appendChild(ripple);
+    <div class="counter col_fourth">
+      <i class="fa fa-lightbulb-o fa-2x"></i>
+      <h2 class="timer count-title count-number" data-to="11900" data-speed="1500">200+</h2>
+      <p class="count-text ">SomeText GoesHere</p>
+    </div>
 
-                    const rect = button.getBoundingClientRect();
-                    const size = Math.max(rect.width, rect.height) * 2;
+    <div class="counter col_fourth end">
+      <i class="fa fa-bug fa-2x"></i>
+      <h2 class="timer count-title count-number" data-to="157" data-speed="1500"></h2>
+      <p class="count-text ">SomeText GoesHere</p>
+    </div>
+</div>
+</section>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script>
+    (function ($) {
+	$.fn.countTo = function (options) {
+		options = options || {};
+		
+		return $(this).each(function () {
+			// set options for current element
+			var settings = $.extend({}, $.fn.countTo.defaults, {
+				from:            $(this).data('from'),
+				to:              $(this).data('to'),
+				speed:           $(this).data('speed'),
+				refreshInterval: $(this).data('refresh-interval'),
+				decimals:        $(this).data('decimals')
+			}, options);
+			
+			// how many times to update the value, and how much to increment the value on each update
+			var loops = Math.ceil(settings.speed / settings.refreshInterval),
+				increment = (settings.to - settings.from) / loops;
+			
+			// references & variables that will change with each update
+			var self = this,
+				$self = $(this),
+				loopCount = 0,
+				value = settings.from,
+				data = $self.data('countTo') || {};
+			
+			$self.data('countTo', data);
+			
+			// if an existing interval can be found, clear it first
+			if (data.interval) {
+				clearInterval(data.interval);
+			}
+			data.interval = setInterval(updateTimer, settings.refreshInterval);
+			
+			// initialize the element with the starting value
+			render(value);
+			
+			function updateTimer() {
+				value += increment;
+				loopCount++;
+				
+				render(value);
+				
+				if (typeof(settings.onUpdate) == 'function') {
+					settings.onUpdate.call(self, value);
+				}
+				
+				if (loopCount >= loops) {
+					// remove the interval
+					$self.removeData('countTo');
+					clearInterval(data.interval);
+					value = settings.to;
+					
+					if (typeof(settings.onComplete) == 'function') {
+						settings.onComplete.call(self, value);
+					}
+				}
+			}
+			
+			function render(value) {
+				var formattedValue = settings.formatter.call(self, value, settings);
+				$self.html(formattedValue);
+			}
+		});
+	};
+	
+	$.fn.countTo.defaults = {
+		from: 0,               // the number the element should start at
+		to: 0,                 // the number the element should end at
+		speed: 1000,           // how long it should take to count between the target numbers
+		refreshInterval: 100,  // how often the element should be updated
+		decimals: 0,           // the number of decimal places to show
+		formatter: formatter,  // handler for formatting the value before rendering
+		onUpdate: null,        // callback method for every time the element is updated
+		onComplete: null       // callback method for when the element finishes updating
+	};
+	
+	function formatter(value, settings) {
+		return value.toFixed(settings.decimals);
+	}
+}(jQuery));
 
-                    ripple.style.width = ripple.style.height = `${size}px`;
-                    ripple.style.left = `${e.clientX - rect.left - size / 2}px`;
-                    ripple.style.top = `${e.clientY - rect.top - size / 2}px`;
-
-                    ripple.classList.add("active");
-
-                    setTimeout(() => {
-                        ripple.remove();
-                    }, 500);
-                });
-            });
-
-            const rippleStyle = document.createElement("style");
-            rippleStyle.textContent = `
-    .card-button {
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .ripple {
-      position: absolute;
-      background: rgba(255, 255, 255, 0.3);
-      border-radius: 50%;
-      transform: scale(0);
-      animation: ripple 0.5s linear;
-      pointer-events: none;
-    }
-    
-    @keyframes ripple {
-      to {
-        transform: scale(2);
-        opacity: 0;
-      }
-    }
-  `;
-            document.head.appendChild(rippleStyle);
-        });
-    </script>
+jQuery(function ($) {
+  // custom formatting example
+  $('.count-number').data('countToOptions', {
+	formatter: function (value, options) {
+	  return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+	}
+  });
+  
+  // start all the timers
+  $('.timer').each(count);  
+  
+  function count(options) {
+	var $this = $(this);
+	options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+	$this.countTo(options);
+  }
+});
+  </script> -->
 
     <!--================================================================================= 
                                 END Program 
@@ -1609,88 +1057,73 @@
          ==================================================================================-->
 
     <style>
-        @keyframes slide {
-            from {
-                transform: translateX(0);
+    .slider {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 5.5rem;
+        position: relative;
+    }
 
-            }
+    .slider-track {
+        display: flex;
+        width: calc(200px * 16); /* 8 logos x 2 sets = 16 */
+        animation: scroll 25s linear infinite;
+    }
 
-            to {
-                transform: translateX(-100%);
+    .slider:hover .slider-track {
+        animation-play-state: paused;
+    }
 
-            }
+    .item {
+        min-width: 200px;
+        padding: 0 30px;
+        flex-shrink: 0;
+    }
+
+    .item img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
         }
-
-        .logos {
-            overflow: hidden;
-            padding: 60px 0;
-            background: white;
-            white-space: nowrap;
-            position: relative;
+        100% {
+            transform: translateX(-50%);
         }
+    }
+</style>
 
-        .logos:before,
-        .logos:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            width: 250px;
-            height: 100%;
-            z-index: 2;
-        }
+<h2 style="text-align: center; margin-bottom: 0px;">Our Top Recruiters</h2>
+<div class="slider">
+    <div class="slider-track">
+        <!-- Original Set -->
+        <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/amul.webp" /></a></div>
+        <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/deloitte.webp" /></a></div>
+        <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/flipkart.webp" /></a></div>
+        <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/icici.webp" /></a></div>
+        <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/jbm.webp" /></a></div>
+        <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/kotak.webp" /></a></div>
+        <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/kpmg.webp" /></a></div>
+        <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/me.webp" /></a></div>
 
-        .logos:before {
-            left: 0;
-            background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-        }
-
-        .logos:after {
-            right: 0;
-            background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-        }
-
-
-        .logos:hover .logos-slide {
-            animation-play-state: paused;
-
-
-        }
-
-        .logos-slide {
-            display: inline-block;
-            animation: 35s slide infinite linear;
-        }
-
-        .logos-slide img {
-            /* border: 2px solid #e0d6d6; */
-            box-shadow: 5px 5px 5px 5px rgb(240, 237, 237);
-            border-radius: 3px;
-            height: 70px;
-            margin: 0 40px;
-        }
-    </style>
-    <!-- partial:index.partial.html -->
-    <div class="tieup">
-        <h2 style="text-align: center;">Our Top Recruiters</h2>
-        <div class="logos">
-            <div class="logos-slide">
-                <img src="assets/images/recruiter/amul.webp" />
-                <img src="assets/images/recruiter/bb.webp" />
-                <img src="assets/images/recruiter/deloitte.webp" />
-                <img src="assets/images/recruiter/flipkart.webp" />
-                <img src="assets/images/recruiter/icici.webp" />
-                <img src="assets/images/recruiter/jbm.webp" />
-                <img src="assets/images/recruiter/kotak.webp" />
-                <img src="assets/images/recruiter/kpmg.webp" />
-                <img src="assets/images/recruiter/me.webp" />
-            </div>
-
-        </div>
+        <!-- Duplicate Set for Seamless Loop -->
+        <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/amul.webp" /></a></div>
+        <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/deloitte.webp" /></a></div>
+        <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/flipkart.webp" /></a></div>
+        <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/icici.webp" /></a></div>
+        <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/jbm.webp" /></a></div>
+        <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/kotak.webp" /></a></div>
+        <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/kpmg.webp" /></a></div>
+        <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/me.webp" /></a></div>
     </div>
-    <script>
-        const copy = document.querySelector(".logos-slide").cloneNode(false);
-        document.querySelector(".logos").appendChild(copy);
-    </script>
+</div>
+
+    <!-- </div> -->
 
     <!--================================================================================= 
                                 END Program 
@@ -1704,9 +1137,6 @@
             <div class="row">
                 <!-- Section title -->
                 <div class="main-title text-center wow fadeIn" data-wow-duration="2s">
-                    <div class="subtitle color-7">
-                        A modern and unique style
-                    </div>
                     <div class="title color-white lheight-40 mb30">
                         <span>Our Faculty<span class="color-15">.</span></span>
                     </div>
@@ -1719,21 +1149,8 @@
                     <div class="col-md-12 teacher_col">
                         <div class="wrap_teacher uk-transition-toggle ">
                             <div class="uk-inline-clip uk-light teacher_img" tabindex="0">
-                                <img src="assets/images/teachers/hitesh-manocha.webp" alt="teacher name">
-                                <div class="uk-position-bottom tp_teacher_caption theme-bg-gradient">
-                                    <div class=" tp_desc_overlay">
-                                        <ul class="teacher_contact p_color">
-                                            <li><a href="mailto:info@gmail.com" title="Mail To David"><i
-                                                        class="fa fa-envelope" aria-hidden="true"></i></a> </li>
-                                            <li> <a href="#" title="David"> <i class="fa-brands fa-twitter"></i> </a>
-                                            </li>
-                                            <li><a href="#" title="David"><i class="fa-brands fa-facebook"></i> </a>
-                                            </li>
-                                            <li><a href="#" title="David"><i class="fa-brands fa-linkedin"></i> </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <img src="assets/images/teachers/hitesh-manocha_Nero_AI_Image_Upscaler_Photo_Face.webp" alt="teacher name">
+                                
                             </div>
                             <div class="teacher_text color-white">
                                 <h3 class="tp_medium_title teacher_name "> Prof. Hitesh Manocha </h3>
@@ -1746,27 +1163,13 @@
                     <div class="col-md-12 teacher_col">
                         <div class="wrap_teacher uk-transition-toggle">
                             <div class="uk-inline-clip  uk-light teacher_img" tabindex="0">
-                                <img src="assets/images/teachers/Rishi_Mehra.jpg" alt="teacher name">
-                                <div class="uk-position-bottom tp_teacher_caption theme-bg-gradient">
-                                    <div class=" tp_desc_overlay">
-                                        <ul class="teacher_contact p_color">
-                                            <li><a href="mailto:info@gmail.com" title="Mail To David"><i
-                                                        class="fa fa-envelope" aria-hidden="true"></i></a> </li>
-                                            <li> <a href="#" title="David"> <i class="fa-brands fa-twitter"></i> </a>
-                                            </li>
-                                            <li><a href="#" title="David"><i class="fa-brands fa-facebook"></i> </a>
-                                            </li>
-                                            <li><a href="#" title="David"><i class="fa-brands fa-linkedin"></i> </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <img src="assets/images/teachers/Rishi_Mehra_Nero_AI_Image_Upscaler_Photo_Face.webp" alt="teacher name">
+                                
                             </div>
                             <div class="teacher_text color-white">
                                 <h3 class="tp_medium_title teacher_name "> Prof. Rishi Mehra </h3>
                                 <p class="teacher_position">IFRA Canada, Sr. Consultant DEA-AJNIFM Research Program,
                                     Ministry,</p>
-                                ...
                             </div>
                         </div>
                     </div>
@@ -1775,21 +1178,7 @@
                     <div class="col-md-12 teacher_col">
                         <div class="wrap_teacher uk-transition-toggle ">
                             <div class="uk-inline-clip uk-light teacher_img" tabindex="0">
-                                <img src="assets/images/teachers/shailaja.jpg" alt="teacher name">
-                                <div class="uk-position-bottom tp_teacher_caption theme-bg-gradient">
-                                    <div class=" tp_desc_overlay">
-                                        <ul class="teacher_contact p_color">
-                                            <li><a href="mailto:info@gmail.com" title="Mail To David"><i
-                                                        class="fa fa-envelope" aria-hidden="true"></i></a> </li>
-                                            <li> <a href="#" title="David"> <i class="fa-brands fa-twitter"></i> </a>
-                                            </li>
-                                            <li><a href="#" title="David"><i class="fa-brands fa-facebook"></i> </a>
-                                            </li>
-                                            <li><a href="#" title="David"><i class="fa-brands fa-linkedin"></i> </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <img src="assets/images/teachers/shailaja_Nero_AI_Image_Upscaler_Photo_Face.webp" alt="teacher name">
                             </div>
                             <div class="teacher_text color-white">
                                 <h3 class="tp_medium_title teacher_name "> Prof. Shailaja Manocha </h3>
@@ -1802,20 +1191,9 @@
                     <div class="col-md-12 teacher_col">
                         <div class="wrap_teacher uk-transition-toggle">
                             <div class="uk-inline-clip  uk-light teacher_img" tabindex="0">
-                                <img src="assets/images/teachers/Vartika_Chaturvedi.jpg" alt="teacher name">
-                                <div class="uk-position-bottom tp_teacher_caption theme-bg-gradient">
-                                    <div class=" tp_desc_overlay">
-                                        <ul class="teacher_contact p_color">
-                                            <li><a href="mailto:info@gmail.com" title="Mail To David"><i
-                                                        class="fa fa-envelope" aria-hidden="true"></i></a> </li>
-                                            <li> <a href="#" title="David"> <i class="fa-brands fa-twitter"></i> </a>
-                                            </li>
-                                            <li><a href="#" title="David"><i class="fa-brands fa-facebook"></i> </a>
-                                            </li>
-                                            <li><a href="#" title="David"><i class="fa-brands fa-linkedin"></i> </a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <img src="assets/images/teachers/Vartika_Chaturvedi_Nero_AI_Image_Upscaler_Photo_Face.webp" alt="teacher name">
+                                
+                                    
                                 </div>
                             </div>
                             <div class="teacher_text color-white">
@@ -2006,11 +1384,11 @@
             text-transform: capitalize;
         }
 
-        h3 {
+        /* h3 {
             margin: 0 0 10px;
             font-size: 28px;
             line-height: 36px;
-        }
+        } */
 
         button {
             outline: none !important;
@@ -2246,16 +1624,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-5">
-                    <h5 style="color: #eec50f;">Facilities at GNIM Greater Noida</h5>
-                    <h2 style="font-weight: bold; font-size: x-large;">What We Provide</h2>
+                    <h4 style="color: #ffa100;">Facilities at GNIM Greater Noida</h4>
+                    <h2>What We Provide</h2>
                 </div>
                 <div class="col-lg-4">
-                    <p>GNIM Greater Noida is committed to offering a well-rounded educational experience by providing
+                    <p style="font-size: 16px;">GNIM Greater Noida is committed to offering a well-rounded educational experience by providing
                         top-notch facilities, industry exposure, and a vibrant student life.</p>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3" style="text-align: right">
                     <button
-                        style="height: 40px; width: 150px; background-color: #d9ff00; border: none;color: #f5f3f3; text-align: center;">Check
+                        style="height: 40px; width: 150px; background-color: #ffa100; border: none;color: #f5f3f3; text-align: center;">Check
                         all</button>
                 </div>
             </div>
@@ -2268,7 +1646,7 @@
                         personally. From academic excellence to extracurricular...</p>
                 </div>
             </div>
-            <div class="item" style="background-image: url(assets/images/facilities/home_10.webp);">
+            <div class="item" style="background-image: url(assets/images/facilities/home_10.jpg);">
                 <div class="item-desc">
                     <h3>Art & Clubs</h3>
                     <p>Students can explore their passions beyond academics through various clubs including: Business &
@@ -2302,13 +1680,37 @@
         });
     </script>
 
-
-    <div class="header">
-        <h1>Masonary layout with css Flexbox</h1>
-    </div>
-
+            
     <!-- Photo Grid -->
-
+<div class="container-fluid" style="padding: 0px;">
+    <div class="row" style="margin: 0px;">
+        <div class="col-md-6" style="padding: 0px;">
+            <img src="assets/images/facilities/life_carrer.jpg" alt="">
+        </div>
+        <div class="col-md-6" style="padding: 0px;">
+            <div class="row" style="margin: 0px;">
+                <div class="col-md-6 back3" style="padding: 0px;">
+                    <h2 style="margin-top: 55px;">Scholarship Programs</h2>
+            <p class="mymargin">A scholarship of up to INR 90,000 is given to candidates on first-cum-first serve basis. The candidates should fall under the merit category on the basis of their percentile in CAT/XAT/CMAT/MAT.</p>
+            <button style="margin-bottom: 21px;">READ MORE -></button>
+                </div>
+                <div class="col-md-6" style="padding: 0px;">
+                    <img src="assets/images/facilities/life_sc.jpg" alt="">
+                </div>
+            </div>
+            <div class="row" style="margin: 0px;">
+                <div class="col-md-6" style="padding: 0px;">
+                    <img src="assets/images/facilities/home_10p.jpg" alt="">
+                </div>
+                <div class="col-md-6 back4" style="padding: 0px;">
+                    <h2 style="margin-top: 55px;">Career Opportunities</h2>
+            <p class="mymargin">Start your journey to success with GNIM! Gain industry-relevant skills, expert guidance, and hands-on experience to shape your future. Enroll today and take the first step toward a rewarding career!</p>
+            <button style="background-color: #010c4e;">READ MORE -></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <style>
         .photo-grid {
             display: grid;
@@ -2359,7 +1761,7 @@
             transform: translateY(-3px) scale(1.05);
         }
     </style>
-    <section class="photo-grid">
+    <section class="photo-grid" style="margin-top: 3%;">
         <div class="card card-wide" style="background-image: url(assets/images/facilities/home_1.jpg)"></div>
         <div class="card card-tall" style="background-image: url(assets/images/facilities/home_2.jpg)"></div>
         <div class="card card-wide" style="background-image: url(assets/images/facilities/home_3_1.jpg)"></div>
@@ -2368,7 +1770,9 @@
         <div class="card" style="background-image: url(assets/images/facilities/home_6.jpg)"></div>
         <div class="card card-tall" style="background-image: url('assets/images/facilities/home_7.jpg')"></div>
         <div class="card" style="background-image: url('assets/images/facilities/home_8.jpg')"></div>
-        <div class="card card-wide" style="background-image: url(assets/images/facilities/life_carrer.jpg)"></div>
+        <!-- <div class="card" style="background-image: url('assets/images/facilities/home_8.jpg')"></div> -->
+        <div class="card card-wide" style="background-image: url('assets/images/facilities/vision_gnim_2.jpg')"></div>
+        
     </section>
 
     <!--================================================================================= 
@@ -2416,10 +1820,6 @@
                                                     CEO &amp; Founder, A'sara Consultants
                                                 </div>
                                             </div>
-                                            <div class="author-col table-cell valign-middle text-right">
-                                                <img src="assets/images/author-signature_1.png" alt=""
-                                                    class="author-signature">
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -2464,10 +1864,6 @@
                                                     Co-Founder &amp; CEO, JOP
                                                 </div>
                                             </div>
-                                            <div class="author-col table-cell valign-middle text-right">
-                                                <img src="assets/images/author-signature_1.png" alt=""
-                                                    class="author-signature">
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -2507,10 +1903,6 @@
                                                 Business Head - North, Dabur India Limited
                                             </div>
                                         </div>
-                                        <div class="author-col table-cell valign-middle text-right">
-                                            <img src="assets/images/author-signature_2.png" alt=""
-                                                class="author-signature">
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -2549,10 +1941,6 @@
                                                 Director, WideCare Private Limited
                                             </div>
                                         </div>
-                                        <div class="author-col table-cell valign-middle text-right">
-                                            <img src="assets/images/author-signature_3.png" alt=""
-                                                class="author-signature">
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -2561,7 +1949,7 @@
 
                     <div class="tes-singel-content">
                         <div class="testimonial-img col-lg-6 col-md-6 col-sm-12 col-xs-12"
-                            style="background-image: url(assets/images/review/Amitabh\ Tiwari.webp);"></div>
+                            style="background-image: url(assets/images/review/Taksh\ Kumar.webp);"></div>
                         <div class="testimonial-content-bl col-lg-6 col-md-6 col-sm-12 col-xs-12 ptb100">
                             <!-- title -->
                             <div class="partition_left inline-block pl30 relative mb40">
@@ -2590,10 +1978,6 @@
                                             <div class="fsize-12 fweight-600 color-17 uppercase">
                                                 Senior Manager - Human Resources, VIVO India
                                             </div>
-                                        </div>
-                                        <div class="author-col table-cell valign-middle text-right">
-                                            <img src="assets/images/author-signature_3.png" alt=""
-                                                class="author-signature">
                                         </div>
                                     </div>
                                 </div>
@@ -2631,10 +2015,6 @@
                                                 General Manager HR, DS Group
                                             </div>
                                         </div>
-                                        <div class="author-col table-cell valign-middle text-right">
-                                            <img src="assets/images/author-signature_3.png" alt=""
-                                                class="author-signature">
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -2651,383 +2031,197 @@
     <!--================================================================================= 
                                 START BLOG  
     ==================================================================================-->
-    <section id="education-blog" class="pt100 pb80">
-        <div class="education-blog">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center wow fadeIn" data-wow-duration="2s"
-                        style="visibility: visible; animation-duration: 2s; animation-name: fadeIn;">
-                        <div class="title color-2 lheight-40 mb30">
-                            <span>News & Events<span class="color-15">.</span></span>
-                        </div>
-                        <div class="spliter mb40"></div>
-                    </div>
-                    <!--====| All Blog Start |====-->
-                    <div class="all-blogs">
-                        <!-- Single Blog Item Start -->
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single-blog-item">
-                                <div class="blog-photo">
-                                    <img src="assets/images/news/Haier_visit.webp" alt="">
-                                    <div class="blog-post-date theme-bg-gradient">
-                                        <!-- <h3 class="color-white fsize-16 plr30">23-9-2018</h3> -->
-                                    </div>
-                                    <div class="blog-dtls-link color-4">
-                                        <a href="#">Check Details <i class="fa fa-share" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Blog Item End -->
-                        <!-- Single gallery Item Start -->
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single-blog-item">
-                                <div class="blog-photo">
-                                    <img src="assets/images/news/industry_insights.webp" alt="">
-                                    <div class="blog-post-date theme-bg-gradient">
-                                        <!-- <h3 class="color-white fsize-16 plr30">25-9-2018</h3> -->
-                                    </div>
-                                    <div class="blog-dtls-link color-4">
-                                        <a href="#">Check Details <i class="fa fa-share" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Blog Item End -->
-                        <!-- Single Blog Item Start -->
-                        <div class="col-md-4 col-sm-6 col-md-offset-0 col-sm-offset-3">
-                            <div class="single-blog-item">
-                                <div class="blog-photo">
-                                    <img src="assets/images/news/petrocol.webp" alt="">
-                                    <div class="blog-post-date theme-bg-gradient">
-                                        <!-- <h3 class="color-white fsize-16 plr30">26-9-2018</h3> -->
-                                    </div>
-                                    <div class="blog-dtls-link color-4">
-                                        <a href="#">Check Details <i class="fa fa-share" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Single Blog Item End -->
-                    </div>
-                    <!--====| All Blog End |====-->
-                </div>
-            </div>
-        </div>
-    </section>
+    
     <!--================================================================================= 
                                 END BLOG
     ==================================================================================-->
     <!--================================================================================= 
                                 START FOOTER  
     ==================================================================================-->
-    <style>
-        ul {
-            margin: 0px;
-            padding: 0px;
-        }
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" /> -->
+  
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 
-        .footer-section {
-            background: #151414;
-            position: relative;
-        }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
-        .footer-cta {
-            border-bottom: 1px solid #373636;
-        }
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
 
-        .single-cta i {
-            color: #ff5e14;
-            font-size: 30px;
-            float: left;
-            margin-top: 8px;
-        }
+    /* Top footer: Darker navy */
+    .footer-top {
+      background-color: #030c32;
+      color: white;
+      padding: 15px 100px;
+    }
 
-        .cta-text {
-            padding-left: 15px;
-            display: inline-block;
-        }
+    .footer-top h2 {
+      font-weight: 700;
+      font-size: 24px;
+      margin-bottom: 0;
+    }
 
-        .cta-text h4 {
-            color: #fff;
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 2px;
-        }
+    .cta-box {
+      display: flex;
+      align-items: stretch;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
 
-        .cta-text span {
-            color: #757575;
-            font-size: 15px;
-        }
+    .cta-box .phone {
+      background-color: #f89c1d;
+      color: white;
+      padding: 12px 20px;
+      font-weight: 600;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+    }
 
-        .footer-content {
-            position: relative;
-            z-index: 2;
-        }
+    .cta-box .phone i {
+      margin-right: 8px;
+    }
 
-        .footer-pattern img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 330px;
-            background-size: cover;
-            background-position: 100% 100%;
-        }
+    .cta-box .or {
+      background-color: #030c32;
+      color: white;
+      padding: 12px 20px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
 
-        .footer-logo {
-            margin-bottom: 30px;
-        }
+    .cta-box .apply {
+      background-color: white;
+      color: #030c32;
+      padding: 12px 20px;
+      font-weight: bold;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
 
-        .footer-logo img {
-            max-width: 200px;
-        }
+    .cta-box .apply:hover {
+      background-color: #f1f1f1;
+    }
 
-        .footer-text p {
-            margin-bottom: 14px;
-            font-size: 14px;
-            color: #7e7e7e;
-            line-height: 28px;
-        }
+    /* Bottom footer: Slightly lighter */
+    .footer-bottom {
+      background-color: #000522;
+      color: white;
+      padding: 100px 100px;
+    }
 
-        .footer-social-icon span {
-            color: #fff;
-            display: block;
-            font-size: 20px;
-            font-weight: 700;
-            font-family: 'Poppins', sans-serif;
-            margin-bottom: 20px;
-        }
+    .footer-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #f89c1d;
+      margin-bottom: 20px;
+    }
 
-        .footer-social-icon a {
-            color: #fff;
-            font-size: 16px;
-            margin-right: 15px;
-        }
+    .footer-link {
+      color: white;
+      font-size: 14px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
 
-        .footer-social-icon i {
-            height: 40px;
-            width: 40px;
-            text-align: center;
-            line-height: 38px;
-            border-radius: 50%;
-        }
+    .footer-link i {
+      color: #f89c1d;
+      font-size: 12px;
+      margin-right: 8px;
+    }
 
-        .facebook-bg {
-            background: #3B5998;
-        }
+    .footer-link:hover {
+      color: #f89c1d;
+    }
 
-        .twitter-bg {
-            background: #55ACEE;
-        }
+    .contact-info i {
+      color: #f89c1d;
+      margin-right: 8px;
+    }
 
-        .google-bg {
-            background: #DD4B39;
-        }
+    .contact-info p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
 
-        .footer-widget-heading h3 {
-            color: #fff;
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .footer-widget-heading h3::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -15px;
-            height: 2px;
-            width: 50px;
-            background: #ff5e14;
-        }
-
-        .footer-widget ul li {
-            display: inline-block;
-            float: left;
-            width: 50%;
-            margin-bottom: 12px;
-        }
-
-        .footer-widget ul li a:hover {
-            color: #ff5e14;
-        }
-
-        .footer-widget ul li a {
-            color: #878787;
-            text-transform: capitalize;
-        }
-
-        .subscribe-form {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .subscribe-form input {
-            width: 100%;
-            padding: 14px 28px;
-            background: #2E2E2E;
-            border: 1px solid #2E2E2E;
-            color: #fff;
-        }
-
-        .subscribe-form button {
-            position: absolute;
-            right: 0;
-            background: #ff5e14;
-            padding: 13px 20px;
-            border: 1px solid #ff5e14;
-            top: 0;
-        }
-
-        .subscribe-form button i {
-            color: #fff;
-            font-size: 22px;
-            transform: rotate(-6deg);
-        }
-
-        .copyright-area {
-            background: #202020;
-            padding: 25px 0;
-        }
-
-        .copyright-text p {
-            margin: 0;
-            font-size: 14px;
-            color: #878787;
-        }
-
-        .copyright-text p a {
-            color: #ff5e14;
-        }
-
-        .footer-menu li {
-            display: inline-block;
-            margin-left: 20px;
-        }
-
-        .footer-menu li:hover a {
-            color: #ff5e14;
-        }
-
-        .footer-menu li a {
-            font-size: 14px;
-            color: #878787;
-        }
-    </style>
-    <footer class="footer-section">
-        <div class="container">
-            <div class="footer-cta pt-5 pb-5">
-                <div class="row">
-                    <div class="col-xl-4 col-md-4 mb-30">
-                        <div class="single-cta">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="cta-text">
-                                <h4>Find us</h4>
-                                <span>Plot No. 6C, Knowledge Park 2, Greater Noida (Delhi NCR) - 201310</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-4 mb-30">
-                        <div class="single-cta">
-                            <i class="fas fa-phone"></i>
-                            <div class="cta-text">
-                                <h4>Call us</h4>
-                                <span>+91-8826124205, 8826154124</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-4 mb-30">
-                        <div class="single-cta">
-                            <i class="far fa-envelope-open"></i>
-                            <div class="cta-text">
-                                <h4>Mail us</h4>
-                                <span>admissions@gnimgreaternoida.org, info@gnimgreaternoida.org</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-content pt-5 pb-5">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 mb-50">
-                        <div class="footer-widget">
-                            <div class="footer-logo">
-                                <a href="index.html"><img src="assets/images/logog.jpg" class="img-fluid"
-                                        alt="logo"></a>
-                            </div>
-                            <div class="footer-text">
-                                <p>We work hard to prepare every student for a successful professional life.</p>
-                            </div>
-                            <div class="footer-social-icon">
-                                <span>Follow us</span>
-                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
-                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                        <div class="footer-widget">
-                            <div class="footer-widget-heading">
-                                <h3>Useful Links</h3>
-                            </div>
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">about</a></li>
-                                <li><a href="#">services</a></li>
-                                <li><a href="#">portfolio</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Our Services</a></li>
-                                <li><a href="#">Expert Team</a></li>
-                                <li><a href="#">Contact us</a></li>
-                                <li><a href="#">Latest News</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-                        <div class="footer-widget">
-                            <div class="footer-widget-heading">
-                                <h3>Subscribe</h3>
-                            </div>
-                            <div class="footer-text mb-25">
-                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
-                            </div>
-                            <div class="subscribe-form">
-                                <form action="#">
-                                    <input type="text" placeholder="Email Address">
-                                    <button><i class="fab fa-telegram-plane"></i></button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    .contact-info strong {
+          font-weight: 900;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+    }
+  </style>
+ <footer style="padding: 0;">
+  <!-- Top Section (Darker) -->
+  <div class="footer-top container-fluid">
+    <div class="row align-items-center justify-content-between" style="margin-top: 35px;">
+      <div class="col-lg-7 col-md-12 mb-3">
+        <h2>We Work Hard To Prepare Every Student For<br/>A Successful Professional Life.</h2>
+      </div>
+      <div class="col-lg-5 col-md-12 d-flex justify-content-md-start justify-content-lg-end">
+        <div class="cta-box">
+          <div class="phone"><i class="fas fa-phone"></i>+91-8826124205</div>
+          <div class="or">OR</div>
+          <a href="#" class="apply">APPLY NOW</a>
         </div>
-        <div class="copyright-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-                        <div class="copyright-text">
-                            <p>Copyright © 2025 Innoweb Solution. All rights reserved.
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-                        <div class="footer-menu">
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Terms</a></li>
-                                <li><a href="#">Privacy</a></li>
-                                <li><a href="#">Policy</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Section (Lighter) -->
+  <div class="footer-bottom container-fluid">
+    <div class="row">
+      <!-- Contact Column -->
+      <div class="col-md-6 col-lg-3 mb-4 contact-info">
+        <h5 class="footer-title fweight-600">GET IN TOUCH</h5>
+        <strong>Greater Noida Institute of Management (GNIM)</strong>
+        <p class="fsize-16"><i class="fas fa-location-dot"></i> Plot No. 6C, Knowledge Park 2, Greater Noida (Delhi NCR) - 201310</p>
+        <p class="fsize-16"><i class="fas fa-phone"></i> +91-8826124205, 8826154124</p>
+        <p class="fsize-16"><i class="fas fa-envelope"></i> admissions@gnimgreaternoida.org, info@gnimgreaternoida.org</p>
+        <p class="fsize-16"><i class="fas fa-map-marker-alt"></i> Open in Google Maps</p>
+      </div>
+
+      <!-- About Column -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <h5 class="footer-title fweight-600">About</h5>
+        <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>About Us</a>
+        <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Vision & Mission</a>
+        <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Program Highlights</a>
+        <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>AICTE Approval</a>
+        <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Contact</a>
+      </div>
+
+      <!-- Links Column -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <h5 class="footer-title fweight-600">Important Links</h5>
+        <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Accreditations & Affiliations</a>
+        <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Downloads</a>
+        <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Campus Tour</a>
+        <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>FAQ</a>
+        <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Privacy Policy</a>
+      </div>
+
+      <!-- Program Column -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <h5 class="footer-title fweight-600">Program</h5>
+        <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Academic Roadmap</a>
+        <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Pedagogy</a>
+        <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Curriculum</a>
+        <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Program Fee</a>
+        <a href="#" class="footer-link"><i class="fas fa-chevron-right"></i>Scholarship</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- partial -->
     <!--================================================================================= 
                                 END FOOTER  
@@ -3052,121 +2246,23 @@
                 <div class="modal-body">
                     <!-- contact form -->
                     <style>
-                        @media (min-width: 1200px) {
-                            .forming {
-                                position: relative;
-                                margin-top: -745px;
-                                margin-left: 844px;
-                            }
-
-                        }
-
-                        .registration-container {
-                            background-color: #fff;
-                            max-width: 500px;
-                            margin: 50px auto;
-                            padding: 30px;
-                            border-radius: 8px;
-                            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                        }
-
-                        .registration-container h1 {
-                            text-align: center;
-                            color: #2c3e50;
-                            margin-bottom: 20px;
-                            font-size: 24px;
-                        }
-
-                        .form-group {
-                            margin-bottom: 0px;
-                        }
-
-                        .form-group label {
-                            display: block;
-                            color: #34495e;
-                            margin-bottom: 5px;
-                            font-size: 14px;
-                        }
-
-                        .form-group input,
-                        .form-group select {
-                            width: 100%;
-                            padding: 10px;
-                            border: 1px solid #bdc3c7;
-                            border-radius: 5px;
-                            font-size: 14px;
-                        }
-
-                        .form-group.checkbox {
-                            display: flex;
-                            align-items: flex-start;
-                            gap: 10px;
-                        }
-
-                        .form-group.checkbox input {
-                            margin-top: 5px;
-                            left: -190px;
-                        }
-
-                        button {
-                            /* width: 100%; */
-                            padding: 12px;
-                            background-color: #ffa100;
-                            color: #fff;
-                            border: none;
-                            border-radius: 5px;
-                            font-size: 16px;
-                            cursor: pointer;
-                            margin-top: 10px;
-                        }
-
-                        button:hover {
-                            background-color: #1c5980;
-                        }
-
-                        .success-message {
-                            text-align: center;
-                            color: green;
-                            margin-top: 15px;
-                            font-weight: bold;
-                        }
-
-                        /* Responsive Design */
-                        @media screen and (max-width: 600px) {
-                            .registration-container {
-                                margin: 20px;
-                                padding: 20px;
-                            }
-
-                            .registration-container h1 {
-                                font-size: 20px;
-                            }
-
-                            .form-group input,
-                            .form-group select {
-                                font-size: 13px;
-                            }
-
-                            button {
-                                font-size: 15px;
-                            }
-                        }
+                        
                     </style>
                     <!-- <section class="forming"> -->
                     <div class="registration-container">
                         <h1 style="color: #ffa100;">Admissions Open 2025-27</h1>
                         <form id="registrationForm">
                             <div class="form-group">
-                                <label for="fullName">Full Name*</label>
-                                <input type="text" id="fullName" required />
+                                <!-- <label for="fullName">Full Name*</label> -->
+                                <input type="text" id="fullName" placeholder="Full name" required />
                             </div>
                             <div class="form-group">
-                                <label for="email">Email Address*</label>
-                                <input type="email" id="email" required />
+                                <!-- <label for="email">Email Address*</label> -->
+                                <input type="email" id="email" placeholder="Enter Email" required />
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone Number*</label>
-                                <input type="tel" id="phone" required />
+                                <input type="tel" id="phone" placeholder="Phone Number" required />
                             </div>
                             <div class="form-group">
                                 <label for="state">Select State*</label>
@@ -3232,7 +2328,7 @@
                     </script>
 
                 </div>
-            </div>
+            </div> 
         </div>
     </div>
     <!--================================================================================= 
