@@ -2194,14 +2194,33 @@ nav.top-nav-collapse {
     background-color: #ffa100;
     text-align: center;
 }
+.back3 h2{
+    margin-top: 55px;
+}
+@media (max-width:1200px) {
+    .back3 h2{
+        margin: 0;
+    }
+}
 .back4{
         color: white;
     background-color: #010c4e;
     text-align: center;
 }
+.back4 h2{
+    margin-top: 55px;
+}
+@media (max-width:1200px) {
+    .back4 h2{
+        margin: 0;
+    }
+}
 .mymargin{
     margin: -15px 33px 0px 33px;
     font-size: 16px;
+}
+.object_fit{
+    object-fit: cover;
 }
 /* ==========================================================================
    07. Price section
