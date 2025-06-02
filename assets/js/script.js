@@ -152,14 +152,14 @@
     /*-------------------------------*/
 
     $('.testimonials-slider').slick({
-        arrows: false,
+        arrows: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
         draggable: true,
         dots: true,
         respondTo: 'window',
-        autoplay: false
+        autoplay: true
     });
 
 
