@@ -1748,8 +1748,10 @@ nav.top-nav-collapse {
     border-radius: 25px;
     text-align: center;
     max-width: 315px;
-    font-size: 25px;
+    font-size: 20px;
     z-index: 2;
+        padding-left: 19px;
+    padding-right: 19px;
 }
 /* ==========================================================================
    04. course SECTION
@@ -1914,7 +1916,7 @@ nav.top-nav-collapse {
     color: white;
 }
 
-.proinfo:hover{
+.hoverc:hover{
 
     color: #ffa100;
     background-color: white;
