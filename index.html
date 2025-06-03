@@ -71,7 +71,7 @@
                     </button>
                     <!-- 5* Logo -->
                     <a href="#education-home" class="brand-logo">
-                        <img src="assets/images/logog.jpg" alt="karbar logo">
+                        <img src="assets/images/logog.jpg" alt="karbar logo" class="footer-logo">
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
@@ -248,7 +248,7 @@
                                 <p style="color: black;">GNIM Video</p>
                             </div>
                             <div class="single-media">
-                                <a href="#education-courses"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
                                 <p style="color: black;">Courses</p>
                             </div>
                             <div class="single-media">
@@ -847,7 +847,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6" style="margin-bottom: 15px;">
                             <div class="proinfo slide-left hoverc" style="background-color: white;">
                                 <i class="fa-solid fa-graduation-cap color-1"></i>
                                 <h3 class="marginde">Post Graduate Diploma in Management(PGDM)</h3>
@@ -862,7 +862,7 @@
                     </div>
                     <div class="row">
 
-                        <div class="col-md-6">
+                        <div class="col-md-6" style="margin-bottom: 15px;">
                             <div class="proinfo textw slide-left hoverc">
                                 <i class="fa-solid fa-user-doctor color-1"></i>
                                 <h3 class="marginde">Dual Specialization</h3>
@@ -882,7 +882,7 @@
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
     <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
     <style>
         @import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
@@ -929,22 +929,22 @@
     <section id="education-placement" class="jaupper">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 text-center">
+                <div class="col-md-3 col-sm-6 text-center">
                     <h1><i class="fa fa-users color-3"></i></h1>
                     <span class="counter">100</span> <i class="color-1">%</i>
                     <h4>100 % Placement Record</h4>
                 </div>
-                <div class="col-md-3 text-center">
+                <div class="col-md-3 col-sm-6 text-center">
                     <h1><i class="fa fa-desktop color-3"></i></h1>
                     <span class="counter">35</span> <i class="color-1">LPA</i>
                     <h4>Highest Package</h4>
                 </div>
-                <div class="col-md-3 text-center">
+                <div class="col-md-3 col-sm-6 text-center">
                     <h1><i class="fa-solid fa-graduation-cap color-3"></i></h1>
                     <span class="counter">200</span><i class="color-1">+</i>
                     <h4>Companies Recruiters</h4>
                 </div>
-                <div class="col-md-3 text-center">
+                <div class="col-md-3 col-sm-6 text-center">
                     <h1><i class="fa fa-coffee color-3"></i></h1>
                     <span class="counter">5.5</span><i class="color-1">LPA</i>
                     <h4>Placement Opportunity Assurance (POA)</h4>
@@ -1539,6 +1539,7 @@ jQuery(function ($) {
             box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
             -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
         }
+
         .game-section .item:hover {
             width: 500px;
             box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
@@ -1572,6 +1573,7 @@ jQuery(function ($) {
             transform: none;
             -webkit-transform: none;
         }
+
         .game-section .item:hover .item-desc {
             transform: none;
             -webkit-transform: none;
@@ -1590,6 +1592,7 @@ jQuery(function ($) {
             -webkit-transform: translateY(0);
             transform: translateY(0);
         }
+
         .game-section .item:hover .item-desc p {
             opacity: 1;
             -webkit-transform: translateY(0);
@@ -1733,31 +1736,32 @@ jQuery(function ($) {
             }
 
         }
+
         /* Enable active state for touch devices */
-.game-section .item.active {
-    width: 500px;
-    box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
-    -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
-}
+        .game-section .item.active {
+            width: 500px;
+            box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+            -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+        }
 
-/* Ensure the description expands and shows paragraph on click */
-.game-section .item.active .item-desc {
-    transform: none;
-    -webkit-transform: none;
-}
+        /* Ensure the description expands and shows paragraph on click */
+        .game-section .item.active .item-desc {
+            transform: none;
+            -webkit-transform: none;
+        }
 
-.game-section .item.active .item-desc p {
-    opacity: 1;
-    transform: translateY(0);
-    -webkit-transform: translateY(0);
-}
-@media (max-width: 767px) {
-    .game-section .item.active {
-        width: 270px; /* or 100% */
-    }
-}
+        .game-section .item.active .item-desc p {
+            opacity: 1;
+            transform: translateY(0);
+            -webkit-transform: translateY(0);
+        }
 
-
+        @media (max-width: 767px) {
+            .game-section .item.active {
+                width: 270px;
+                /* or 100% */
+            }
+        }
     </style>
     <section id="education-infrastructure" class="game-section">
         <div class="container">
@@ -2267,6 +2271,17 @@ jQuery(function ($) {
             padding: 100px 100px;
         }
 
+        .footer-logo {
+  width: 180px; /* default size for desktop */
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .footer-logo {
+    width: 120px; /* smaller size for mobile */
+  }
+}
+
         @media (max-width: 600px) {
             .okthen {
                 display: grid;
@@ -2277,6 +2292,7 @@ jQuery(function ($) {
             .footer-bottom {
                 padding: 20px !important;
             }
+
         }
 
 
@@ -2412,7 +2428,7 @@ jQuery(function ($) {
                     <span style="margin: 10px; padding: 10px;">Greater Noida Institute of Management</span>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4">
-                    <img src="assets/images/logog.jpg" alt="">
+                    <img src="assets/images/logog.jpg" alt="" class="footer-logo">
                 </div>
                 <div class="col-md-6 col-lg-5 mb-4">
                     <span style="margin: 10px; padding: 10px;">Copyright © 2025 <a
