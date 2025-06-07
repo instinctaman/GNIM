@@ -58,10 +58,10 @@
     <!--================================================================================= 
                                 START HEADER
     ==================================================================================-->
-    <header>
+    <header style="margin-bottom: 85px;" id="education-home">
         <!--Nav Menu Starts-->
         <nav class="navbar default nav-mob " style="
-    margin-bottom: 0px;">
+    margin-bottom: 0px; position: fixed;">
             <div class="container mob-logo">
                 <div class="navbar-header col-sm-2 tablet-logo">
                     <button type="button" class="navbar-toggle mob-menu" data-toggle="collapse" data-target="#myNavbar">
@@ -72,11 +72,11 @@
                     <!-- 5* Logo -->
                     <a href="#education-home" class="brand-logo">
                         <img src="assets/images/logog.jpg" alt="karbar logo" class="footer-logo">
-                    </a>
+                    </a> 
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <!-- Menu itmes -->
-                    <ul class="nav navbar-nav pull-right">
+                    <ul class="nav navbar-nav pull-right fade-right">
                         <li class="active">
                             <a href="#education-home">Home</a>
                         </li>
@@ -483,11 +483,11 @@
         }
 
         .owl-nav button.owl-prev {
-            left: 0;
+            left: -50px;
         }
 
         .owl-nav button.owl-next {
-            right: 0;
+            right: -50px;
         }
 
         .owl-dots {
@@ -836,7 +836,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="color-1" style="font-size: 20px;">ACADEMIC</div>
+                    <div class="color-1" style="font-size: 80px;">ACADEMIC</div>
                     <h2 style="color: white;" class="slide-right">Program Offered by (GNIM)</h2>
                     <p style="    color: #a1a3b1;">Greater Noida Institute of Management (GNIM) offers a range of
                         programs tailored for future business leaders, including PGDM and MBA courses with options for
@@ -1516,6 +1516,32 @@ jQuery(function ($) {
             display: flex;
             display: -webkit-flex;
         }
+        .owl-nav {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 99;
+}
+
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+    pointer-events: all;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.owl-nav .owl-prev:hover,
+.owl-nav .owl-next:hover {
+    background: #e73700;
+}
 
         .game-section .item {
             margin: 0 15px 60px;
@@ -1783,7 +1809,7 @@ jQuery(function ($) {
             </div>
         </div>
         <div class="owl-carousel custom-carousel owl-theme">
-            <div class="item active" style="background-image: url(assets/images/facilities/home_9.webp);">
+            <div class="item" style="background-image: url(assets/images/facilities/home_9.webp);">
                 <div class="item-desc">
                     <h3>Student Life</h3>
                     <p>GNIM fosters a dynamic and engaging campus life, ensuring students develop both academically and
@@ -1809,26 +1835,48 @@ jQuery(function ($) {
         </div>
     </section>
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
-    <script>
+   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
+<script>
+    $(document).ready(function () {
         $(".custom-carousel").owlCarousel({
+            loop: true,
+            margin: 20,
             autoWidth: true,
-            loop: true
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            nav: true,
+            dots: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            },
+            navText: [
+    "<span class='owl-prev'>&#10094;</span>",
+    "<span class='owl-next'>&#10095;</span>"
+]
+
         });
 
-        // Detect touch devices
-        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints;
-
+        // Enable tap/click to expand on touch devices
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
         if (isTouchDevice) {
-            $(document).ready(function () {
-                $(".custom-carousel .item").on("click", function () {
-                    $(".custom-carousel .item").not(this).removeClass("active");
-                    $(this).toggleClass("active");
-                });
+            $(".custom-carousel .item").on("click", function () {
+                $(".custom-carousel .item").not(this).removeClass("active");
+                $(this).toggleClass("active");
             });
         }
-    </script>
+    });
+</script>
+
 
 
 
@@ -2272,15 +2320,17 @@ jQuery(function ($) {
         }
 
         .footer-logo {
-  width: 180px; /* default size for desktop */
-  height: auto;
-}
+            width: 180px;
+            /* default size for desktop */
+            height: auto;
+        }
 
-@media (max-width: 767px) {
-  .footer-logo {
-    width: 120px; /* smaller size for mobile */
-  }
-}
+        @media (max-width: 767px) {
+            .footer-logo {
+                width: 120px;
+                /* smaller size for mobile */
+            }
+        }
 
         @media (max-width: 600px) {
             .okthen {
@@ -2424,13 +2474,13 @@ jQuery(function ($) {
             </div>
             <div class="line"></div>
             <div class="row okthen">
-                <div class="col-md-6 col-lg-4 mb-4">
+                <div class="col-md-6 col-lg-4 mb-4 text-center">
                     <span style="margin: 10px; padding: 10px;">Greater Noida Institute of Management</span>
                 </div>
-                <div class="col-md-6 col-lg-3 mb-4">
+                <div class="col-md-6 col-lg-3 mb-4 text-center">
                     <img src="assets/images/logog.jpg" alt="" class="footer-logo">
                 </div>
-                <div class="col-md-6 col-lg-5 mb-4">
+                <div class="col-md-6 col-lg-5 mb-4 text-center">
                     <span style="margin: 10px; padding: 10px;">Copyright © 2025 <a
                             href="https://innowebsolution.com/">Innoweb Solution</a>. All rights reserved.</span>
                 </div>

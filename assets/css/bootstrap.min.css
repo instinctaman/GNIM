@@ -3764,7 +3764,7 @@ input[type="submit"].btn-block,input[type="reset"].btn-block,input[type="button"
 }
 
 .fade {
-    opacity: 0;
+    opacity: 0.5;
     -webkit-transition: opacity .15s linear;
     -o-transition: opacity .15s linear;
     transition: opacity .15s linear
@@ -3773,7 +3773,19 @@ input[type="submit"].btn-block,input[type="reset"].btn-block,input[type="button"
 .fade.in {
     opacity: 1
 }
-
+.fade-right{
+    animation: faderight 1s ease-in-out;
+}
+@keyframes faderight {
+    from{
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 .collapse {
     display: none
 }
