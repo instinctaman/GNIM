@@ -1405,105 +1405,7 @@ nav.top-nav-collapse {
 
 
 
-@media (min-width: 1200px) {
-            .forming {
-                position: relative;
-                margin-top: -500px;
-                margin-left: 844px;
-            }
 
-        }
-
-        .registration-container {
-            background-color: #fff;
-            max-width: 365px;
-            margin: 50px auto;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .registration-container h1 {
-            text-align: center;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-size: 24px;
-        }
-
-        .form-group {
-            margin-bottom: 0px;
-        }
-
-        .form-group label {
-            display: block;
-            color: #34495e;
-            margin-bottom: 5px;
-            font-size: 14px;
-        }
-
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #bdc3c7;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
-        .form-group.checkbox {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
-        .form-group.checkbox input {
-            margin-top: 5px;
-            left: -135px;
-        }
-
-        button {
-            /* width: 100%; */
-            padding: 12px;
-            background-color: #ffa100;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        button:hover {
-            background-color: #1c5980;
-        }
-
-        .success-message {
-            text-align: center;
-            color: green;
-            margin-top: 15px;
-            font-weight: bold;
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 600px) {
-            .registration-container {
-                margin: 20px;
-                padding: 20px;
-            }
-
-            .registration-container h1 {
-                font-size: 20px;
-            }
-
-            .form-group input,
-            .form-group select {
-                font-size: 13px;
-            }
-
-            button {
-                font-size: 15px;
-            }
-        }
 /* ==========================================================================
    03. Home Banner Area style
    ========================================================================== */
@@ -1514,7 +1416,6 @@ nav.top-nav-collapse {
     position: relative;
     z-index: 1;
     min-height: 475px;
-    margin-top: -150px;
 }
 
 .banner-area::before {
@@ -1620,6 +1521,7 @@ nav.top-nav-collapse {
     font-size: 18px;
     line-height: 27px;
     max-width: 160px;
+    color: white;
 }
 
 .banner-area .banner-txt .app-media .single-media:nth-child(2) {
@@ -1650,7 +1552,7 @@ nav.top-nav-collapse {
 .popup-vedio .circle-1 {
     width: 100%;
     height: 100%;
-    background-color: #313C4F;
+    background-color: #ffa100;
     top: 0;
     animation: pulse 1.2s linear 0s infinite;
 }
@@ -1658,11 +1560,20 @@ nav.top-nav-collapse {
 .popup-vedio .circle-2 {
     width: 100%;
     height: 100%;
-    background-color: #333;
+    background-color: #ffa100;
     top: 0;
     animation: pulse-2 1.2s linear 0s infinite;
 }
-
+@media (min-width:768) {
+    .single-media p{
+        color: white;
+    }
+}
+@media (max-width:767) {
+    .single-media p{
+        color: #000;
+    }
+}
 @keyframes pulse {
     0% {
         transform: scale(0);
@@ -2201,6 +2112,7 @@ nav.top-nav-collapse {
 }
 .back3 h2{
     margin-top: 55px;
+    margin-bottom: 45px;
 }
 @media (max-width:1200px) {
     .back3 h2{
@@ -2214,6 +2126,7 @@ nav.top-nav-collapse {
 }
 .back4 h2{
     margin-top: 55px;
+    margin-bottom: 45px;
 }
 @media (max-width:1200px) {
     .back4 h2{
@@ -2222,7 +2135,7 @@ nav.top-nav-collapse {
 }
 .mymargin{
     margin: -15px 33px 0px 33px;
-    font-size: 16px;
+    font-size: 17px;
 }
 .object_fit{
     object-fit: cover;
@@ -2285,7 +2198,7 @@ nav.top-nav-collapse {
 .testimonial-bg {
     background: url(../images/icons/testimonial-icon.png) no-repeat;
     box-shadow: 0px 10px 70px 0px rgba(0, 0, 0, 0.26);
-    padding: 40px 20px 20px;
+    padding: 65px 20px 20px;
 }
 
 .testimonials-slider {
@@ -2299,7 +2212,7 @@ nav.top-nav-collapse {
 .testimonials-slider .testimonial-img {
     background-repeat: no-repeat;
     background-position: center center;
-    height: 615px;
+    height: 500px;
     padding: 0;
     position: relative;
 }
@@ -2323,7 +2236,7 @@ nav.top-nav-collapse {
 }
 
 .testimonials-slider .slick-dots {
-    bottom: 100px;
+    bottom: 60px;
     left: 52%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);

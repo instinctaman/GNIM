@@ -125,87 +125,87 @@
                                 END HEADER
     ==================================================================================-->
 
+<link rel="stylesheet" href="assets/css/forming.css">
+     <section class="forming">
+  <div class="reg-box">
+    <div class="reg-title">Admissions Open 2025-27</div>
+    <form class="reg-form" onsubmit="return handleSubmit(event)">
+      <input type="text" class="reg-input" placeholder="Enter Name*" required />
 
-    <style>
+      <input type="email" class="reg-input" placeholder="Enter Email*" required />
 
-    </style>
-    <section class="forming">
-        <div class="registration-container" style="margin-bottom: 70px;">
-            <h1 style="color: #ffa100; margin-top: 0; margin-bottom: 15px;">Admissions Open 2025-27</h1>
-            <form id="registrationForm">
-                <div class="form-group" style="margin: 0;">
-                    <!-- <label for="fullName">Full Name*</label> -->
-                    <input type="text" id="fullName" placeholder="Full Name" required />
-                </div>
-                <div class="form-group" style="margin: 0;">
-                    <!-- <label for="email">Email Address*</label> -->
-                    <input type="email" id="email" placeholder="Enter Email" required />
-                </div>
-                <div class="form-group" style="margin: 0;">
-                    <!-- <label for="phone">Phone Number*</label> -->
-                    <input type="tel" id="phone" placeholder="Phone Number" required />
-                </div>
-                <div class="form-group" style="margin: 0;">
-                    <label for="state">Select State*</label>
-                    <select id="state" required>
-                        <option value="">--Select State--</option>
-                        <option value="UP">Uttar Pradesh</option>
-                        <option value="DL">Delhi</option>
-                        <option value="HR">Haryana</option>
-                    </select>
-                </div>
-                <div class="form-group" style="margin: 0;">
-                    <label for="city">Select City*</label>
-                    <select id="city" required>
-                        <option value="">--Select City--</option>
-                        <option value="Noida">Noida</option>
-                        <option value="Delhi">Delhi</option>
-                        <option value="Gurgaon">Gurgaon</option>
-                    </select>
-                </div>
-                <div class="form-group" style="margin: 0;">
-                    <label for="course">Select Course*</label>
-                    <select id="course" required>
-                        <option value="">--Select Course--</option>
-                        <option value="BCA">BCA</option>
-                        <option value="BBA">BBA</option>
-                        <option value="MBA">MBA</option>
-                    </select>
-                </div>
-                <div class="form-group checkbox">
-                    <input type="checkbox" id="consent" required />
-                    <label for="consent">
-                        I authorize GNIM and its representatives to contact me with updates and notifications.
-                    </label>
-                </div>
-                <button type="submit">Register Now</button>
-                <p id="successMsg" class="success-message"></p>
-            </form>
-        </div>
-    </section>
-    <script>
-        document.getElementById("registrationForm").addEventListener("submit", function (e) {
-            e.preventDefault();
+      <div class="reg-phone-wrapper">
+        <span class="reg-phone-prefix">+91</span>
+        <input type="tel" class="reg-input" pattern="[0-9]{10}" maxlength="10"
+          placeholder="Phone Number*" required style="border:none;outline:none;padding-left:0;background:transparent;" />
+      </div>
 
-            const fullName = document.getElementById("fullName").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const phone = document.getElementById("phone").value.trim();
-            const state = document.getElementById("state").value;
-            const city = document.getElementById("city").value;
-            const course = document.getElementById("course").value;
-            const consent = document.getElementById("consent").checked;
+      <select class="reg-select" id="state-select" required>
+        <option value="" disabled selected>Select State*</option>
+        <option>Andhra Pradesh</option>
+<option>Arunachal Pradesh</option>
+<option>Assam</option>
+<option>Bihar</option>
+<option>Chhattisgarh</option>
+<option>Goa</option>
+<option>Gujarat</option>
+<option>Haryana</option>
+<option>Himachal Pradesh</option>
+<option>Jharkhand</option>
+<option>Karnataka</option>
+<option>Kerala</option>
+<option>Madhya Pradesh</option>
+<option>Maharashtra</option>
+<option>Manipur</option>
+<option>Meghalaya</option>
+<option>Mizoram</option>
+<option>Nagaland</option>
+<option>Odisha</option>
+<option>Punjab</option>
+<option>Rajasthan</option>
+<option>Sikkim</option>
+<option>Tamil Nadu</option>
+<option>Telangana</option>
+<option>Tripura</option>
+<option>Uttar Pradesh</option>
+<option>Uttarakhand</option>
+<option>West Bengal</option>
 
-            if (!fullName || !email || !phone || !state || !city || !course || !consent) {
-                alert("Please fill all fields and agree to the terms.");
-                return;
-            }
+        <!-- Add all states as needed -->
+      </select>
 
-            document.getElementById("successMsg").textContent =
-                "Registration successful! Our team will contact you shortly.";
-            this.reset();
-        });
+      <select class="reg-select" id="city-select" required>
+        <option value="" disabled selected>Select City*</option>
+      </select>
 
-    </script>
+      <select class="reg-select" required>
+        <option value="" disabled selected>Select Course*</option>
+        <option>B.Tech</option>
+        <option>MBA</option>
+        <option>BBA</option>
+      </select>
+
+      <div class="reg-checkbox-row">
+        <input type="checkbox" required style="position: relative;
+    top: 6px;"/>
+        <label style="    font-size: 14px;">
+          I authorize VSIET and its representative to contact me with updates and notifications via Email, SMS, WhatsApp, and Call.
+        </label>
+      </div>
+
+      <!-- Google reCAPTCHA -->
+      <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
+
+      <button type="submit" class="reg-button">Register</button>
+    </form>
+
+    <div class="reg-footer-row">
+      <span>Already Registered?</span>
+      <span class="reg-login-link" onclick="alert('Login action')">Login</span>
+    </div>
+  </div>
+</section>
+        <script src="assets/js/formings.js"></script>
     <!--================================================================================= 
                                 START 5* APP HOME
     ==================================================================================-->
@@ -246,16 +246,16 @@
                                     <div class="circle circle-1"></div>
                                     <div class="circle circle-2"></div>
                                 </a>
-                                <p style="color: black;">GNIM Video</p>
+                                <p>GNIM Video</p>
                             </div>
                             <div class="single-media">
                                 <a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
-                                <p style="color: black;">Courses</p>
+                                <p>Courses</p>
                             </div>
                             <div class="single-media">
                                 <a data-toggle="modal" data-target="#education-contact"><i
                                         class="fa-solid fa-clipboard-question"></i></a>
-                                <p style="color: black;">Apply Now</p>
+                                <p>Apply Now</p>
                             </div>
                         </div>
                     </div>
@@ -279,7 +279,7 @@
             margin-right: auto;
             background: #f9f9f9;
             padding-bottom: 30px;
-            height: 150px;
+            height: 240px;
         }
 
         #ourclients .clients-wrap {
@@ -328,7 +328,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <div id="ourclients" class="mb120">
         <center>
-            <h2 style="margin-bottom: 20px; margin-top: -100px;">Academic Tie-Ups</h2>
+            <h2 style="margin-bottom: 0;
+    margin-top: -160px;
+    padding: 37px;">Academic Tie-Ups</h2>
         </center>
         <div class="clients-wrap">
             <ul id="clientlogo" class="clearfix">
@@ -484,11 +486,11 @@
         }
 
         .owl-nav button.owl-prev {
-            left: -50px;
+            left: -125px;
         }
 
         .owl-nav button.owl-next {
-            right: -50px;
+            right: -125px;
         }
 
         .owl-dots {
@@ -516,7 +518,7 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.38) !important;
+            /* background: rgba(255, 255, 255, 0.38) !important; */
         }
 
         span {
@@ -565,7 +567,7 @@
     width: 100%;
 } */
     </style>
-    <section class="container">
+    <section class="container" style="background-color: #f9f9f9;">
         <h2 style="text-align: center; margin-bottom: 0px;">Awards</h2>
         <div class="owl-slider">
             <div id="carousel" class="owl-carousel">
@@ -813,8 +815,8 @@
 
 
 
-    <section class="videosection">
-        <h2 style="text-align: center;">Explore Our Campus</h2>
+    <section class="videosection" style="background-color: #f9f9f9;">
+        <h2 style="text-align: center; padding: 20px">Explore Our Campus</h2>
         <iframe width="695" height="391" src="https://www.youtube.com/embed/hElbFa5ryGY"
             title=" Best Management Institute in Delhi-NCR | PGDM | GNIM" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -837,7 +839,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="color-1" style="font-size: 80px;">ACADEMIC</div>
+                    <div class="color-1" style="font-size: 34px;">ACADEMIC</div>
                     <h2 style="color: white;" class="slide-right">Program Offered by (GNIM)</h2>
                     <p style="    color: #a1a3b1;">Greater Noida Institute of Management (GNIM) offers a range of
                         programs tailored for future business leaders, including PGDM and MBA courses with options for
@@ -1459,7 +1461,7 @@ jQuery(function ($) {
             color: #e73700;
         }
 
-        h2 {
+        .col-lg-5 h2 {
             margin-bottom: 48px;
             padding-bottom: 16px;
             line-height: 28px;
@@ -1476,6 +1478,11 @@ jQuery(function ($) {
 
         button {
             outline: none !important;
+            color: white;
+    background-color: #ffa100;
+    padding: 10px;
+    width: 200px;
+    border-radius: 15px;
         }
 
         /******* Common Element CSS End *********/
@@ -1790,7 +1797,7 @@ jQuery(function ($) {
             }
         }
     </style>
-    <section id="education-infrastructure" class="game-section">
+    <section id="education-infrastructure" class="game-section" style="background-color: #f9f9f9;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5">
@@ -1894,7 +1901,7 @@ jQuery(function ($) {
                         <p class="mymargin">A scholarship of up to INR 90,000 is given to candidates on first-cum-first
                             serve basis. The candidates should fall under the merit category on the basis of their
                             percentile in CAT/XAT/CMAT/MAT.</p>
-                        <a href="https://gnimgreaternoida.org/fees-structure"><button style="margin-bottom: 21px;">READ
+                        <a href="https://gnimgreaternoida.org/fees-structure"><button style="margin-bottom: 31px; border: none;">READ
                                 MORE -></button></a>
                     </div>
                     <div class="col-md-6" style="padding: 0px;">
@@ -1910,7 +1917,7 @@ jQuery(function ($) {
                         <p class="mymargin">Start your journey to success with GNIM! Gain industry-relevant skills,
                             expert guidance, and hands-on experience to shape your future. Enroll today and take the
                             first step toward a rewarding career!</p>
-                        <a href="https://apply.gnimgreaternoida.in/"><button style="background-color: #010c4e;">READ
+                        <a href="https://apply.gnimgreaternoida.in/"><button style="background-color: #010c4e; border: none;">READ
                                 MORE -></button></a>
                     </div>
                 </div>
@@ -1993,9 +2000,9 @@ jQuery(function ($) {
                 <div class="testimonials-slider background-2">
                     <!-- Start single item -->
                     <div class="tes-singel-content">
-                        <div class="testimonial-img col-lg-6 col-md-6 col-sm-12 col-xs-12"
+                        <div class="testimonial-img col-lg-5 col-md-6 col-sm-12 col-xs-12"
                             style="background-image: url(assets/images/review/Alpna\ Khera.webp);"></div>
-                        <div class="testimonial-content-bl col-lg-6 col-md-6 col-sm-12 col-xs-12 pt100 pb150">
+                        <div class="testimonial-content-bl col-lg-7 col-md-6 col-sm-12 col-xs-12 pt90">
                             <div class="testimonial-wrapper">
                                 <!--  Title -->
                                 <div class="partition_left inline-block pl30 relative mb40">
@@ -2035,9 +2042,9 @@ jQuery(function ($) {
 
 
                     <div class="tes-singel-content">
-                        <div class="testimonial-img col-lg-6 col-md-6 col-sm-12 col-xs-12"
+                        <div class="testimonial-img col-lg-5 col-md-6 col-sm-12 col-xs-12"
                             style="background-image: url(assets/images/review/Gaurav\ Sabharwal.webp);"></div>
-                        <div class="testimonial-content-bl col-lg-6 col-md-6 col-sm-12 col-xs-12 pt100 pb150">
+                        <div class="testimonial-content-bl col-lg-7 col-md-6 col-sm-12 col-xs-12 pt90">
                             <div class="testimonial-wrapper">
                                 <!--  Title -->
                                 <div class="partition_left inline-block pl30 relative mb40">
@@ -2079,9 +2086,9 @@ jQuery(function ($) {
                     <!-- End single item -->
                     <!-- Start single item -->
                     <div class="tes-singel-content">
-                        <div class="testimonial-img col-lg-6 col-md-6 col-sm-12 col-xs-12"
+                        <div class="testimonial-img col-lg-5 col-md-6 col-sm-12 col-xs-12"
                             style="background-image: url(assets/images/review/Amit\ Jawar.webp);"></div>
-                        <div class="testimonial-content-bl col-lg-6 col-md-6 col-sm-12 col-xs-12 ptb100">
+                        <div class="testimonial-content-bl col-lg-7 col-md-6 col-sm-12 col-xs-12 ptb100">
                             <!-- title -->
                             <div class="partition_left inline-block pl30 relative mb40">
                                 <div class="ptb5">
@@ -2117,9 +2124,9 @@ jQuery(function ($) {
                     <!-- End single item -->
                     <!-- Start single item -->
                     <div class="tes-singel-content">
-                        <div class="testimonial-img col-lg-6 col-md-6 col-sm-12 col-xs-12"
+                        <div class="testimonial-img col-lg-5 col-md-6 col-sm-12 col-xs-12"
                             style="background-image: url(assets/images/review/Amitabh\ Tiwari.webp);"></div>
-                        <div class="testimonial-content-bl col-lg-6 col-md-6 col-sm-12 col-xs-12 ptb100">
+                        <div class="testimonial-content-bl col-lg-7 col-md-6 col-sm-12 col-xs-12 ptb100">
                             <!-- title -->
                             <div class="partition_left inline-block pl30 relative mb40">
                                 <div class="ptb5">
@@ -2154,9 +2161,9 @@ jQuery(function ($) {
                     </div>
 
                     <div class="tes-singel-content">
-                        <div class="testimonial-img col-lg-6 col-md-6 col-sm-12 col-xs-12"
+                        <div class="testimonial-img col-lg-5 col-md-6 col-sm-12 col-xs-12"
                             style="background-image: url(assets/images/review/Taksh\ Kumar.webp);"></div>
-                        <div class="testimonial-content-bl col-lg-6 col-md-6 col-sm-12 col-xs-12 ptb100">
+                        <div class="testimonial-content-bl col-lg-7 col-md-6 col-sm-12 col-xs-12 ptb100">
                             <!-- title -->
                             <div class="partition_left inline-block pl30 relative mb40">
                                 <div class="ptb5">
@@ -2192,9 +2199,9 @@ jQuery(function ($) {
                     </div>
 
                     <div class="tes-singel-content">
-                        <div class="testimonial-img col-lg-6 col-md-6 col-sm-12 col-xs-12"
+                        <div class="testimonial-img col-lg-5 col-md-6 col-sm-12 col-xs-12"
                             style="background-image: url(assets/images/review/Debargha\ Deb.webp);"></div>
-                        <div class="testimonial-content-bl col-lg-6 col-md-6 col-sm-12 col-xs-12 ptb100">
+                        <div class="testimonial-content-bl col-lg-7 col-md-6 col-sm-12 col-xs-12 ptb100">
                             <!-- title -->
                             <div class="partition_left inline-block pl30 relative mb40">
                                 <div class="ptb5">
@@ -2308,7 +2315,7 @@ jQuery(function ($) {
             display: flex;
             align-items: center;
         }
-
+a
         .cta-box .apply:hover {
             background-color: #f1f1f1;
         }
@@ -2317,7 +2324,7 @@ jQuery(function ($) {
         .footer-bottom {
             background-color: #000522;
             color: white;
-            padding: 100px 100px;
+            padding: 100px 100px 0;
         }
 
         .footer-logo {
