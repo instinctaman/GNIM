@@ -2612,11 +2612,6 @@ a
     <!--================================================================================= 
                             START ALL SCRIPTS
     ==================================================================================-->
-    <script>
-  window.onload = function () {
-    window.scrollTo(0, 0);
-  };
-</script>
 
     <!-- JQUERY LIBRARY JS -->
     <script src="assets/js/jquery-3.3.1.min.js"></script>
@@ -2639,6 +2634,20 @@ a
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <!-- CUSTOM JS -->
     <script src="assets/js/script.js"></script>
+    <script>
+  // Disable scroll restoration
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+  // Scroll to top when page is fully loaded
+  window.addEventListener('load', function () {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }, 0);
+  });
+</script>
+
 </body>
 
 </html>
