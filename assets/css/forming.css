@@ -11,15 +11,13 @@
     @media (min-width:1300px) {
        .forming{
             position: relative;
-    top: -567px;
+    top: -453px;
     z-index: 34;
     left: 60%;
     height: 0;
 
      }
-     .front_image img{
-        height: 575px;
-     }
+     
     }
     @media (min-width:1190px) and (max-width:1299px) {
       .forming {
@@ -27,17 +25,15 @@
     z-index: 34;
     left: 60%;
     height: 0;
-    bottom: 530px;
+    bottom: 423px;
 
      }
-     .front_image img{
-        height: 575px;
-     }
+     
       }
      
     .reg-box {
       width: 100%;
-      max-width: 400px;
+      max-width: 315px;
       background: #fff;
       color: #132273;
       border-radius: 8px;
@@ -59,13 +55,13 @@
     }
     .reg-input, .reg-select {
       width: 100%;
-      border: 1px solid #d3d4d3;
-      border-radius: 4px;
-      padding: 10px 12px;
-      font-size: 15px;
-      color: #333;
-      background: #fff;
-      box-sizing: border-box;
+    border: 1px solid #d3d4d3;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 12px;
+    color: #333;
+    background: #fff;
+    box-sizing: border-box;
     }
     .reg-label {
       font-size: 13px;
@@ -83,7 +79,7 @@
     .reg-phone-prefix {
       margin-right: 6px;
       color: #333;
-      font-size: 15px;
+      font-size: 12px;
       user-select: none;
     }
     .reg-checkbox-row {
@@ -103,13 +99,13 @@
       user-select: none;
     }
     .reg-button {
-      margin-top: 8px;
+      margin-top: -12px;
       background: #132273;
       color: #fff;
       border: none;
       border-radius: 5px;
       padding: 11px 0;
-      font-size: 16px;
+      font-size: 12px;
       font-weight: 600;
       cursor: pointer;
       width: 100%;

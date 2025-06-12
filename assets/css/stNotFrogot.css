@@ -886,12 +886,12 @@ img {
     padding-bottom: 30px;
 }
 
-.ptb40 {
+.ptb50 {
     padding-top: 50px;
     padding-bottom: 50px;
 }
 
-.ptb50 {
+.ptb40 {
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -1291,12 +1291,6 @@ a:focus {
    02. Main Header style
    ========================================================================== */
 
-.brand-logo img {
-    left: 0;
-    position: absolute;
-    min-width: 240px;
-    margin-top: -8px;
-}
 
 header li:hover>a {
     color: #ffa100 !important;

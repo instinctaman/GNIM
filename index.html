@@ -71,7 +71,8 @@
                         <span class="icon-bar"></span>
                     </button>
                     <!-- 5* Logo -->
-                    <a href="#education-home" class="brand-logo">
+                    <a href="#education-home" class="brand-logo" style="display: block;
+    width: 200px;">
                         <img src="assets/images/logog.jpg" alt="karbar logo" class="footer-logo">
                     </a> 
                 </div>
@@ -187,7 +188,7 @@
 
       <div class="reg-checkbox-row">
         <input type="checkbox" required />
-        <label style="    font-size: 14px;">
+        <label style="    font-size: 12px;">
           I authorize VSIET and its representative to contact me with updates and notifications via Email, SMS, WhatsApp, and Call.
         </label>
       </div>
@@ -523,7 +524,7 @@
         span {
             /* font-size: 70px;     */
             position: relative;
-            top: -5px;
+            /* top: -5px; */
         }
 
         .owl-nav button:focus {
@@ -1213,7 +1214,7 @@ jQuery(function ($) {
     <!--================================================================================= 
                                      START TEACHERS
          ==================================================================================-->
-    <section id="education-teachers" class="our_teacher ptb100">
+    <section id="education-teachers" class="our_teacher ptb40">
         <div class="container">
             <div class="row">
                 <!-- Section title -->
@@ -2326,12 +2327,14 @@ a
             padding: 100px 100px 0;
         }
 
-        .footer-logo {
-            width: 180px;
+        
+        @media (min-width: 768px) {
+            .footer-logo {
+                width: 190px;
             /* default size for desktop */
             height: auto;
+            }
         }
-
         @media (max-width: 767px) {
             .footer-logo {
                 width: 120px;
@@ -2510,98 +2513,105 @@ a
                                 START CONTACT POP-UP  
     ==================================================================================-->
     <!-- Modal -->
+     <style>
+        .modal .forming{
+            position: relative;
+    top: 0;
+    left: -15px;
+        }
+        .modal .forming .reg-box{
+            width: 598px;
+        }
+     </style>
     <div id="education-contact" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <!-- Modal content-->
-            <div class="modal-content">
+            <div class="modal-content" style="max-width: 402px;">
                 <div class="modal-header">
                     <img class="close" data-dismiss="modal" src="assets/images/icons/close-icon.png" alt="close">
                     <h4 class="modal-title">Feel free shoot a message</h4>
                 </div>
                 <div class="modal-body">
-                    <!-- contact form -->
-                    <style>
+                    <link rel="stylesheet" href="assets/css/forming.css">
+     <section class="forming">
+  <div class="reg-box">
+    <div class="reg-title">Admissions Open 2025-27</div>
+    <form class="reg-form" onsubmit="return handleSubmit(event)">
+      <input type="text" class="reg-input" placeholder="Enter Name*" required />
 
-                    </style>
-                    <!-- <section class="forming"> -->
-                    <div class="registration-container">
-                        <h1 style="color: #ffa100;">Admissions Open 2025-27</h1>
-                        <form id="registrationForm">
-                            <div class="form-group">
-                                <!-- <label for="fullName">Full Name*</label> -->
-                                <input type="text" id="fullName" placeholder="Full name" required />
-                            </div>
-                            <div class="form-group">
-                                <!-- <label for="email">Email Address*</label> -->
-                                <input type="email" id="email" placeholder="Enter Email" required />
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number*</label>
-                                <input type="tel" id="phone" placeholder="Phone Number" required />
-                            </div>
-                            <div class="form-group">
-                                <label for="state">Select State*</label>
-                                <select id="state" required>
-                                    <option value="">--Select State--</option>
-                                    <option value="UP">Uttar Pradesh</option>
-                                    <option value="DL">Delhi</option>
-                                    <option value="HR">Haryana</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="city">Select City*</label>
-                                <select id="city" required>
-                                    <option value="">--Select City--</option>
-                                    <option value="Noida">Noida</option>
-                                    <option value="Delhi">Delhi</option>
-                                    <option value="Gurgaon">Gurgaon</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="course">Select Course*</label>
-                                <select id="course" required>
-                                    <option value="">--Select Course--</option>
-                                    <option value="BCA">BCA</option>
-                                    <option value="BBA">BBA</option>
-                                    <option value="MBA">MBA</option>
-                                </select>
-                            </div>
-                            <div class="form-group checkbox">
-                                <input type="checkbox" id="consent" required />
-                                <label for="consent">
-                                    I authorize GNIM and its representatives to contact me with updates and
-                                    notifications.
-                                </label>
-                            </div>
-                            <button type="submit">Register Now</button>
-                            <p id="successMsg" class="success-message"></p>
-                        </form>
-                    </div>
-                    <!-- </section> -->
-                    <script>
-                        document.getElementById("registrationForm").addEventListener("submit", function (e) {
-                            e.preventDefault();
+      <input type="email" class="reg-input" placeholder="Enter Email*" required />
 
-                            const fullName = document.getElementById("fullName").value.trim();
-                            const email = document.getElementById("email").value.trim();
-                            const phone = document.getElementById("phone").value.trim();
-                            const state = document.getElementById("state").value;
-                            const city = document.getElementById("city").value;
-                            const course = document.getElementById("course").value;
-                            const consent = document.getElementById("consent").checked;
+      <div class="reg-phone-wrapper">
+        <span class="reg-phone-prefix">+91</span>
+        <input type="tel" class="reg-input" pattern="[0-9]{10}" maxlength="10"
+          placeholder="Phone Number*" required style="border:none;outline:none;padding-left:0;background:transparent;" />
+      </div>
 
-                            if (!fullName || !email || !phone || !state || !city || !course || !consent) {
-                                alert("Please fill all fields and agree to the terms.");
-                                return;
-                            }
+      <select class="reg-select" id="state-select" required>
+        <option value="" disabled selected>Select State*</option>
+        <option>Andhra Pradesh</option>
+<option>Arunachal Pradesh</option>
+<option>Assam</option>
+<option>Bihar</option>
+<option>Chhattisgarh</option>
+<option>Goa</option>
+<option>Gujarat</option>
+<option>Haryana</option>
+<option>Himachal Pradesh</option>
+<option>Jharkhand</option>
+<option>Karnataka</option>
+<option>Kerala</option>
+<option>Madhya Pradesh</option>
+<option>Maharashtra</option>
+<option>Manipur</option>
+<option>Meghalaya</option>
+<option>Mizoram</option>
+<option>Nagaland</option>
+<option>Odisha</option>
+<option>Punjab</option>
+<option>Rajasthan</option>
+<option>Sikkim</option>
+<option>Tamil Nadu</option>
+<option>Telangana</option>
+<option>Tripura</option>
+<option>Uttar Pradesh</option>
+<option>Uttarakhand</option>
+<option>West Bengal</option>
 
-                            document.getElementById("successMsg").textContent =
-                                "Registration successful! Our team will contact you shortly.";
-                            this.reset();
-                        });
+        <!-- Add all states as needed -->
+      </select>
 
-                    </script>
+      <select class="reg-select" id="city-select" required>
+        <option value="" disabled selected>Select City*</option>
+      </select>
 
+      <select class="reg-select" required>
+        <option value="" disabled selected>Select Course*</option>
+        <option>B.Tech</option>
+        <option>MBA</option>
+        <option>BBA</option>
+      </select>
+
+      <div class="reg-checkbox-row">
+        <input type="checkbox" required />
+        <label style="    font-size: 14px;">
+          I authorize VSIET and its representative to contact me with updates and notifications via Email, SMS, WhatsApp, and Call.
+        </label>
+      </div>
+
+      <!-- Google reCAPTCHA -->
+      <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
+
+      <button type="submit" class="reg-button">Register</button>
+    </form>
+
+    <div class="reg-footer-row">
+      <span>Already Registered?</span>
+      <span class="reg-login-link" onclick="alert('Login action')">Login</span>
+    </div>
+  </div>
+</section>
+        <script src="assets/js/formings.js"></script>
                 </div>
             </div>
         </div>
