@@ -1307,7 +1307,9 @@ header li:hover>a {
 /* header li.active>a {
     color: #132273 !important;
 } */
-
+.StyleP{
+    color: #ffa100;
+}
 
 .slide-right {
   animation: 3s slide-right;

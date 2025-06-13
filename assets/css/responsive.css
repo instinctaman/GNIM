@@ -239,6 +239,9 @@
 
 
     /* course Section */
+    .StyleP{
+        color: black;
+    }
     .course {
         background-size: auto 120%;
     }
@@ -307,6 +310,10 @@
 @media screen and (max-width: 767px) {
 
     /*course section*/
+    .forming{
+        left: -53px;
+    top: -52px;
+    }
     #UpperPage{
         margin-top: -25px;
     }
