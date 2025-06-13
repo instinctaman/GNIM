@@ -14,7 +14,7 @@
     @media (min-width:1300px) {
        .forming{
             position: relative;
-    top: -560px;
+    top: -515px;
     z-index: 34;
     left: 60%;
     height: 0;
@@ -28,7 +28,7 @@
     z-index: 34;
     left: 60%;
     height: 0;
-    bottom: 527px;
+    bottom: 477;
 
      }
      
