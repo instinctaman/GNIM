@@ -1308,69 +1308,6 @@ header li:hover>a {
     color: #132273 !important;
 } */
 
-nav {
-    background: rgba(35, 36, 36, 0);
-    padding: 10px 0;
-    -webkit-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-    border-radius: 0px !important;
-}
-
-.nav-background {
-    background: rgba(32, 152, 245, 1);
-    -webkit-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
-    border-radius: 0px !important;
-}
-
-.navbar-nav li a {
-    color: #fff;
-    font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.nav>li>a:focus,
-.nav>li>a:hover {
-    background: transparent;
-}
-
-.active {
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-}
-
-.default {
-    top: 0;
-}
-
-.navbar {
-    position: fixed;
-}
-
-nav {
-    left: 0;
-    top: -80px;
-    right: 0;
-    padding: 10px 0;
-    -webkit-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-    height: auto;
-    z-index: 99;
-}
-
-nav.top-nav-collapse {
-    padding-bottom: 10px;
-    padding-top: 10px;
-    border-radius: 0px !important;
-    -webkit-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-}
-
-.navbar-toggle span {
-    background: #fff;
-}
 
 .slide-right {
   animation: 3s slide-right;

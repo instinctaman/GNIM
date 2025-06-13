@@ -307,6 +307,21 @@
 @media screen and (max-width: 767px) {
 
     /*course section*/
+    #UpperPage{
+        margin-top: -25px;
+    }
+    .header{
+        height: 60px;
+    }
+    .logoTop{
+        width: 135px;
+    }
+    .banner-title{
+        font-size: 23px;
+    }
+    .jaupper{
+        background-color: #efece9;
+    }
     .about-h5{
             margin-top: 40px;
     }

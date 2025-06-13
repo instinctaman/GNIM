@@ -7,11 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GNIM
     </title>
+    <style>
+        button{
+            color: white;
+        }
+    </style>    
     <!-- Favicon -->
 <!-- Favicon (ICO or PNG) -->
 <link rel="icon" type="image/png" href="favicon.png">
 
     <!-- Google Fonts -->
+     
+<link rel="stylesheet" href="assets/css/Navigation.css">
     <link
         href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
@@ -59,62 +66,292 @@
     <!--================================================================================= 
                                 START HEADER
     ==================================================================================-->
-    <header style="background-color: #132772;height: 85px;">
-        <!--Nav Menu Starts-->
-        <nav class="navbar default nav-mob " style="margin-bottom: 0; position: fixed;">
-            <div class="container mob-logo">
-                <div class="navbar-header col-sm-2 tablet-logo">
-                    <button type="button" class="navbar-toggle mob-menu" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!-- 5* Logo -->
-                    <a href="#education-home" class="brand-logo">
-                        <img src="assets/images/logog.jpg" alt="karbar logo" class="logoimg">
-                    </a>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="#"><img src="assets/images/logog.jpg" alt="" class="logoTop"></a>
+            </div>
+            
+            <div class="nav-toggle">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <!-- Menu itmes -->
-                    <ul class="nav navbar-nav pull-right">
-                        <li class="active">
-                            <a href="#education-home">Home</a>
-                        </li>
-                        <li>
-                            <a href="#education-courses">courses</a>
-                        </li>
-                        <li>
-                            <a href="#education-teachers">Teachers </a>
-                        </li>
-                        <li>
-                            <a href="#education-price">Price </a>
-                        </li>
-                        <li>
-                            <a href="#education-testimonial">Testimonial</a>
-                        </li>
-                        <li>
-                            <a href="#education-blog">Blog</a>
-                        </li>
-                        <li>
-                            <a href="#education-footer">Facts</a>
-                        </li>
-                        <li>
-                            <a data-toggle="modal" data-target="#education-contact">
+            </div>
+
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#UpperPage" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#education-about" class="nav-link">
+                            About Us 
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#education-program" class="nav-link">
+                            Program 
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#education-placement" class="nav-link">Placement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#education-teachers" class="nav-link">Faculty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#education-campus" class="nav-link">Campus</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" data-toggle="modal" data-target="#education-contact">
                                 Contact
                             </a>
                         </li>
-                    </ul>
-                </div>
+                </ul>
+                
+                
             </div>
         </nav>
     </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    // Elements
+    const navbar = document.querySelector('.navbar');
+    const navToggle = document.querySelector('.nav-toggle');
+    const dropdowns = document.querySelectorAll('.has-dropdown');
+    const themeToggle = document.querySelector('.theme-toggle');
+    const searchInput = document.querySelector('.search-input');
+    const searchBtn = document.querySelector('.search-btn');
+    const moonIcon = document.querySelector('.moon-icon');
+    const sunIcon = document.querySelector('.sun-icon');
 
+    // Mobile menu toggle with animation
+    navToggle.addEventListener('click', () => {
+        navbar.classList.toggle('nav-active');
+        
+        // Prevent scrolling when menu is open
+        if (navbar.classList.contains('nav-active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navbar.contains(e.target) && navbar.classList.contains('nav-active')) {
+            navbar.classList.remove('nav-active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Handle dropdowns on mobile
+    dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('.nav-link');
+        
+        // For mobile: toggle dropdowns on click
+        link.addEventListener('click', (e) => {
+            if (window.innerWidth <= 968) {
+                e.preventDefault();
+                dropdown.classList.toggle('active');
+                
+                // Close other dropdowns
+                dropdowns.forEach(other => {
+                    if (other !== dropdown && other.classList.contains('active')) {
+                        other.classList.remove('active');
+                        
+                        // Add slide-up animation class
+                        const otherDropdown = other.querySelector('.dropdown');
+                        otherDropdown.style.animation = 'slideUp 0.3s forwards';
+                        
+                        // Remove animation class after it completes
+                        setTimeout(() => {
+                            otherDropdown.style.animation = '';
+                        }, 300);
+                    }
+                });
+                
+                // Add slide animation for current dropdown
+                const currentDropdown = dropdown.querySelector('.dropdown');
+                if (dropdown.classList.contains('active')) {
+                    currentDropdown.style.animation = 'slideDown 0.3s forwards';
+                } else {
+                    currentDropdown.style.animation = 'slideUp 0.3s forwards';
+                    setTimeout(() => {
+                        currentDropdown.style.animation = '';
+                    }, 300);
+                }
+            }
+        });
+    });
+
+    // Theme toggle with enhanced transitions
+    let isDark = true; // Default dark theme
+    
+    themeToggle.addEventListener('click', () => {
+        isDark = !isDark;
+        
+        if (isDark) {
+            // Switch to dark theme
+            transformToTheme(
+                '#0a0a12', 
+                '#ffffff', 
+                'rgba(16, 16, 26, 0.7)', 
+                'rgba(20, 20, 35, 0.8)'
+            );
+            
+            // Switch icons
+            moonIcon.classList.remove('hidden');
+            sunIcon.classList.add('hidden');
+        } else {
+            // Switch to light theme
+            transformToTheme(
+                '#ffffff', 
+                '#0a0a12', 
+                'rgba(255, 255, 255, 0.8)', 
+                'rgba(240, 240, 255, 0.9)'
+            );
+            
+            // Switch icons
+            moonIcon.classList.add('hidden');
+            sunIcon.classList.remove('hidden');
+        }
+    });
+    
+    // Helper function for smooth theme transition
+    function transformToTheme(bgColor, textColor, navBg, dropdownBg) {
+        document.documentElement.style.setProperty('--bg-color', bgColor);
+        document.documentElement.style.setProperty('--text-color', textColor);
+        document.documentElement.style.setProperty('--nav-bg', navBg);
+        document.documentElement.style.setProperty('--dropdown-bg', dropdownBg);
+        
+        // Adjust gradient background and text description color
+        if (isDark) {
+            document.documentElement.style.setProperty('--gradient-bg', 'linear-gradient(135deg, #0a0a12, #151530)');
+            document.documentElement.style.setProperty('--border-color', 'rgba(255, 255, 255, 0.08)');
+            document.documentElement.style.setProperty('--text-description', 'rgba(255, 255, 255, 0.7)');
+        } else {
+            document.documentElement.style.setProperty('--gradient-bg', 'linear-gradient(135deg, #ffffff, #f0f4ff)');
+            document.documentElement.style.setProperty('--border-color', 'rgba(0, 0, 0, 0.08)');
+            document.documentElement.style.setProperty('--text-description', 'rgba(0, 0, 0, 0.7)');
+        }
+        
+        // Add transition class to body for smooth color changes
+        document.body.classList.add('theme-transition');
+        setTimeout(() => {
+            document.body.classList.remove('theme-transition');
+        }, 1000);
+    }
+
+    // Enhanced search functionality
+    searchBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (searchInput.value.trim()) {
+            performSearch(searchInput.value.trim());
+        }
+    });
+
+    // Handle search on enter key
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' && searchInput.value.trim()) {
+            e.preventDefault();
+            performSearch(searchInput.value.trim());
+        }
+    });
+    
+    // Animated search focus
+    searchInput.addEventListener('focus', () => {
+        searchInput.parentElement.classList.add('search-focused');
+    });
+    
+    searchInput.addEventListener('blur', () => {
+        searchInput.parentElement.classList.remove('search-focused');
+    });
+    
+    function performSearch(query) {
+        // Add your search logic here
+        console.log('Searching for:', query);
+        
+        // Show visual feedback
+        searchBtn.classList.add('search-active');
+        setTimeout(() => {
+            searchBtn.classList.remove('search-active');
+        }, 300);
+    }
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 968) {
+            navbar.classList.remove('nav-active');
+            dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Add scroll effect for navbar
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+    
+    // Inject CSS animations
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 1; transform: translateY(0); }
+            to { opacity: 0; transform: translateY(-10px); }
+        }
+        
+        .search-focused {
+            box-shadow: 0 0 0 3px var(--primary-glow) !important;
+        }
+        
+        .search-active {
+            animation: pulse 0.3s ease;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        .theme-transition {
+            transition: background 0.5s ease, color 0.5s ease;
+        }
+        
+        .scrolled {
+            padding: 0.7rem 2rem;
+            background: var(--nav-bg);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        @media (max-width: 576px) {
+            .scrolled {
+                padding: 0.7rem 1rem;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+});
+    </script>
     <!-- <section class="slider-section"> -->
-    <div class="front_image">
+    <div class="front_image" id="UpperPage">
         <img src="assets/images/26-1366x580.jpg" alt="GNIM Banner Image" style="width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;">
+  object-fit: cover;
+  margin-top: 85px;">
     </div>
     <!-- End of Carousel -->
     <!-- </section> -->
@@ -212,7 +449,7 @@
                 <div class="col-lg-6 col-sm-6">
                     <div class="banner-intro">
                         <h1 class="banner-title" style="color: #132772;">Present Education in beautiful way
-                            with <span id="area">variable</span><span id="cursor">|</span></h1>
+                            with  <span id="element"></span></h1>
                         ... <p class="color-white lheight-30" style="color: #ffa100; margin-top: 35px;">The Greater
                             Noida Institute of
                             Management (GNIM) is a distinguished educational institution located in Greater Noida, Uttar
@@ -261,6 +498,13 @@
             </div>
         </div>
     </section>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['<i>Landing</i> Page.','Friendly', '&amp; Attitude.'],
+            typeSpeed: 100,
+        });
+    </script>
     <!--================================================================================= 
                                 END 5* APP HOME
     ==================================================================================-->
@@ -417,7 +661,7 @@
     </script>
 
 
-    <section id="education-courses">
+    <section id="education-about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5">
@@ -929,22 +1173,22 @@
     <section id="education-placement" class="jaupper">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-5 text-center">
+                <div class="col-md-3 col-sm-6 text-center">
                     <h1><i class="fa fa-users color-3"></i></h1>
                     <span class="counter">100</span> <i class="color-1">%</i>
                     <h4>100 % Placement Record</h4>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-5 text-center">
+                <div class="col-md-3 col-sm-6 text-center">
                     <h1><i class="fa fa-desktop color-3"></i></h1>
                     <span class="counter">35</span> <i class="color-1">LPA</i>
                     <h4>Highest Package</h4>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-5 text-center">
+                <div class="col-md-3 col-sm-6 text-center">
                     <h1><i class="fa-solid fa-graduation-cap color-3"></i></h1>
                     <span class="counter">200</span><i class="color-1">+</i>
                     <h4>Companies Recruiters</h4>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-5 text-center">
+                <div class="col-md-3 col-sm-6 text-center">
                     <h1><i class="fa fa-coffee color-3"></i></h1>
                     <span class="counter">5.5</span><i class="color-1">LPA</i>
                     <h4>Placement Opportunity Assurance (POA)</h4>
@@ -1290,6 +1534,28 @@ jQuery(function ($) {
         </div>
         </div>
     </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- Initialize Carousel -->
+<script>
+  $(document).ready(function () {
+    $(".meet-teachers-carousel").owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: false,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: { items: 1 },
+        768: { items: 2 },
+        992: { items: 3 }
+      }
+    });
+  });
+</script>
     <!--================================================================================= 
              END TEACHERS
          ==================================================================================-->
@@ -1473,6 +1739,7 @@ jQuery(function ($) {
         } */
 
         button {
+            /* color: white; */
             outline: none !important;
             color: white;
     background-color: #ffa100;
@@ -1990,10 +2257,14 @@ jQuery(function ($) {
     <!--================================================================================= 
                                 START TESTIMONIALS  
     ==================================================================================-->
+    <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
     <section id="education-testimonial" class="testimonials" style="margin-top: 45px;">
         <div class="container-fluid">
             <div class="row">
-                <div class="testimonials-slider background-2">
+                <div class="testimonials-slider owl-carousel background-2">
                     <!-- Start single item -->
                     <div class="tes-singel-content">
                         <div class="testimonial-img col-lg-5 col-md-6 col-sm-12 col-xs-12"
@@ -2234,6 +2505,26 @@ jQuery(function ($) {
             </div>
         </div>
     </section>
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $(".testimonials-slider").owlCarousel({
+      items: 1,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 500,
+      autoplayHoverPause: true,
+      nav: false,
+      dots: true,
+      smartSpeed: 800
+    });
+  });
+</script>
+
+
     <!--================================================================================= 
                                 END TESTIMONIALS   
     ==================================================================================-->
@@ -2408,7 +2699,7 @@ a
                 <div class="col-lg-5 col-md-12 d-flex justify-content-md-end justify-content-lg-end"
                     style="text-align: center; margin-top: 15px;">
                     <!-- <div class="cta-box"> -->
-                    <a href="https://apply.gnimgreaternoida.in/"><button>Apply Now</button></a>
+                    <a href="https://apply.gnimgreaternoida.in/"><button> Apply Now</button></a>
                     <!-- </div> -->
                 </div>
             </div>
