@@ -89,7 +89,7 @@
 
     .banner-area .banner-txt {
         margin: 0;
-        padding: 170px 0 100px;
+        padding: 15px 0 100px;
     }
 
     .banner-area .banner-txt .banner-intro {
@@ -307,13 +307,22 @@
 @media screen and (max-width: 767px) {
 
     /*course section*/
+    .about-h5{
+            margin-top: 40px;
+    }
+    .owl-dots {
+    visibility: hidden;
+    }
+    .back2{
+        padding: 2px;
+    }
     .course .course-info-header {
         padding: 40px 20px 20px;
     }
 
     .course-items .mt100 {
         margin-top: 60px;
-    }
+    }   
     .course {
         padding-top: 60px;
     }
@@ -427,6 +436,23 @@
         width: 100%;
     }
 
+    .back3 h2 {
+        padding: 25px;
+        margin: 0;
+    }
+     .back4 h2 {
+        padding: 25px;
+        margin: 0;
+    }
+    .brand-logo{
+    display: inline
+;
+
+}
+.logoimg {
+    position: relative;
+    top: 12px;
+    width: 150px;
     /* why-choose Section */
     .why-choose.pt150 {
         padding-top: 80px;
@@ -468,7 +494,9 @@
     .footer-st-25 .copyright {
         margin-top: 5px;
     }
-
+    .footer-top h2{
+        font-size: 22px;
+    }
     .section-subscribe-st h2,
     .progress-bars-inner h2 {
         font-size: 30px;

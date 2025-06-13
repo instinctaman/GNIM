@@ -8,10 +8,13 @@
       margin: 0;
       font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
     } */
+     .forming{
+      margin: 35px;;
+     }
     @media (min-width:1300px) {
        .forming{
             position: relative;
-    top: -453px;
+    top: -560px;
     z-index: 34;
     left: 60%;
     height: 0;
@@ -25,7 +28,7 @@
     z-index: 34;
     left: 60%;
     height: 0;
-    bottom: 423px;
+    bottom: 527px;
 
      }
      
@@ -133,7 +136,4 @@
         max-width: 96vw;
         padding: 12px;
       }
-      body {
-        padding: 10px 0;
-      }
-    }
+    } 
