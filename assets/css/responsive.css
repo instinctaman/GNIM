@@ -38,6 +38,11 @@
     .banner-area {
         min-height: auto;
     }
+    /* .forming{
+        display: flex
+;
+    justify-content: center;
+    } */
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -315,10 +320,6 @@
 @media screen and (max-width: 767px) {
 
     /*course section*/
-    .forming{
-        left: -53px;
-    top: -52px;
-    }
     #UpperPage{
         margin-top: -25px;
     }
@@ -578,4 +579,5 @@
     .testimonial-nav {
         width: 100%;
     }
+}
 }
