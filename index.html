@@ -559,9 +559,18 @@
             height: 240px;
         }
 
+        @media (min-width:1349px) {
+            #ourclients .clients-wrap {
+                width: 1350px;
+            }
+        }
+        @media (max-width:1348px) {
+            #ourclients .clients-wrap {
+                width: 100%;
+            }
+        }
         #ourclients .clients-wrap {
             display: block;
-            width: 1350px;
             margin: 0 auto;
             overflow: hidden;
         }
@@ -1417,9 +1426,18 @@ jQuery(function ($) {
          ==================================================================================-->
 
     <style>
+        @media (min-width:1349px) {
+            .slider {
+                width: 2000px;
+            }
+        }
+        @media (max-width:1348px) {
+            .slider {
+                width: 100%;
+            }
+        }
         .slider {
             display: flex;
-            width: 2000px;
             margin: 0 auto;
             overflow: hidden;
             padding: 5.5rem;
