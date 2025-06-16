@@ -362,86 +362,88 @@
 
     <link rel="stylesheet" href="assets/css/forming.css">
     <div class="karcenter">
-    <section class="forming">
-        
-        <div class="reg-box">
-            <div class="reg-title">Admissions Open 2025-27</div>
-            <form class="reg-form" onsubmit="return handleSubmit(event)">
-                <input type="text" class="reg-input" placeholder="Enter Name*" required />
+        <section class="forming">
 
-                <input type="email" class="reg-input" placeholder="Enter Email*" required />
+            <div class="reg-box">
+                <div class="reg-title">Admissions Open 2025-27</div>
+                <form class="reg-form" onsubmit="return handleSubmit(event)">
+                    <input type="text" class="reg-input" placeholder="Enter Name*" required />
 
-                <div class="reg-phone-wrapper">
-                    <span class="reg-phone-prefix">+91</span>
-                    <input type="tel" class="reg-input" pattern="[0-9]{10}" maxlength="10" placeholder="Phone Number*"
-                        required style="border:none;outline:none;padding-left:0;background:transparent;" />
+                    <input type="email" class="reg-input" placeholder="Enter Email*" required />
+
+                    <div class="reg-phone-wrapper">
+                        <span class="reg-phone-prefix">+91</span>
+                        <input type="tel" class="reg-input" pattern="[0-9]{10}" maxlength="10"
+                            placeholder="Phone Number*" required
+                            style="border:none;outline:none;padding-left:0;background:transparent;" />
+                    </div>
+
+                    <select class="reg-select" id="state-select" required>
+                        <option value="" disabled selected>Select State*</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Arunachal Pradesh</option>
+                        <option>Assam</option>
+                        <option>Bihar</option>
+                        <option>Chhattisgarh</option>
+                        <option>Goa</option>
+                        <option>Gujarat</option>
+                        <option>Haryana</option>
+                        <option>Himachal Pradesh</option>
+                        <option>Jharkhand</option>
+                        <option>Karnataka</option>
+                        <option>Kerala</option>
+                        <option>Madhya Pradesh</option>
+                        <option>Maharashtra</option>
+                        <option>Manipur</option>
+                        <option>Meghalaya</option>
+                        <option>Mizoram</option>
+                        <option>Nagaland</option>
+                        <option>Odisha</option>
+                        <option>Punjab</option>
+                        <option>Rajasthan</option>
+                        <option>Sikkim</option>
+                        <option>Tamil Nadu</option>
+                        <option>Telangana</option>
+                        <option>Tripura</option>
+                        <option>Uttar Pradesh</option>
+                        <option>Uttarakhand</option>
+                        <option>West Bengal</option>
+
+                        <!-- Add all states as needed -->
+                    </select>
+
+                    <select class="reg-select" id="city-select" required>
+                        <option value="" disabled selected>Select City*</option>
+                    </select>
+
+                    <select class="reg-select" required>
+                        <option value="" disabled selected>Select Course*</option>
+                        <option>B.Tech</option>
+                        <option>MBA</option>
+                        <option>BBA</option>
+                    </select>
+
+                    <div class="reg-checkbox-row">
+                        <input type="checkbox" required />
+                        <label style="    font-size: 12px;">
+                            I authorize GNIM and its representative to contact me with updates and notifications via
+                            Email,
+                            SMS, WhatsApp, and Call.
+                        </label>
+                    </div>
+
+                    <!-- Google reCAPTCHA -->
+                    <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
+
+                    <button type="submit" class="reg-button">Register</button>
+                </form>
+
+                <div class="reg-footer-row">
+                    <span>Already Registered?</span>
+                    <span class="reg-login-link" onclick="alert('Login action')">Login</span>
                 </div>
-
-                <select class="reg-select" id="state-select" required>
-                    <option value="" disabled selected>Select State*</option>
-                    <option>Andhra Pradesh</option>
-                    <option>Arunachal Pradesh</option>
-                    <option>Assam</option>
-                    <option>Bihar</option>
-                    <option>Chhattisgarh</option>
-                    <option>Goa</option>
-                    <option>Gujarat</option>
-                    <option>Haryana</option>
-                    <option>Himachal Pradesh</option>
-                    <option>Jharkhand</option>
-                    <option>Karnataka</option>
-                    <option>Kerala</option>
-                    <option>Madhya Pradesh</option>
-                    <option>Maharashtra</option>
-                    <option>Manipur</option>
-                    <option>Meghalaya</option>
-                    <option>Mizoram</option>
-                    <option>Nagaland</option>
-                    <option>Odisha</option>
-                    <option>Punjab</option>
-                    <option>Rajasthan</option>
-                    <option>Sikkim</option>
-                    <option>Tamil Nadu</option>
-                    <option>Telangana</option>
-                    <option>Tripura</option>
-                    <option>Uttar Pradesh</option>
-                    <option>Uttarakhand</option>
-                    <option>West Bengal</option>
-
-                    <!-- Add all states as needed -->
-                </select>
-
-                <select class="reg-select" id="city-select" required>
-                    <option value="" disabled selected>Select City*</option>
-                </select>
-
-                <select class="reg-select" required>
-                    <option value="" disabled selected>Select Course*</option>
-                    <option>B.Tech</option>
-                    <option>MBA</option>
-                    <option>BBA</option>
-                </select>
-
-                <div class="reg-checkbox-row">
-                    <input type="checkbox" required />
-                    <label style="    font-size: 12px;">
-                        I authorize GNIM and its representative to contact me with updates and notifications via Email,
-                        SMS, WhatsApp, and Call.
-                    </label>
-                </div>
-
-                <!-- Google reCAPTCHA -->
-                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
-
-                <button type="submit" class="reg-button">Register</button>
-            </form>
-
-            <div class="reg-footer-row">
-                <span>Already Registered?</span>
-                <span class="reg-login-link" onclick="alert('Login action')">Login</span>
             </div>
-        </div>
-        </div>
+    </div>
     </section>
     <script src="assets/js/formings.js"></script>
     <!--================================================================================= 
@@ -1092,7 +1094,8 @@
                 <div class="col-md-6">
                     <div class="color-1" style="font-size: 34px;">ACADEMIC</div>
                     <h2 style="color: white;" class="slide-right">Program Offered by (GNIM)</h2>
-                    <p style="    color: white; font-size: 17px; margin-top: 35px;">Greater Noida Institute of Management (GNIM) offers a range of
+                    <p style="    color: white; font-size: 17px; margin-top: 35px;">Greater Noida Institute of
+                        Management (GNIM) offers a range of
                         programs tailored for future business leaders, including PGDM and MBA courses with options for
                         dual specialization. These programs are designed to provide in-depth knowledge and skills in key
                         areas of management. Additionally, GNIM offers certification programs that enhance
@@ -1479,7 +1482,7 @@ jQuery(function ($) {
             <div class="row our_teacher_row">
                 <div class="row teacher_inner_row tp_inner_row meet-teachers-carousel owl-carousel">
                     <!-- single item -->
-                    <div class="col-md-12 teacher_col">
+                    <div class="col-md-12 teacher_col" style="left: 16px;">
                         <div class="wrap_teacher uk-transition-toggle ">
                             <div class="uk-inline-clip uk-light teacher_img" tabindex="0">
                                 <img src="assets/images/teachers/hitesh-manocha_Nero_AI_Image_Upscaler_Photo_Face.webp"
@@ -1494,7 +1497,7 @@ jQuery(function ($) {
                     </div>
                     <!-- End single item -->
                     <!-- single item -->
-                    <div class="col-md-12 teacher_col">
+                    <div class="col-md-12 teacher_col" style="left: 16px;">
                         <div class="wrap_teacher uk-transition-toggle">
                             <div class="uk-inline-clip  uk-light teacher_img" tabindex="0">
                                 <img src="assets/images/teachers/Rishi_Mehra_Nero_AI_Image_Upscaler_Photo_Face.webp"
@@ -1510,7 +1513,7 @@ jQuery(function ($) {
                     </div>
                     <!-- End single item -->
                     <!-- single item -->
-                    <div class="col-md-12 teacher_col">
+                    <div class="col-md-12 teacher_col" style="left: 16px;">
                         <div class="wrap_teacher uk-transition-toggle ">
                             <div class="uk-inline-clip uk-light teacher_img" tabindex="0">
                                 <img src="assets/images/teachers/shailaja_Nero_AI_Image_Upscaler_Photo_Face.webp"
@@ -1524,7 +1527,7 @@ jQuery(function ($) {
                     </div>
                     <!-- End single item -->
                     <!-- single item -->
-                    <div class="col-md-12 teacher_col">
+                    <div class="col-md-12 teacher_col" style="left: 16px;">
                         <div class="wrap_teacher uk-transition-toggle">
                             <div class="uk-inline-clip  uk-light teacher_img" tabindex="0">
                                 <img src="assets/images/teachers/Vartika_Chaturvedi_Nero_AI_Image_Upscaler_Photo_Face.webp"
@@ -1749,12 +1752,12 @@ jQuery(function ($) {
         } */
 
         button {
-           height: 40px;
-    width: 150px;
-    background-color: #ffa100;
-    border: none;
-    color: #f5f3f3;
-    text-align: center;
+            height: 40px;
+            width: 150px;
+            background-color: #ffa100;
+            border: none;
+            color: #f5f3f3;
+            text-align: center;
         }
 
         /******* Common Element CSS End *********/
@@ -2162,13 +2165,13 @@ jQuery(function ($) {
 
 
     <!-- Photo Grid -->
-     <style>
-        .set1{
+    <style>
+        .set1 {
             object-fit: cover;
             width: 100%;
             height: 100%;
         }
-     </style>
+    </style>
     <div class="container-fluid" style="padding: 0px;">
         <div class="row" style="margin: 0px;">
             <div class="col-md-6" style="padding: 0px;">
@@ -2726,7 +2729,7 @@ jQuery(function ($) {
                     <!-- </div> -->
                 </div>
             </div>
-        </div>  
+        </div>
 
         <!-- Bottom Section (Lighter) -->
         <div class="footer-bottom container-fluid">
@@ -2797,8 +2800,8 @@ jQuery(function ($) {
                     <img src="assets/images/logog.jpg" alt="" class="footer-logo">
                 </div>
                 <div class="col-md-6 col-lg-5 mb-4 text-center">
-                    <span style="margin: 10px; padding: 10px;">Copyright © 2025 <a
-                            href="https://innowebsolution.com/" class="color-3">Innoweb Solution</a>. All rights reserved.</span>
+                    <span style="margin: 10px; padding: 10px;">Copyright © 2025 <a href="https://innowebsolution.com/"
+                            class="color-3">Innoweb Solution</a>. All rights reserved.</span>
                 </div>
             </div>
         </div>
