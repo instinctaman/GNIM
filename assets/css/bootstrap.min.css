@@ -6359,8 +6359,8 @@ button.close {
 }
 
 .modal-header {
-    padding: 15px;
-    border-bottom: 1px solid #e5e5e5
+    /* padding: 15px; */
+    /* border-bottom: 1px solid #e5e5e5 */
 }
 
 .modal-header .close {
@@ -6373,13 +6373,13 @@ button.close {
 }
 
 .modal-body {
-    position: relative;
-    padding: 15px
+    /* position: relative; */
+    /* padding: 15px */
 }
 
 .modal-footer {
-    padding: 15px;
-    text-align: right;
+    /* padding: 15px; */
+    /* text-align: right; */
     border-top: 1px solid #e5e5e5
 }
 
