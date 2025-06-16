@@ -706,6 +706,61 @@
     </script>
 
 
+    <!-- <link rel="stylesheet" href="assets/css/btnHover.css"> -->
+     <style>
+        .beautiful-btn {
+    /* Basic Styling */
+    /* padding: 15px 30px; */
+    /* font-size: 18px; */
+    /* font-weight: bold; */
+    color: white;
+    background-image: linear-gradient(135deg, yellow 0%, #ffa100 100%); /* Nice gradient */
+    border: none;
+    border-radius: 50px; /* Very rounded, pill-shape */
+    cursor: pointer;
+    outline: none; /* Removes default browser outline */
+
+    /* Shadow for depth */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+    /* Transition for smooth hover effects */
+    transition: all 0.3s ease-out;
+    position: relative; /* For potential pseudo-elements or advanced effects */
+    overflow: hidden; /* Ensures effects don't spill out */
+}
+
+/* Hover Effect */
+.beautiful-btn:hover {
+    background-image: linear-gradient(135deg, #ffa100 0%, yellow 100%); /* Flip gradient */
+    transform: translateY(-3px) scale(1.05); /* Lift and slightly enlarge */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+/* Active (Pressed) Effect */
+.beautiful-btn:active {
+    transform: translateY(1px) scale(0.98); /* Push down and slightly shrink */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+}
+.beautiful-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start off-screen */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.3), /* Lighter shine */
+        transparent
+    );
+    transition: all 0.5s ease-in-out;
+}
+
+.beautiful-btn:hover::before {
+    left: 100%; /* Move shine across the button */
+}
+     </style>
     <section id="education-about">
         <div class="container">
             <div class="row">
@@ -726,7 +781,7 @@
                         learning. Located in the heart of Greater Noida, GNIM is committed to nurturing future business
                         leaders by integrating academic excellence with practical exposure.</p>
                     <h6 style="margin-top:10px; margin-bottom:10px;">Why Choose GNIM?</h6>
-                    <ul style="font-size:15px; text-align:justify;">
+                    <ul style="font-size:15px; text-align:justify; padding-left: 0;">
                         <li><b><strong>Top Placements:</strong></b> GNIM has a strong track record of placements with
                             top corporate brands, ensuring excellent career opportunities for students.</li>
                         <li><b><strong>Industry-Focused Curriculum:</strong></b> The institute offers a dynamic and
@@ -746,7 +801,7 @@
                         </li>
                     </ul>
                     <a href="https://gnimgreaternoida.org/about_us"><button
-                            style="padding: 12px; background-color: #ffa100; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; margin-top: 10px;">READ
+                            style="padding: 12px; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; margin-top: 10px;" class="beautiful-btn">READ
                             MORE</button></a>
                 </div>
             </div>
@@ -1136,7 +1191,7 @@
                         dual specialization. These programs are designed to provide in-depth knowledge and skills in key
                         areas of management. Additionally, GNIM offers certification programs that enhance
                         industry-relevant competencies, preparing students for competitive careers.</p>
-                    <button style="margin-top: 35px;">Apply Now</button>
+                    <button style="margin-top: 35px;" class="beautiful-btn">Apply Now</button>
                 </div>
                 <div class="col-md-6">
                     <div class="row">
@@ -2132,7 +2187,7 @@ jQuery(function ($) {
                 </div>
                 <div class="col-lg-3" style="text-align: right">
                     <a href="https://apply.gnimgreaternoida.in/"><button
-                            style="height: 40px; width: 150px; background-color: #ffa100; border: none;color: #f5f3f3; text-align: center;">Apply
+                            style="height: 40px; width: 150px; border: none;color: #f5f3f3; text-align: center;" class="beautiful-btn">Apply
                             Now</button></a>
                 </div>
             </div>
@@ -2230,7 +2285,7 @@ jQuery(function ($) {
                             serve basis. The candidates should fall under the merit category on the basis of their
                             percentile in CAT/XAT/CMAT/MAT.</p>
                         <a href="https://gnimgreaternoida.org/fees-structure"><button
-                                style="margin-bottom: 31px; border: none;">READ
+                                style="margin-bottom: 31px; border: none; color: white;">READ
                                 MORE -></button></a>
                     </div>
                     <div class="col-md-6" style="padding: 0px;">
@@ -2247,7 +2302,7 @@ jQuery(function ($) {
                             expert guidance, and hands-on experience to shape your future. Enroll today and take the
                             first step toward a rewarding career!</p>
                         <a href="https://apply.gnimgreaternoida.in/"><button
-                                style="background-color: #010c4e; border: none;">READ
+                                style="background-color: #010c4e; border: none; color: white; margin-bottom: 25px;">READ
                                 MORE -></button></a>
                     </div>
                 </div>
@@ -2770,7 +2825,7 @@ jQuery(function ($) {
                 <div class="col-lg-5 col-md-12 d-flex justify-content-md-center justify-content-lg-center"
                     style="justify-content: center; margin-top: 15px;">
                     <!-- <div class="cta-box"> -->
-                    <a href="https://apply.gnimgreaternoida.in/"><button> Apply Now</button></a>
+                    <a href="https://apply.gnimgreaternoida.in/"><button class="beautiful-btn"> Apply Now</button></a>
                     <!-- </div> -->
                 </div>
             </div>

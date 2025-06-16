@@ -1770,6 +1770,7 @@ header li:hover>a {
     font-size: 25px;
     margin-top: 10px;
     padding: 23px;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .textw{

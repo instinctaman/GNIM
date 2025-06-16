@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .fade-in {
+      animation-name: fadeIn;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  .bounce {
+    width: 100px;
+    height: 100px;
+    background: red;
+    animation: bounce 1s infinite alternate;
+  }
+
+  @keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-100px); }
+  }
+.btn {
+      background-color: #3498db;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      transition: background-color 0.5s ease;
+      /* cursor: pointer; */
+    }
+
+    .btn:hover {
+      background-color: #2ecc71; /* smooth change */
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1 class="fade-in">Hello World 👋</h1>
+  
+<div class="bounce"></div>
+<button class="btn">Hover Me</button>
+
+</body>
+</html>
