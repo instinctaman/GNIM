@@ -244,13 +244,18 @@
     }
 }
 
-
+@media screen and (max-width:1600px) and (min-width:992px) {
+    .StyleP{
+        margin-top: 100px;
+    }
+}
 @media screen and (max-width: 991px) {
 
 
     /* course Section */
     .StyleP{
         color: black;
+        margin-top: 20px;
     }
     .course {
         background-size: auto 120%;
