@@ -1869,6 +1869,7 @@ header li:hover>a {
 
 .program{
     background-image: url(../images/program/background.jpg);
+    background-position-y: center;
     /* margin-top: 50px; */
     /* height: 565px; */
 }
