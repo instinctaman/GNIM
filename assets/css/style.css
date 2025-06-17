@@ -2056,8 +2056,8 @@ header li:hover>a {
     text-align: center;
 }
 .back3 h2{
-    margin-top: 55px;
-    margin-bottom: 45px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 @media (max-width:1200px) {
     .back3 h2{
@@ -2070,8 +2070,8 @@ header li:hover>a {
     text-align: center;
 }
 .back4 h2{
-    margin-top: 55px;
-    margin-bottom: 45px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 @media (max-width:1200px) {
     .back4 h2{
@@ -2080,7 +2080,7 @@ header li:hover>a {
 }
 .mymargin{
     margin: 0 33px 0px 33px;
-    font-size: 17px;
+    font-size: 18px;
 }
 .object_fit{
     object-fit: cover;
