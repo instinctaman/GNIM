@@ -37,7 +37,8 @@
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="stylesheet" href="assets/css/full.css">
     <!-- Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 </head>
 
 <body class="homepage body-bg" data-spy="scroll" data-target=".navbar" data-offset="90" style="padding-right: 0px;">
@@ -355,7 +356,7 @@
             style="width: 100%; height: auto; display: block; object-fit: cover; margin-top: 75px;">
     </div>
     <!-- Video Section (visible above 765px) -->
-     <!-- <style>
+    <!-- <style>
     .responsive-video {
       margin-top: 75px;
       width: 100%;
@@ -403,59 +404,59 @@
     <div class="karcenter">
         <section class="forming">
 
-        <div class="reg-box">
-            <div class="reg-title">Admissions Open 2025-27</div>
-            <form class="reg-form" onsubmit="return handleSubmit(event)">
-                <input type="text" class="reg-input" placeholder="Enter Name*" required />
+            <div class="reg-box">
+                <div class="reg-title">Admissions Open 2025-27</div>
+                <form class="reg-form" onsubmit="return handleSubmit(event)">
+                    <input type="text" class="reg-input" placeholder="Enter Name*" required />
 
-                <input type="email" class="reg-input" placeholder="Enter Email*" required />
+                    <input type="email" class="reg-input" placeholder="Enter Email*" required />
 
-                <div class="reg-phone-wrapper">
-                    <span class="reg-phone-prefix">+91</span>
-                    <input type="tel" class="reg-input" id="mobile" name="mobile" pattern="[0-9]{10}" maxlength="10"
-                        required placeholder="Phone Number*"
-                        style="border:none;outline:none;padding-left:0;background:transparent;"
-                        oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    <div class="reg-phone-wrapper">
+                        <span class="reg-phone-prefix">+91</span>
+                        <input type="tel" class="reg-input" id="mobile" name="mobile" pattern="[0-9]{10}" maxlength="10"
+                            required placeholder="Phone Number*"
+                            style="border:none;outline:none;padding-left:0;background:transparent;"
+                            oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    </div>
+
+                    <select id="state" class="reg-select" aria-label="Select State" onchange="fetchCities()">
+                        <option value="">Select State</option>
+                    </select>
+
+                    <select id="city" class="reg-select" aria-label="Select City">
+                        <option value="">Select a state first</option>
+                    </select>
+
+                    <select id="course-select" class="reg-select" required aria-label="Select Course*">
+                        <option value="" disabled selected>Select Course*</option>
+                        <option>PGDM</option>
+                    </select>
+                    <div class="captcha-box">
+                        <div id="captcha" class="captcha">----</div>
+                        <span style="font-size: 12px;" onclick="generateCaptcha()">Refresh</span>
+                    </div>
+
+                    <input type="text" class="reg-input" id="captchaInput" placeholder="Enter CAPTCHA"
+                        oninput="clearCaptchaError()">
+                    <div class="error-message" id="captchaError">Incorrect CAPTCHA. Please try again.</div>
+                    <div class="reg-checkbox-row">
+                        <input type="checkbox" id="consent-checkbox" required title="Consent to contact" />
+                        <label for="consent-checkbox" style="font-size: 12px;">
+                            I authorize GNIM and its representative to contact me with updates and notifications via
+                            Email,
+                            SMS, WhatsApp, and Call.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="reg-button" onclick="validateCaptcha()">Register</button>
+                </form>
+
+                <div class="reg-footer-row">
+                    <span>Already Registered?</span>
+                    <span class="reg-login-link" onclick="alert('Login action')">Login</span>
                 </div>
-
-                <select id="state" class="reg-select" aria-label="Select State" onchange="fetchCities()">
-                    <option value="">Select State</option>
-                </select>
-
-                <select id="city" class="reg-select" aria-label="Select City">
-                    <option value="">Select a state first</option>
-                </select>
-
-                <select id="course-select" class="reg-select" required aria-label="Select Course*">
-                    <option value="" disabled selected>Select Course*</option>
-                    <option>PGDM</option>
-                </select>
-                <div class="captcha-box">
-                    <div id="captcha" class="captcha">----</div>
-                    <span style="font-size: 12px;" onclick="generateCaptcha()">Refresh</span>
-                </div>
-
-                <input type="text" class="reg-input" id="captchaInput" placeholder="Enter CAPTCHA"
-                    oninput="clearCaptchaError()">
-                <div class="error-message" id="captchaError">Incorrect CAPTCHA. Please try again.</div>
-                <div class="reg-checkbox-row">
-                    <input type="checkbox" id="consent-checkbox" required title="Consent to contact" />
-                    <label for="consent-checkbox" style="font-size: 12px;">
-                        I authorize GNIM and its representative to contact me with updates and notifications via
-                        Email,
-                        SMS, WhatsApp, and Call.
-                    </label>
-                </div>
-
-                <button type="submit" class="reg-button" onclick="validateCaptcha()">Register</button>
-            </form>
-
-            <div class="reg-footer-row">
-                <span>Already Registered?</span>
-                <span class="reg-login-link" onclick="alert('Login action')">Login</span>
             </div>
-        </div>
-    </section>
+        </section>
     </div>
     <script src="assets/js/formings.js"></script>
     <!--================================================================================= 
@@ -1084,7 +1085,7 @@
                 </div>
             </div>
         </div>
-        <div class="arrowbtn">
+        <div class="arrowbtn set">
             <a href="https://gnimgreaternoida.org/award" style="color: #ffa100;">Read More <i
                     class="fa-solid fa-arrow-right"></i></a>
         </div>
@@ -1390,7 +1391,7 @@
         }
     </style>
 
-    <h2 style="text-align: center; margin-bottom: 0px;">Our Top Recruiters</h2>
+    <h2 class="ThodaNiche" style="text-align: center; margin-bottom: 0px;">Our Top Recruiters</h2>
     <div class="slider">
         <div class="slider-track">
             <!-- Original Set -->
@@ -2050,29 +2051,32 @@
             </div>
             <div class="row" style="width: 100%;">
                 <div class="owl-carousel custom-carousel owl-theme">
-            <div class="item" style="background-image: url(assets/images/facilities/home_9.webp);">
-                <div class="item-desc">
-                    <h3>Student Life</h3>
-                    <p>GNIM fosters a dynamic and engaging campus life, ensuring students develop both academically and
-                        personally. From academic excellence to extracurricular...</p>
-                </div>
-            </div>
-            <div class="item" style="background-image: url(assets/images/facilities/home10.webp);">
-                <div class="item-desc">
-                    <h3>Art & Clubs</h3>
-                    <p>Students can explore their passions beyond academics through various clubs including: Business &
-                        Strategy Club, Finance Club, Human Resource Club, Business Analytics Club...</p>
-                </div>
-            </div>
-            <div class="item" style="background-image: url(assets/images/facilities/home_11.webp);">
-                <div class="item-desc">
-                    <h3>Infrastructure</h3>
-                    <p>GNIM offers state-of-the-art infrastructure to enhance learning and development including: Smart
-                        Classrooms, Library & Research Center, Incubation Center, Sports...</p>
-                </div>
-            </div>
+                    <div class="item" style="background-image: url(assets/images/facilities/home_9.webp);">
+                        <div class="item-desc">
+                            <h3>Student Life</h3>
+                            <p>GNIM fosters a dynamic and engaging campus life, ensuring students develop both
+                                academically and
+                                personally. From academic excellence to extracurricular...</p>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(assets/images/facilities/home10.webp);">
+                        <div class="item-desc">
+                            <h3>Art & Clubs</h3>
+                            <p>Students can explore their passions beyond academics through various clubs including:
+                                Business &
+                                Strategy Club, Finance Club, Human Resource Club, Business Analytics Club...</p>
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url(assets/images/facilities/home_11.webp);">
+                        <div class="item-desc">
+                            <h3>Infrastructure</h3>
+                            <p>GNIM offers state-of-the-art infrastructure to enhance learning and development
+                                including: Smart
+                                Classrooms, Library & Research Center, Incubation Center, Sports...</p>
+                        </div>
+                    </div>
 
-        </div>
+                </div>
             </div>
         </div>
     </section>
@@ -2673,7 +2677,7 @@
             }
         }
     </style>
-    <footer style="padding: 0;">
+    <footer style="padding: 0;" class="karupper">
         <!-- Top Section (Darker) -->
         <div class="footer-top container-fluid" style="margin-top: -50px;
 ">
@@ -2776,7 +2780,7 @@
             </div>
             <div class="line"></div>
             <div class="row okthen">
-                <div class="col-md-6 col-lg-4 mb-4 text-center">
+                <div class="col-md-6 col-lg-4 mb-4 text-center karniche">
                     <span style="margin: 10px; padding: 10px;">Greater Noida Institute of Management</span>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4 text-center">
@@ -2825,7 +2829,7 @@
                     <h4 class="modal-title">Feel free shoot a message</h4>
                 </div>
                 <div class="modal-body">
-                    <link rel="stylesheet" href="assets/css/forming.css">
+                    <!-- <link rel="stylesheet" href="assets/css/forming.css"> -->
                     <section class="forming">
                         <div class="reg-box">
                             <div class="reg-title">Admissions Open 2025-27</div>
@@ -2836,66 +2840,44 @@
 
                                 <div class="reg-phone-wrapper">
                                     <span class="reg-phone-prefix">+91</span>
-                                    <input type="tel" class="reg-input" pattern="[0-9]{10}" maxlength="10"
-                                        placeholder="Phone Number*" required
-                                        style="border:none;outline:none;padding-left:0;background:transparent;" />
+                                    <input type="tel" class="reg-input" id="mobile" name="mobile" pattern="[0-9]{10}"
+                                        maxlength="10" required placeholder="Phone Number*"
+                                        style="border:none;outline:none;padding-left:0;background:transparent;"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                                 </div>
 
-                                <select class="reg-select" id="state-select" required>
-                                    <option value="" disabled selected>Select State*</option>
-                                    <option>Andhra Pradesh</option>
-                                    <option>Arunachal Pradesh</option>
-                                    <option>Assam</option>
-                                    <option>Bihar</option>
-                                    <option>Chhattisgarh</option>
-                                    <option>Goa</option>
-                                    <option>Gujarat</option>
-                                    <option>Haryana</option>
-                                    <option>Himachal Pradesh</option>
-                                    <option>Jharkhand</option>
-                                    <option>Karnataka</option>
-                                    <option>Kerala</option>
-                                    <option>Madhya Pradesh</option>
-                                    <option>Maharashtra</option>
-                                    <option>Manipur</option>
-                                    <option>Meghalaya</option>
-                                    <option>Mizoram</option>
-                                    <option>Nagaland</option>
-                                    <option>Odisha</option>
-                                    <option>Punjab</option>
-                                    <option>Rajasthan</option>
-                                    <option>Sikkim</option>
-                                    <option>Tamil Nadu</option>
-                                    <option>Telangana</option>
-                                    <option>Tripura</option>
-                                    <option>Uttar Pradesh</option>
-                                    <option>Uttarakhand</option>
-                                    <option>West Bengal</option>
-
-                                    <!-- Add all states as needed -->
+                                <select id="state" class="reg-select" aria-label="Select State"
+                                    onchange="fetchCities()">
+                                    <option value="">Select State</option>
                                 </select>
 
-                                <select class="reg-select" id="city-select" required>
-                                    <option value="" disabled selected>Select City*</option>
+                                <select id="city" class="reg-select" aria-label="Select City">
+                                    <option value="">Select a state first</option>
                                 </select>
 
-                                <select class="reg-select" required>
+                                <select id="course-select" class="reg-select" required aria-label="Select Course*">
                                     <option value="" disabled selected>Select Course*</option>
                                     <option>PGDM</option>
                                 </select>
+                                <div class="captcha-box">
+                                    <div id="captcha" class="captcha">----</div>
+                                    <span style="font-size: 12px;" onclick="generateCaptcha()">Refresh</span>
+                                </div>
 
+                                <input type="text" class="reg-input" id="captchaInput" placeholder="Enter CAPTCHA"
+                                    oninput="clearCaptchaError()">
+                                <div class="error-message" id="captchaError">Incorrect CAPTCHA. Please try again.</div>
                                 <div class="reg-checkbox-row">
-                                    <input type="checkbox" required />
-                                    <label style="    font-size: 14px;">
+                                    <input type="checkbox" id="consent-checkbox" required title="Consent to contact" />
+                                    <label for="consent-checkbox" style="font-size: 12px;">
                                         I authorize GNIM and its representative to contact me with updates and
-                                        notifications via Email, SMS, WhatsApp, and Call.
+                                        notifications via
+                                        Email,
+                                        SMS, WhatsApp, and Call.
                                     </label>
                                 </div>
 
-                                <!-- Google reCAPTCHA -->
-                                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
-
-                                <button type="submit" class="reg-button">Register</button>
+                                <button type="submit" class="reg-button" onclick="validateCaptcha()">Register</button>
                             </form>
 
                             <div class="reg-footer-row">
@@ -2904,7 +2886,7 @@
                             </div>
                         </div>
                     </section>
-                    <script src="assets/js/formings.js"></script>
+                    <!-- <script src="assets/js/formings.js"></script> -->
                 </div>
             </div>
         </div>
@@ -2917,7 +2899,7 @@
     ==================================================================================-->
 
     <!-- JQUERY LIBRARY JS -->
-     <!-- Bootstrap-->
+    <!-- Bootstrap-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
@@ -2942,7 +2924,7 @@
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <!-- CUSTOM JS -->
     <script src="assets/js/script.js"></script>
-    
+
     <!-- <script>
         // Disable scroll restoration
         if ('scrollRestoration' in history) {
