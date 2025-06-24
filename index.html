@@ -5,13 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GNIM
-    </title>
-    <style>
-        button {
-            color: white;
-        }
-    </style>
+    <title>GNIM</title>
     <!-- Favicon (ICO or PNG) -->
     <link rel="icon" type="image/png" href="assets/images/1721900784phpRGUQTi.jpeg">
 
@@ -19,14 +13,16 @@
 
     <link rel="stylesheet" href="assets/css/Navigation.css">
     <!-- Font-Awesome css -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css">
-    <!-- Bootstrap-->
+    <!-- Pop-Up-->
     <link rel="stylesheet" href="assets/css/magnific-popup.css" />
     <!-- Sliders -->
     <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
@@ -40,13 +36,8 @@
     <!-- Responsive Style -->
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="stylesheet" href="assets/css/full.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-        crossorigin="anonymous"></script>
 </head>
 
 <body class="homepage body-bg" data-spy="scroll" data-target=".navbar" data-offset="90" style="padding-right: 0px;">
@@ -350,8 +341,7 @@
     <!-- <section class="slider-section"> -->
     <style>
         .responsive-image {
-            content: url('assets/images/gnim_web03_m_1-Picsart-AiImageEnhancer.jpg');
-            /* default image */
+            content: url('assets/images/gnim_web03_m_2.jpg');
         }
 
         @media (max-width: 768px) {
@@ -364,6 +354,44 @@
         <img class="responsive-image" alt="GNIM Banner Image"
             style="width: 100%; height: auto; display: block; object-fit: cover; margin-top: 75px;">
     </div>
+    <!-- Video Section (visible above 765px) -->
+     <!-- <style>
+    .responsive-video {
+      margin-top: 75px;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .video-container,
+    .image-link-container {
+      display: none;
+    }
+
+    @media (min-width: 766px) {
+      .video-container {
+        display: block;
+      }
+    }
+
+    @media (max-width: 765px) {
+      .image-link-container {
+        display: block;
+      }
+    }
+  </style>
+  <div class="video-container">
+    <video class="responsive-video" autoplay muted loop playsinline>
+      <source src="assets/video/Recording 2025-06-24 145305  2.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="image-link-container">
+    <a href="#">
+      <img src="assets/images/gnim_web03_m_1-Picsart-AiImageEnhancer.webp" alt="Alternative Link" class="responsive-video" />
+    </a>
+  </div> -->
     <!-- End of Carousel -->
     <!-- </section> -->
 
@@ -375,85 +403,60 @@
     <div class="karcenter">
         <section class="forming">
 
-            <div class="reg-box">
-                <div class="reg-title">Admissions Open 2025-27</div>
-                <form class="reg-form" onsubmit="return handleSubmit(event)">
-                    <input type="text" class="reg-input" placeholder="Enter Name*" required />
+        <div class="reg-box">
+            <div class="reg-title">Admissions Open 2025-27</div>
+            <form class="reg-form" onsubmit="return handleSubmit(event)">
+                <input type="text" class="reg-input" placeholder="Enter Name*" required />
 
-                    <input type="email" class="reg-input" placeholder="Enter Email*" required />
+                <input type="email" class="reg-input" placeholder="Enter Email*" required />
 
-                    <div class="reg-phone-wrapper">
-                        <span class="reg-phone-prefix">+91</span>
-                        <input type="tel" class="reg-input" pattern="[0-9]{10}" maxlength="10"
-                            placeholder="Phone Number*" required
-                            style="border:none;outline:none;padding-left:0;background:transparent;" />
-                    </div>
-
-                    <select class="reg-select" id="state-select" required>
-                        <option value="" disabled selected>Select State*</option>
-                        <option>Andhra Pradesh</option>
-                        <option>Arunachal Pradesh</option>
-                        <option>Assam</option>
-                        <option>Bihar</option>
-                        <option>Chhattisgarh</option>
-                        <option>Goa</option>
-                        <option>Gujarat</option>
-                        <option>Haryana</option>
-                        <option>Himachal Pradesh</option>
-                        <option>Jharkhand</option>
-                        <option>Karnataka</option>
-                        <option>Kerala</option>
-                        <option>Madhya Pradesh</option>
-                        <option>Maharashtra</option>
-                        <option>Manipur</option>
-                        <option>Meghalaya</option>
-                        <option>Mizoram</option>
-                        <option>Nagaland</option>
-                        <option>Odisha</option>
-                        <option>Punjab</option>
-                        <option>Rajasthan</option>
-                        <option>Sikkim</option>
-                        <option>Tamil Nadu</option>
-                        <option>Telangana</option>
-                        <option>Tripura</option>
-                        <option>Uttar Pradesh</option>
-                        <option>Uttarakhand</option>
-                        <option>West Bengal</option>
-
-                        <!-- Add all states as needed -->
-                    </select>
-
-                    <select class="reg-select" id="city-select" required>
-                        <option value="" disabled selected>Select City*</option>
-                    </select>
-
-                    <select class="reg-select" required>
-                        <option value="" disabled selected>Select Course*</option>
-                        <option>PGDM</option>
-                    </select>
-
-                    <div class="reg-checkbox-row">
-                        <input type="checkbox" required />
-                        <label style="    font-size: 12px;">
-                            I authorize GNIM and its representative to contact me with updates and notifications via
-                            Email,
-                            SMS, WhatsApp, and Call.
-                        </label>
-                    </div>
-
-                    <!-- Google reCAPTCHA -->
-                    <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
-
-                    <button type="submit" class="reg-button">Register</button>
-                </form>
-
-                <div class="reg-footer-row">
-                    <span>Already Registered?</span>
-                    <span class="reg-login-link" onclick="alert('Login action')">Login</span>
+                <div class="reg-phone-wrapper">
+                    <span class="reg-phone-prefix">+91</span>
+                    <input type="tel" class="reg-input" id="mobile" name="mobile" pattern="[0-9]{10}" maxlength="10"
+                        required placeholder="Phone Number*"
+                        style="border:none;outline:none;padding-left:0;background:transparent;"
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                 </div>
+
+                <select id="state" class="reg-select" aria-label="Select State" onchange="fetchCities()">
+                    <option value="">Select State</option>
+                </select>
+
+                <select id="city" class="reg-select" aria-label="Select City">
+                    <option value="">Select a state first</option>
+                </select>
+
+                <select id="course-select" class="reg-select" required aria-label="Select Course*">
+                    <option value="" disabled selected>Select Course*</option>
+                    <option>PGDM</option>
+                </select>
+                <div class="captcha-box">
+                    <div id="captcha" class="captcha">----</div>
+                    <span style="font-size: 12px;" onclick="generateCaptcha()">Refresh</span>
+                </div>
+
+                <input type="text" class="reg-input" id="captchaInput" placeholder="Enter CAPTCHA"
+                    oninput="clearCaptchaError()">
+                <div class="error-message" id="captchaError">Incorrect CAPTCHA. Please try again.</div>
+                <div class="reg-checkbox-row">
+                    <input type="checkbox" id="consent-checkbox" required title="Consent to contact" />
+                    <label for="consent-checkbox" style="font-size: 12px;">
+                        I authorize GNIM and its representative to contact me with updates and notifications via
+                        Email,
+                        SMS, WhatsApp, and Call.
+                    </label>
+                </div>
+
+                <button type="submit" class="reg-button" onclick="validateCaptcha()">Register</button>
+            </form>
+
+            <div class="reg-footer-row">
+                <span>Already Registered?</span>
+                <span class="reg-login-link" onclick="alert('Login action')">Login</span>
             </div>
-    </div>
+        </div>
     </section>
+    </div>
     <script src="assets/js/formings.js"></script>
     <!--================================================================================= 
                                 START 5* APP HOME
@@ -463,7 +466,8 @@
             <div class="row">
                 <div class="col-lg-6 col-sm-6">
                     <div class="banner-intro">
-                        <h1 class="banner-title" style="color: #132772;">Shape Futures with an <br> Inspiring <span id="element"></span></h1>
+                        <h1 class="banner-title" style="color: #132772;">Shape Futures with an <br> Inspiring <span
+                                id="element"></span></h1>
                         <p class="height-30 StyleP">The Greater
                             Noida Institute of
                             Management (GNIM) is a distinguished educational institution located in Greater Noida, Uttar
@@ -557,11 +561,13 @@
                 width: 1350px;
             }
         }
+
         @media (max-width:1348px) {
             #ourclients .clients-wrap {
                 width: 100%;
             }
         }
+
         #ourclients .clients-wrap {
             display: block;
             margin: 0 auto;
@@ -700,60 +706,72 @@
 
 
     <!-- <link rel="stylesheet" href="assets/css/btnHover.css"> -->
-     <style>
+    <style>
         .beautiful-btn {
-    /* Basic Styling */
-    /* padding: 15px 30px; */
-    /* font-size: 18px; */
-    /* font-weight: bold; */
-    color: white;
-    background-image: linear-gradient(135deg, yellow 0%, #ffa100 100%); /* Nice gradient */
-    border: none;
-    border-radius: 50px; /* Very rounded, pill-shape */
-    cursor: pointer;
-    outline: none; /* Removes default browser outline */
+            /* Basic Styling */
+            /* padding: 15px 30px; */
+            /* font-size: 18px; */
+            /* font-weight: bold; */
+            color: white;
+            background-image: linear-gradient(135deg, yellow 0%, #ffa100 100%);
+            /* Nice gradient */
+            border: none;
+            border-radius: 50px;
+            /* Very rounded, pill-shape */
+            cursor: pointer;
+            outline: none;
+            /* Removes default browser outline */
 
-    /* Shadow for depth */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            /* Shadow for depth */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 
-    /* Transition for smooth hover effects */
-    transition: all 0.3s ease-out;
-    position: relative; /* For potential pseudo-elements or advanced effects */
-    overflow: hidden; /* Ensures effects don't spill out */
-}
+            /* Transition for smooth hover effects */
+            transition: all 0.3s ease-out;
+            position: relative;
+            /* For potential pseudo-elements or advanced effects */
+            overflow: hidden;
+            /* Ensures effects don't spill out */
+        }
 
-/* Hover Effect */
-.beautiful-btn:hover {
-    background-image: linear-gradient(135deg, #ffa100 0%, yellow 100%); /* Flip gradient */
-    transform: translateY(-3px) scale(1.05); /* Lift and slightly enlarge */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
-}
+        /* Hover Effect */
+        .beautiful-btn:hover {
+            background-image: linear-gradient(135deg, #ffa100 0%, yellow 100%);
+            /* Flip gradient */
+            transform: translateY(-3px) scale(1.05);
+            /* Lift and slightly enlarge */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            /* Enhanced shadow */
+        }
 
-/* Active (Pressed) Effect */
-.beautiful-btn:active {
-    transform: translateY(1px) scale(0.98); /* Push down and slightly shrink */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Reduced shadow */
-}
-.beautiful-btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%; /* Start off-screen */
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        120deg,
-        transparent,
-        rgba(255, 255, 255, 0.3), /* Lighter shine */
-        transparent
-    );
-    transition: all 0.5s ease-in-out;
-}
+        /* Active (Pressed) Effect */
+        .beautiful-btn:active {
+            transform: translateY(1px) scale(0.98);
+            /* Push down and slightly shrink */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            /* Reduced shadow */
+        }
 
-.beautiful-btn:hover::before {
-    left: 100%; /* Move shine across the button */
-}
-     </style>
+        .beautiful-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            /* Start off-screen */
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.3),
+                    /* Lighter shine */
+                    transparent);
+            transition: all 0.5s ease-in-out;
+        }
+
+        .beautiful-btn:hover::before {
+            left: 100%;
+            /* Move shine across the button */
+        }
+    </style>
     <section id="education-about">
         <div class="container">
             <div class="row">
@@ -794,7 +812,8 @@
                         </li>
                     </ul>
                     <a href="https://gnimgreaternoida.org/about_us"><button
-                            style="padding: 12px; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; margin-top: 10px;" class="beautiful-btn">READ
+                            style="padding: 12px; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; margin-top: 10px;"
+                            class="beautiful-btn">READ
                             MORE</button></a>
                 </div>
             </div>
@@ -1191,7 +1210,7 @@
                         <div class="col-md-6" style="margin-bottom: 15px;">
                             <div class="proinfo slide-left hoverc" style="background-color: white;">
                                 <i class="fa-solid fa-graduation-cap color-1"></i>
-                                <h3 class="marginde">Post Graduate Diploma in Management(PGDM)</h3>
+                                <h3 class="marginde">Post Graduate Diploma in Management&#40;PGDM&#41;</h3>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -1306,7 +1325,7 @@
         $('.counter').addClass('animated fadeInDownBig');
         $('h3').addClass('animated fadeIn');
     </script>
-    
+
     <!--================================================================================= 
                                 END Program 
     ==================================================================================-->
@@ -1316,16 +1335,18 @@
          ==================================================================================-->
 
     <style>
-        @media (min-width:1349px) {
+        @media (min-width:2000px) {
             .slider {
-                width: 2000px;
+                max-width: 2000px;
             }
         }
+
         @media (max-width:1348px) {
             .slider {
                 width: 100%;
             }
         }
+
         .slider {
             display: flex;
             margin: 0 auto;
@@ -2022,12 +2043,13 @@
                 </div>
                 <div class="col-lg-3" style="text-align: right">
                     <a href="https://apply.gnimgreaternoida.in/"><button
-                            style="height: 40px; width: 150px; border: none;color: #f5f3f3; text-align: center;" class="beautiful-btn">Apply
+                            style="height: 40px; width: 150px; border: none;color: #f5f3f3; text-align: center;"
+                            class="beautiful-btn">Apply
                             Now</button></a>
                 </div>
             </div>
-        </div>
-        <div class="owl-carousel custom-carousel owl-theme">
+            <div class="row" style="width: 100%;">
+                <div class="owl-carousel custom-carousel owl-theme">
             <div class="item" style="background-image: url(assets/images/facilities/home_9.webp);">
                 <div class="item-desc">
                     <h3>Student Life</h3>
@@ -2051,6 +2073,7 @@
             </div>
 
         </div>
+            </div>
         </div>
     </section>
 
@@ -2082,7 +2105,6 @@
                     "<span class='owl-prev'>&#10094;</span>",
                     "<span class='owl-next'>&#10095;</span>"
                 ]
-
             });
 
             // Enable tap/click to expand on touch devices
@@ -2388,7 +2410,8 @@
 
                     <div class="tes-singel-content">
                         <div class="testimonial-img col-lg-5 col-md-6 col-sm-12 col-xs-12"
-                            style="background-image: url(assets/images/review/Taksh\ Kumar-Picsart-AiImageEnhancer.webp); background-size: 398px;"></div>
+                            style="background-image: url(assets/images/review/Taksh\ Kumar-Picsart-AiImageEnhancer.webp); background-size: 398px;">
+                        </div>
                         <div class="testimonial-content-bl col-lg-7 col-md-6 col-sm-12 col-xs-12 ptb100">
                             <!-- title -->
                             <div class="partition_left inline-block pl30 relative mb40">
@@ -2426,7 +2449,8 @@
 
                     <div class="tes-singel-content">
                         <div class="testimonial-img col-lg-5 col-md-6 col-sm-12 col-xs-12"
-                            style="background-image: url(assets/images/review/Debargha\ Deb-Picsart-AiImageEnhancer.webp); background-size: 398px;"></div>
+                            style="background-image: url(assets/images/review/Debargha\ Deb-Picsart-AiImageEnhancer.webp); background-size: 398px;">
+                        </div>
                         <div class="testimonial-content-bl col-lg-7 col-md-6 col-sm-12 col-xs-12 ptb100">
                             <!-- title -->
                             <div class="partition_left inline-block pl30 relative mb40">
@@ -2564,7 +2588,7 @@
         .footer-bottom {
             background-color: #000522;
             color: white;
-            padding: 100px 100px 0;
+            padding: 25px 100px 0;
         }
 
 
@@ -2673,28 +2697,36 @@
                 <div class="col-md-6 col-lg-3 mb-4 contact-info">
                     <h5 class="footer-title fweight-600">GET IN TOUCH</h5>
                     <strong>Greater Noida Institute of Management (GNIM)</strong>
-                    <a target="_blank" rel="noopener">
-                        <p class="fsize-16"><i class="fas fa-location-dot"></i> Plot No. 6C, Knowledge Park 2, Greater
-                            Noida
-                            (Delhi NCR) - 201310</p>
-                    </a>
-                    <a href="callto:+91-8826124205">
-                        <i class="fas fa-phone"></i> +91-8826124205
-                    </a>
-                    <a href="callto:+91-8826154124">
-                        , 8826154124
-                    </a>   
-                    <p class="fsize-16">
-                    <a href="mailto:admissions@gnimgreaternoida.org">
-                        <i class="fas fa-envelope"></i> admissions@gnimgreaternoida.org
-                    </a>
-                    <a href="mailto:info@gnimgreaternoida.org">
-                        </i> , info@gnimgreaternoida.org
-                    </a>
-                    </p>
-                    <a href="https://maps.app.goo.gl/bDJpU61U8HBybqhu7" target="_blank" rel="noopener">
-                        <p class="fsize-16"><i class="fas fa-map-marker-alt"></i> Open in Google Maps</p>
-                    </a>
+                    <div style="display: flex;">
+                        <div><i class="fas fa-location-dot"></i></div>
+                        <p class="fsize-16">
+                            <a target="_blank" rel="noopener">Plot No. 6C, Knowledge Park 2, Greater Noida (Delhi NCR) -
+                                201310</a>
+                        </p>
+                    </div>
+                    <div style="display: flex;">
+                        <div><i class="fas fa-phone"></i></div>
+                        <p class="fsize-16">
+                            <a href="callto:+91-8826124205">+91-8826124205</a>
+                            ,
+                            <a href="callto:+91-8826154124">8826154124</a>
+                        </p>
+                    </div>
+                    <div style="display: flex;">
+                        <div><i class="fas fa-envelope"></i></div>
+                        <p class="fsize-16">
+                            <a href="mailto:admissions@gnimgreaternoida.org">admissions@gnimgreaternoida.org</a>
+                            ,
+                            <a href="mailto:info@gnimgreaternoida.org">info@gnimgreaternoida.org</a>
+                        </p>
+                    </div>
+                    <div style="display: flex;">
+                        <div><i class="fas fa-map-marker-alt"></i></div>
+                        <p class="fsize-16">
+                            <a href="https://maps.app.goo.gl/bDJpU61U8HBybqhu7" target="_blank" rel="noopener">Open in
+                                Google Maps</a>
+                        </p>
+                    </div>
                 </div>
 
                 <!-- About Column -->
@@ -2751,8 +2783,8 @@
                     <img src="assets/images/logog.jpg" alt="" class="footer-logo">
                 </div>
                 <div class="col-md-6 col-lg-5 mb-4 text-center" style="font-size: 13px; padding: 0;">
-                    <div>Copyright © 2025 <a href="https://innowebsolution.com/"
-                            class="color-3">Innoweb Solution</a>. All rights reserved.</div>
+                    <div>Copyright © 2025 <a href="https://innowebsolution.com/" class="color-3">Innoweb Solution</a>.
+                        All rights reserved.</div>
                 </div>
             </div>
         </div>
@@ -2885,6 +2917,11 @@
     ==================================================================================-->
 
     <!-- JQUERY LIBRARY JS -->
+     <!-- Bootstrap-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <!-- CONTACT JS -->
     <script src="assets/js/jquery-contact.js"></script>
@@ -2905,7 +2942,8 @@
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <!-- CUSTOM JS -->
     <script src="assets/js/script.js"></script>
-    <script>
+    
+    <!-- <script>
         // Disable scroll restoration
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
@@ -2917,7 +2955,7 @@
                 window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
             }, 0);
         });
-    </script>
+    </script> -->
 
 </body>
 

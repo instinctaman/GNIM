@@ -144,18 +144,21 @@ img {
     background: -webkit-gradient(linear, left top, right top, from(#ffa100), to(#ffa100));
     background: linear-gradient(to right, #ffa100 0%, #ffa100 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .more_btn.text-gradient:hover {
     background: #1e283c;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .more_btn.text-gradient:hover i {
     background: #1e283c;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -1387,11 +1390,6 @@ header li:hover>a {
 }
     
 }
-/* @media (max-width: 1200px) {
-    .banner-intro h1{
-    margin-top: 70px;
-    
-} */
 
 .banner-intro .banner-title span {
     color: #ffa100;
@@ -1741,17 +1739,17 @@ header li:hover>a {
     border-radius: 0;
     border-style: double;
     border-width: 4px;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .course .ia-icon .fa {
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 
@@ -1978,10 +1976,10 @@ header li:hover>a {
     text-transform: capitalize;
     font-weight: 400;
     padding: 15px 0;
-    transition: all .4s;
+    -ms-transition: all .4s;
     -webkit-transition: all .4s;
     -moz-transition: all .4s;
-    -ms-transition: all .4s;
+    transition: all .4s;
 }
 
 .tp_second_btn i {
@@ -1993,10 +1991,10 @@ header li:hover>a {
     font-size: 16px;
     border-radius: 50%;
     color: #333;
-    transition: all .4s;
+    -ms-transition: all .4s;
     -webkit-transition: all .4s;
     -moz-transition: all .4s;
-    -ms-transition: all .4s;
+    transition: all .4s;
 }
 
 .tp_second_btn:hover i {
@@ -2035,8 +2033,6 @@ header li:hover>a {
     border: 1px solid #ffa100;
     border-radius: 50%;
 }
-
-.owl-dots .owl-dot.active {}
 
 .owl-dots .owl-dot.active span {
     background-image: -webkit-gradient(linear, left top, right top, from(#ffa100), to(#ffa100));
@@ -2086,56 +2082,6 @@ header li:hover>a {
 .object_fit{
     object-fit: cover;
 }
-/* ==========================================================================
-   07. Price section
-   ========================================================================== */
-
-.price-center {
-    /* margin-top: -30px; */
-}
-
-.price-holder {
-    margin-bottom: 50px;
-}
-
-.price-title {
-    opacity: 0.1;
-}
-
-.price-wrapper ul {
-    list-style: none;
-}
-
-.price-wrapper .price-list {
-    border-bottom: 1px solid #eaf0f8;
-    padding: 20px 0;
-}
-
-.price-wrapper .price-list:first-child {
-    border-top: 1px solid #eaf0f8;
-}
-
-.price-wrapper .price-same-st .price-list {
-    border-bottom: 1px solid #00B2D6;
-    padding: 20px 0;
-}
-
-.price-wrapper .price-same-st .price-list:first-child {
-    border-top: 1px solid #00B2D6;
-}
-
-.price-wrapper .price-btn {
-    width: 220px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    bottom: -30px;
-}
-
-.price-wrapper .price-center .border-gradient:hover {
-    color: inherit;
-}
-
 
 /* ==========================================================================
    08. Testimonials section
@@ -2533,6 +2479,7 @@ header li:hover>a {
     color: rgba(255, 255, 255, 1) !important;
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: opacity(1);
 }
 
 .semitrans.section-signup .form-control:-ms-input-placeholder {
@@ -2581,7 +2528,8 @@ header li:hover>a {
 .section-signup .form-group {
     margin-bottom: 30px;
     margin-bottom: 30px;
-    margin-bottom: 1.875rem width: 100%;
+    margin-bottom: 1.875rem;
+    width: 100%;
     text-align: center;
 }
 
@@ -3015,5 +2963,5 @@ footer {
 .line{
     background-color: #0e0b36;
     height: 1px;
-    margin: 50px;
+    margin: 15px;
 }

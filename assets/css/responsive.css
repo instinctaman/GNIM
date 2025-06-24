@@ -325,6 +325,9 @@
 @media screen and (max-width: 767px) {
 
     /*course section*/
+    .program {
+        background-position-y: 460px;
+    }
     #UpperPage{
         margin-top: -25px;
     }
