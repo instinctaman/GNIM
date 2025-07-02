@@ -22,6 +22,12 @@
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .owl-nav{
+        display: none;
+    }
+    .owl-prev{
+        display: none;
+    }
     .banner-area::before {
         bottom: -115px;
     }
@@ -39,7 +45,7 @@
 
 @media only screen and (max-width: 991px) {
     .banner-area {
-        min-height: auto;
+        /* min-height: auto; */
     }
 
     /* .forming{
