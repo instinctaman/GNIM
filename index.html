@@ -355,29 +355,33 @@
     /* background-repeat: no-repeat; */
         }
 @media screen and (min-width: 997px) {
-            .afterresponsive{
-                display: none;
+            .first1{
+                 display: block;
             }
-            .beforeresponsive{
-                display: block;
+            .second2, .karcenter {
+                display: none;
             }
 }
         @media (max-width: 996px) {
-            .responsive-image {
-                margin-top: 50px;
-                height: 100vh;
-                background-image: url('assets/images/gnim_web03_m_1-Picsart-AiImageEnhancer.webp');
-            }
-            .beforeresponsive{
+            .first1 {
                 display: none;
             }
-            .afterresponsive {
+            .second2{
                 display: block;
+                width: 100%;
+                height: auto;
+                margin-top: 75px;
             }
+        }
+        @media screen and (max-width: 776px) {
+            .second2{
+                margin-top: 50px;
+            }
+            
         }
     </style>
 
-<section>
+<section class="first1">
     <div class="container-fluid responsive-image">
         <div class="row">
             <div class="col-lg-8">
@@ -446,7 +450,9 @@
         </div>
     </div>
     </section>
-    <div class="karcenter">
+    
+        <img src="assets/images/gnim_web03_m_1-Picsart-AiImageEnhancer.webp" class="second2" alt="">
+        <div class="karcenter second2">
     <section class="forming afterresponsive">
 
             <div class="reg-box">

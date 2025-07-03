@@ -29,11 +29,14 @@
 }
 
 /* @media (max-width:1189) { */
-.karcenter {
+@media screen and (max-width: 996px) {
+    .karcenter {
   margin-top: 10px;
   display: flex;
   justify-content: center;
   z-index: 2;
+}
+  
 }
 
 .reg-box {
