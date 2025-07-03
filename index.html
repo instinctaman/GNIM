@@ -345,69 +345,48 @@
         });
     </script>
     <!-- <section class="slider-section"> -->
-    <style>
+        <style>
         .responsive-image {
-            content: url('assets/images/Admission\ open\ for.jpg');
+                margin-top: 75px;
+                height: 100vh;
+           background-image: url('assets/images/Your\ paragraph\ text.jpg');
+    background-size: cover;
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
         }
-
-        @media (max-width: 768px) {
+@media screen and (min-width: 997px) {
+            .afterresponsive{
+                display: none;
+            }
+            .beforeresponsive{
+                display: block;
+            }
+}
+        @media (max-width: 996px) {
             .responsive-image {
-                content: url('assets/images/gnim_web03_m_1-Picsart-AiImageEnhancer.webp');
+                margin-top: 50px;
+                height: 100vh;
+                background-image: url('assets/images/gnim_web03_m_1-Picsart-AiImageEnhancer.webp');
+            }
+            .beforeresponsive{
+                display: none;
+            }
+            .afterresponsive {
+                display: block;
             }
         }
     </style>
-    <div class="front_image" id="UpperPage">
-        <img class="responsive-image" alt="GNIM Banner Image"
-            style="width: 100%; height: auto; display: block; object-fit: cover; margin-top: 75px;">
-    </div>
-    <!-- Video Section (visible above 765px) -->
-    <!-- <style>
-    .responsive-video {
-      margin-top: 75px;
-      width: 100%;
-      height: auto;
-      display: block;
-    }
 
-    .video-container,
-    .image-link-container {
-      display: none;
-    }
-
-    @media (min-width: 766px) {
-      .video-container {
-        display: block;
-      }
-    }
-
-    @media (max-width: 765px) {
-      .image-link-container {
-        display: block;
-      }
-    }
-  </style>
-  <div class="video-container">
-    <video class="responsive-video" autoplay muted loop playsinline>
-      <source src="assets/video/Front_Video.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  <div class="image-link-container">
-    <a href="#">
-      <img src="assets/images/gnim_web03_m_1-Picsart-AiImageEnhancer.webp" alt="Alternative Link" class="responsive-video" />
-    </a>
-  </div> -->
-    <!-- End of Carousel -->
-    <!-- </section> -->
-
-    <!--================================================================================= 
-                                END HEADER
-    ==================================================================================-->
-
-    <link rel="stylesheet" href="assets/css/forming.css">
-    <div class="karcenter">
-        <section class="forming">
+<section>
+    <div class="container-fluid responsive-image">
+        <div class="row">
+            <div class="col-lg-8">
+                
+            </div>
+            <div class="col-lg-4 d-flex justify-content-center">
+                    <link rel="stylesheet" href="assets/css/forming.css">
+    <!-- <div class="karcenter"> -->
+        <section class="forming beforeresponsive">
 
             <div class="reg-box">
                 <div class="reg-title">Admissions Open 2025-27</div>
@@ -462,7 +441,118 @@
                 </div>
             </div>
         </section>
+    <!-- </div> -->
+                </div>
+        </div>
     </div>
+    </section>
+    <div class="karcenter">
+    <section class="forming afterresponsive">
+
+            <div class="reg-box">
+                <div class="reg-title">Admissions Open 2025-27</div>
+                <form class="reg-form" onsubmit="return handleSubmit(event)">
+                    <input type="text" class="reg-input" placeholder="Enter Name*" required />
+
+                    <input type="email" class="reg-input" placeholder="Enter Email*" required />
+
+                    <div class="reg-phone-wrapper">
+                        <span class="reg-phone-prefix">+91</span>
+                        <input type="tel" class="reg-input" id="mobile" name="mobile" pattern="[0-9]{10}" maxlength="10"
+                            required placeholder="Phone Number*"
+                            style="border:none;outline:none;padding-left:0;background:transparent;"
+                            oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    </div>
+
+                    <select id="state" class="reg-select" aria-label="Select State" onchange="fetchCities()">
+                        <option value="">Select State</option>
+                    </select>
+
+                    <select id="city" class="reg-select" aria-label="Select City">
+                        <option value="">Select a state first</option>
+                    </select>
+
+                    <select id="course-select" class="reg-select" required aria-label="Select Course*">
+                        <option value="" disabled selected>Select Course*</option>
+                        <option>PGDM</option>
+                    </select>
+                    <div class="captcha-box">
+                        <div id="captcha" class="captcha">----</div>
+                        <span style="font-size: 12px;" onclick="generateCaptcha()">Refresh</span>
+                    </div>
+
+                    <input type="text" class="reg-input" id="captchaInput" placeholder="Enter CAPTCHA"
+                        oninput="clearCaptchaError()">
+                    <div class="error-message" id="captchaError">Incorrect CAPTCHA. Please try again.</div>
+                    <div class="reg-checkbox-row">
+                        <input type="checkbox" id="consent-checkbox" required title="Consent to contact" />
+                        <label for="consent-checkbox" style="font-size: 12px;">
+                            I authorize GNIM and its representative to contact me with updates and notifications via
+                            Email,
+                            SMS, WhatsApp, and Call.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="reg-button" onclick="validateCaptcha()">Register</button>
+                </form>
+
+                <div class="reg-footer-row">
+                    <span>Already Registered?</span>
+                    <!-- <span class="reg-login-link" onclick="alert('Login action')">Login</span> -->
+                </div>
+            </div>
+        </section>
+        </div>
+    <!-- <div class="front_image" id="UpperPage">
+        <img class="responsive-image" alt="GNIM Banner Image"
+            style="width: 100%; height: auto; display: block; object-fit: cover; margin-top: 75px;">
+    </div> -->
+    <!-- Video Section (visible above 765px) -->
+    <!-- <style>
+    .responsive-video {
+      margin-top: 75px;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .video-container,
+    .image-link-container {
+      display: none;
+    }
+
+    @media (min-width: 766px) {
+      .video-container {
+        display: block;
+      }
+    }
+
+    @media (max-width: 765px) {
+      .image-link-container {
+        display: block;
+      }
+    }
+  </style>
+  <div class="video-container">
+    <video class="responsive-video" autoplay muted loop playsinline>
+      <source src="assets/video/Front_Video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="image-link-container">
+    <a href="#">
+      <img src="assets/images/gnim_web03_m_1-Picsart-AiImageEnhancer.webp" alt="Alternative Link" class="responsive-video" />
+    </a>
+  </div> -->
+    <!-- End of Carousel -->
+    <!-- </section> -->
+
+    <!--================================================================================= 
+                                END HEADER
+    ==================================================================================-->
+    
+    <!--  -->
     <!--================================================================================= 
                                 START 5* APP HOME
     ==================================================================================-->
@@ -760,7 +850,7 @@
             /* Move shine across the button */
         }
     </style>
-    <section id="education-about">
+    <section id="education-about" style="margin-bottom: 60px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5">
@@ -2010,11 +2100,11 @@
     <section id="education-infrastructure" class="game-section" style="background-color: #f7f7f7;">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5">
+                <div class="col-lg-4">
                     <h4 style="color: #ffa100;">Facilities at GNIM Greater Noida</h4>
                     <h2>What We Provide</h2>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-5">
                     <p style="font-size: 16px;">GNIM Greater Noida is committed to offering a well-rounded educational
                         experience by providing
                         top-notch facilities, industry exposure, and a vibrant student life.</p>
@@ -2770,6 +2860,9 @@
         .modal .forming .reg-box {
             width: 598px;
         }
+        .modal-body .forming{
+            margin-top: 0;
+        }
     </style>
     <div id="education-contact" class="modal fade" role="dialog">
         <div class="modal-dialog" style="width: 317px">
@@ -2777,7 +2870,6 @@
             <div class="modal-content" style="max-width: 317px">
                 <div class="modal-header">
                     <img class="close" data-dismiss="modal" src="assets/images/icons/close-icon.png" alt="close">
-                    <h4 class="modal-title">Feel free shoot a message</h4>
                 </div>
                 <div class="modal-body">
                     <!-- <link rel="stylesheet" href="assets/css/forming.css"> -->
