@@ -9,7 +9,8 @@
     <!-- Favicon (ICO or PNG) -->
     <link rel="icon" type="image/png" href="assets/images/1721900784phpRGUQTi.jpeg">
 
-    <!-- Google Fonts -->
+    <!--  AOS styles  -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/Navigation.css">
     <!-- Style -->
@@ -18,9 +19,10 @@
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <!-- Font-Awesome css -->
     <!-- Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- Pop-Up-->
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <!-- Animate CSS -->
@@ -28,7 +30,7 @@
     <link rel="stylesheet" href="assets/css/btnHover.css">
 </head>
 
-<body class="homepage body-bg" data-spy="scroll" data-target=".navbar" data-offset="90" style="padding-right: 0px;">
+<body class="homepage body-bg" data-spy="scroll" data-target=".navbar" data-offset="90" style="padding:0;">
     <!--================================================================================= 
                                 START PRELOADER
     ==================================================================================-->
@@ -52,11 +54,11 @@
             <header class="header">
                 <nav class="navbar">
                     <div class="nav-brand">
-                        <a href="#"><img src="assets/images/logog.jpg" alt="" class="logoTop"></a>
+                        <a href="#"><img src="assets/images/logog.jpg" alt="" class="logoTop" data-aos="fade-down"></a>
                     </div>
 
                     <div class="nav-toggle">
-                        <div class="hamburger">
+                        <div class="hamburger" data-aos="fade-left">
                             <span></span>
                             <span></span>
                             <span></span>
@@ -64,7 +66,7 @@
                     </div>
 
                     <div class="nav-menu">
-                        <ul class="nav-list" style="gap: 30px;">
+                        <ul class="nav-list" style="gap: 30px;" data-aos="fade-down">
                             <li class="nav-item">
                                 <a href="#UpperPage" class="nav-link">Home</a>
                             </li>
@@ -97,7 +99,8 @@
 
                     </div>
                 </nav>
-            </header><script>
+            </header>
+            <script>
                 document.addEventListener('DOMContentLoaded', () => {
                     // Elements
                     const navbar = document.querySelector('.navbar');
@@ -358,13 +361,13 @@
                         /* display: block; */
                         width: 100%;
                         height: auto;
-                        margin-top: 75px;
+                        /* margin-top: 75px; */
                     }
                 }
 
                 @media screen and (max-width: 776px) {
                     .second2 {
-                        margin-top: 50px;
+                        /* margin-top: 50px; */
                     }
 
                 }
@@ -378,66 +381,11 @@
                         </div>
                         <div class="col-lg-4 d-flex justify-content-center">
                             <!-- <div class="karcenter"> -->
-                            <section class="forming">
+                            <section class="forming" data-aos="fade-left">
 
-                                <div class="reg-box">
-                                    <div class="reg-title">Admissions Open 2025-27</div>
-                                    <form class="reg-form" onsubmit="return handleSubmit(event)">
-                                        <input type="text" class="reg-input" placeholder="Enter Name*" required />
+                                <iframe src="react-form/index.html" width="100%" height="650"
+                                    style="border:none;"></iframe>
 
-                                        <input type="email" class="reg-input" placeholder="Enter Email*" required />
-
-                                        <div class="reg-phone-wrapper">
-                                            <span class="reg-phone-prefix">+91</span>
-                                            <input type="tel" class="reg-input" id="mobile" name="mobile"
-                                                pattern="[0-9]{10}" maxlength="10" required placeholder="Phone Number*"
-                                                style="border:none;outline:none;padding-left:0;background:transparent;"
-                                                oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-                                        </div>
-
-                                        <select id="state" class="reg-select" aria-label="Select State"
-                                            onchange="fetchCities()">
-                                            <option value="">Select State</option>
-                                        </select>
-
-                                        <select id="city" class="reg-select" aria-label="Select City">
-                                            <option value="">Select a state first</option>
-                                        </select>
-
-                                        <select id="course-select" class="reg-select" required
-                                            aria-label="Select Course*">
-                                            <option value="" disabled selected>Select Course*</option>
-                                            <option>PGDM</option>
-                                        </select>
-                                        <div class="captcha-box">
-                                            <div id="captcha" class="captcha">----</div>
-                                            <span style="font-size: 12px;" onclick="generateCaptcha()">Refresh</span>
-                                        </div>
-
-                                        <input type="text" class="reg-input" id="captchaInput"
-                                            placeholder="Enter CAPTCHA" oninput="clearCaptchaError()">
-                                        <div class="error-message" id="captchaError">Incorrect CAPTCHA. Please try
-                                            again.</div>
-                                        <div class="reg-checkbox-row">
-                                            <input type="checkbox" id="consent-checkbox" required
-                                                title="Consent to contact" />
-                                            <label for="consent-checkbox" style="font-size: 12px;">
-                                                I authorize GNIM and its representative to contact me with updates and
-                                                notifications via
-                                                Email,
-                                                SMS, WhatsApp, and Call.
-                                            </label>
-                                        </div>
-
-                                        <button type="submit" class="reg-button"
-                                            onclick="validateCaptcha()">Register</button>
-                                    </form>
-
-                                    <div class="reg-footer-row">
-                                        <span>Already Registered?</span>
-                                        <!-- <span class="reg-login-link" onclick="alert('Login action')">Login</span> -->
-                                    </div>
-                                </div>
                             </section>
                             <!-- </div> -->
                         </div>
@@ -447,61 +395,10 @@
 
             <img src="assets/images/gnim_web03_m_1-Picsart-AiImageEnhancer.webp" class="second2" alt="">
             <div class="karcenter second2">
-                <section class="forming">
+                <section class="forming" data-aos="fade-up">
 
-                    <div class="reg-box">
-                        <div class="reg-title">Admissions Open 2025-27</div>
-                        <form class="reg-form" onsubmit="return handleSubmit(event)">
-                            <input type="text" class="reg-input" placeholder="Enter Name*" required />
+                    <iframe src="react-form/index.html" width="315" height="515" style="border:none;"></iframe>
 
-                            <input type="email" class="reg-input" placeholder="Enter Email*" required />
-
-                            <div class="reg-phone-wrapper">
-                                <span class="reg-phone-prefix">+91</span>
-                                <input type="tel" class="reg-input" id="mobile" name="mobile" pattern="[0-9]{10}"
-                                    maxlength="10" required placeholder="Phone Number*"
-                                    style="border:none;outline:none;padding-left:0;background:transparent;"
-                                    oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-                            </div>
-
-                            <select id="state" class="reg-select" aria-label="Select State" onchange="fetchCities()">
-                                <option value="">Select State</option>
-                            </select>
-
-                            <select id="city" class="reg-select" aria-label="Select City">
-                                <option value="">Select a state first</option>
-                            </select>
-
-                            <select id="course-select" class="reg-select" required aria-label="Select Course*">
-                                <option value="" disabled selected>Select Course*</option>
-                                <option>PGDM</option>
-                            </select>
-                            <div class="captcha-box">
-                                <div id="captcha" class="captcha">----</div>
-                                <span style="font-size: 12px;" onclick="generateCaptcha()">Refresh</span>
-                            </div>
-
-                            <input type="text" class="reg-input" id="captchaInput" placeholder="Enter CAPTCHA"
-                                oninput="clearCaptchaError()">
-                            <div class="error-message" id="captchaError">Incorrect CAPTCHA. Please try again.</div>
-                            <div class="reg-checkbox-row">
-                                <input type="checkbox" id="consent-checkbox" required title="Consent to contact" />
-                                <label for="consent-checkbox" style="font-size: 12px;">
-                                    I authorize GNIM and its representative to contact me with updates and notifications
-                                    via
-                                    Email,
-                                    SMS, WhatsApp, and Call.
-                                </label>
-                            </div>
-
-                            <button type="submit" class="reg-button" onclick="validateCaptcha()">Register</button>
-                        </form>
-
-                        <div class="reg-footer-row">
-                            <span>Already Registered?</span>
-                            <!-- <span class="reg-login-link" onclick="alert('Login action')">Login</span> -->
-                        </div>
-                    </div>
                 </section>
             </div>
             <!-- <div class="front_image" id="UpperPage">
@@ -563,7 +460,8 @@
                         <div class="col-lg-6 col-sm-6">
                             <div class="banner-intro">
                                 <h1 class="banner-title" style="color: #132772;">Shape Futures with an <br> Inspiring
-                                    <span id="element"></span></h1>
+                                    <span id="element"></span>
+                                </h1>
                                 <p class="height-30 StyleP">
                                     The Greater Noida Institute of Management (GNIM) is a distinguished educational
                                     institution located in Greater Noida, Uttar
@@ -799,7 +697,7 @@
                 });
             </script>
             <style>
-                
+
             </style>
             <section id="education-about" style="margin-bottom: 60px;">
                 <div class="container">
@@ -808,11 +706,12 @@
                             <div class="back1">
                                 <img src="assets/images/about/about_gnim_home.webp"
                                     style="box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px !important; border-radius: 10px !important;"
-                                    alt="GNIM Image" class="slide-right">
+                                    alt="GNIM Image" data-aos="fade-right" data-aos-duration="1000">
                             </div>
                         </div>
                         <div class="col-lg-7">
-                            <h5 class="color-1 slide-left about-h5" style="text-transform: uppercase;">Best PGDM College
+                            <h5 class="color-1 about-h5" data-aos="fade-left" style="text-transform: uppercase;">Best
+                                PGDM College
                                 in
                                 Delhi NCR
                             </h5>
@@ -883,7 +782,7 @@
 
                 .owl-nav button.owl-prev {
                     background-color: transparent;
-                    left: -15px;
+                    left: -30px;
                 }
 
                 .owl-nav button.owl-next {
@@ -1256,8 +1155,8 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="color-1" style="font-size: 34px;">ACADEMIC</div>
-                            <h2 style="color: white;" class="slide-right">Program Offered by (GNIM)</h2>
-                            <p style="    color: white; font-size: 17px; margin-top: 35px;">Greater Noida Institute of
+                            <h2 style="color: white;" data-aos="fade-right" data-aos-duration="1000"">Program Offered by (GNIM)</h2>
+                            <p style=" color: white; font-size: 17px; margin-top: 35px;">Greater Noida Institute of
                                 Management (GNIM) offers a range of
                                 programs tailored for future business leaders, including PGDM and MBA courses with
                                 options for
@@ -1265,18 +1164,18 @@
                                 skills in key
                                 areas of management. Additionally, GNIM offers certification programs that enhance
                                 industry-relevant competencies, preparing students for competitive careers.</p>
-                            <button style="margin-top: 35px;" class="beautiful-btn">Apply Now</button>
+                                <button style="margin-top: 35px;" class="beautiful-btn">Apply Now</button>
                         </div>
                         <div class="col-md-6">
                             <div class="row">
                                 <div class="col-md-6" style="margin-bottom: 15px;">
-                                    <div class="proinfo slide-left hoverc" style="background-color: white;">
+                                    <div class="proinfo hoverc" data-aos="fade-left" style="background-color: white;">
                                         <i class="fa-solid fa-graduation-cap color-1"></i>
                                         <h3 class="marginde">Post Graduate Diploma in Management&#40;PGDM&#41;</h3>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="proinfo textw slide-left hoverc">
+                                    <div class="proinfo textw hoverc" data-aos="fade-left">
                                         <i class="fa-solid fa-thumbs-up color-1"></i>
                                         <h3 class="marginde">Corporate Exposure through Live Projects</h3>
                                     </div>
@@ -1285,13 +1184,13 @@
                             <div class="row">
 
                                 <div class="col-md-6" style="margin-bottom: 15px;">
-                                    <div class="proinfo textw slide-left hoverc">
+                                    <div class="proinfo textw hoverc" data-aos="fade-left">
                                         <i class="fa-solid fa-user-doctor color-1"></i>
                                         <h3 class="marginde">Dual Specialization</h3>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="proinfo textw slide-left" style="background-color: #ffa100;">
+                                    <div class="proinfo textw" data-aos="fade-left" style="background-color: #ffa100;">
                                         <i class="fa-solid fa-briefcase color-white"></i>
                                         <h3 class="marginde">Certification Programs</h3>
                                     </div>
@@ -1452,24 +1351,30 @@
                     <!-- Original Set -->
                     <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/Amul1.png" /></a></div>
                     <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/bb-r.jpg" /></a></div>
-                    <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/delloite-r.jpg" /></a></div>
-                    <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/flipkart-r.jpg" /></a></div>
+                    <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/delloite-r.jpg" /></a>
+                    </div>
+                    <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/flipkart-r.jpg" /></a>
+                    </div>
                     <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/icici-r.jpg" /></a></div>
                     <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/jbm-r.jpg" /></a></div>
                     <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/kotak-r.jpg" /></a></div>
                     <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/kpmg-r.jpg" /></a></div>
-                    <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/mitshubishi-r.jpg" /></a></div>
+                    <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/mitshubishi-r.jpg" /></a>
+                    </div>
 
                     <!-- Duplicate Set for Seamless Loop -->
                     <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/Amul1.png" /></a></div>
                     <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/bb-r.jpg" /></a></div>
-                    <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/delloite-r.jpg" /></a></div>
-                    <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/flipkart-r.jpg" /></a></div>
+                    <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/delloite-r.jpg" /></a>
+                    </div>
+                    <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/flipkart-r.jpg" /></a>
+                    </div>
                     <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/icici-r.jpg" /></a></div>
                     <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/jbm-r.jpg" /></a></div>
                     <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/kotak-r.jpg" /></a></div>
                     <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/kpmg-r.jpg" /></a></div>
-                    <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/mitshubishi-r.jpg" /></a></div>
+                    <div class="item"><a href=""><img alt="logo" src="assets/images/recruiter/mitshubishi-r.jpg" /></a>
+                    </div>
                 </div>
             </div>
 
@@ -1823,10 +1728,10 @@
                 transition: background 0.3s ease;
             }
 
-            .owl-nav .owl-prev:hover,
+            /* .owl-nav .owl-prev:hover,
             .owl-nav .owl-next:hover {
                 background: #132772;
-            }
+            } */
 
             .game-section .item {
                 margin: 0 15px 60px;
@@ -2858,64 +2763,8 @@
                         <img class="close" data-dismiss="modal" src="assets/images/icons/close-icon.png" alt="close">
                     </div>
                     <div class="modal-body">
-                        <section class="forming">
-                            <div class="reg-box">
-                                <div class="reg-title">Admissions Open 2025-27</div>
-                                <form class="reg-form" onsubmit="return handleSubmit(event)">
-                                    <input type="text" class="reg-input" placeholder="Enter Name*" required />
-
-                                    <input type="email" class="reg-input" placeholder="Enter Email*" required />
-
-                                    <div class="reg-phone-wrapper">
-                                        <span class="reg-phone-prefix">+91</span>
-                                        <input type="tel" class="reg-input" id="mobile" name="mobile"
-                                            pattern="[0-9]{10}" maxlength="10" required placeholder="Phone Number*"
-                                            style="border:none;outline:none;padding-left:0;background:transparent;"
-                                            oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-                                    </div>
-
-                                    <select id="state" class="reg-select" aria-label="Select State"
-                                        onchange="fetchCities()">
-                                        <option value="">Select State</option>
-                                    </select>
-
-                                    <select id="city" class="reg-select" aria-label="Select City">
-                                        <option value="">Select a state first</option>
-                                    </select>
-
-                                    <select id="course-select" class="reg-select" required aria-label="Select Course*">
-                                        <option value="" disabled selected>Select Course*</option>
-                                        <option>PGDM</option>
-                                    </select>
-                                    <div class="captcha-box">
-                                        <div id="captcha" class="captcha">----</div>
-                                        <span style="font-size: 12px;" onclick="generateCaptcha()">Refresh</span>
-                                    </div>
-
-                                    <input type="text" class="reg-input" id="captchaInput" placeholder="Enter CAPTCHA"
-                                        oninput="clearCaptchaError()">
-                                    <div class="error-message" id="captchaError">Incorrect CAPTCHA. Please try again.
-                                    </div>
-                                    <div class="reg-checkbox-row">
-                                        <input type="checkbox" id="consent-checkbox" required
-                                            title="Consent to contact" />
-                                        <label for="consent-checkbox" style="font-size: 12px;">
-                                            I authorize GNIM and its representative to contact me with updates and
-                                            notifications via
-                                            Email,
-                                            SMS, WhatsApp, and Call.
-                                        </label>
-                                    </div>
-
-                                    <button type="submit" class="reg-button"
-                                        onclick="validateCaptcha()">Register</button>
-                                </form>
-
-                                <div class="reg-footer-row">
-                                    <span>Already Registered?</span>
-                                    <span class="reg-login-link" onclick="alert('Login action')">Login</span>
-                                </div>
-                            </div>
+                        <section class="forming" data-aos="fade-up" style="display: contents;">
+                            <iframe src="react-form/index.html" width="100%" height="650" style="border:none;"></iframe>
                         </section>
                         <!-- <script src="assets/js/formings.js"></script> -->
                     </div>
@@ -2934,13 +2783,25 @@
     <!-- JQUERY LIBRARY JS -->
     <!-- Bootstrap-->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
     <!-- BOOTSTRAP JS -->
     <script src="assets/js/bootstrap.min.js" defer></script>
     <!-- OWLCAROUSEL JS -->
     <script src="assets/js/owl.carousel.min.js" defer></script>
     <!-- Forming JS -->
     <script src="assets/js/formings.js" defer></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: false, // false = animate every time the element is in the viewport
+            duration: 1000, // animation duration
+        });
+    </script>
+
 
     <!-- <script>
         // Disable scroll restoration

@@ -1278,6 +1278,7 @@ body {
   background-attachment: fixed;
   background-position: center; */
     margin: 0;
+    padding: 0;
     font-weight: 400;
     font-size: 16px;
     color: #58709d;
@@ -1382,6 +1383,12 @@ header li:hover>a {
     }
 }
 
+@media (max-width: 600px) {
+    .game-section {
+        margin-bottom: -180px;
+    }
+    
+}
 /* @media (min-width: 1200px) {
 .response{
     height: 660px;
@@ -1599,7 +1606,7 @@ header li:hover>a {
    ========================================================================== */
 .full1 {
     background-color: aliceblue;
-    max-width: 315px;
+    max-width: 290px;
     border-radius: 25px;
     max-height: 260px;
 }
@@ -1614,7 +1621,7 @@ header li:hover>a {
 .back {
     border-radius: 30px 30px 0px 30px;
     background-color: #00062B;
-    max-width: 315px;
+    max-width: 290px;
     padding: 25px;
     margin-top: 25px;
     display: flex;
@@ -1644,7 +1651,7 @@ header li:hover>a {
     top: 0px;
     position: relative;
     height: 25px;
-    left: 280px;
+    left: 255px;
     z-index: 1;
     width: 35px;
 }
@@ -2068,13 +2075,6 @@ header li:hover>a {
     margin: 10px 0;
 }
 
-.owl-dots {
-    text-align: center;
-    margin-top: -65px;
-    margin-bottom: 75px;
-    margin-top: 10px;
-    height: 36px;
-}
 
 .owl-dots .owl-dot {
     margin: 20px 6px 0;
@@ -2364,7 +2364,24 @@ header li:hover>a {
 }
 
 /*end progress bar*/
-
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .testimonials-slider {
+        height: 865px;
+    }
+    
+}
+@media screen and (min-width: 455px) and (max-width: 575px) {
+    .testimonials-slider {
+        height: 900px;
+    }
+    
+}
+@media screen and (max-width: 454px) {
+    .testimonials-slider {
+        height: 1050px;
+    }
+    
+}
 
 /*subscribe*/
 
@@ -2725,9 +2742,13 @@ header li:hover>a {
 /* ==========================================================================
    12. Elements 
    ========================================================================== */
+   .forming{
+    display: flex;
+    justify-content: center;
+   }
 .set {
     position: relative;
-    top: -103px;
+    top: -25px;
     z-index: 10;
 }
 
